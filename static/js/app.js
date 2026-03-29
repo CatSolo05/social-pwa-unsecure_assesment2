@@ -4,10 +4,13 @@
 //  INTENTIONAL VULNERABILITIES (for educational use):
 //    1. DOM-based XSS       — historical issue; URL-driven msg injection has been removed
 //    2. Aggressive push     — historical issue; permission prompt now requires a user click
-//    3. Hardcoded VAPID key — visible to any student who views page source
+//    3. VAPID public key    — now supplied by the server at render time
 //    4. No CSRF protection  — fetch() calls include no CSRF token
 //    5. postMessage handling — now limited to same-origin messages and internal redirects
 // ─────────────────────────────────────────────────────────────────────────────
+
+const vapidPublicKeyMeta = document.querySelector('meta[name="vapid-public-key"]');
+const vapidPublicKey = vapidPublicKeyMeta ? vapidPublicKeyMeta.content : '';
 
 // ── Service Worker Registration ───────────────────────────────────────────────
 if ('serviceWorker' in navigator) {
@@ -39,6 +42,11 @@ function setupNotificationsButton() {
     return;
   }
 
+  if (!vapidPublicKey) {
+    notificationsBtn.hidden = true;
+    return;
+  }
+
   if (Notification.permission === 'granted') {
     notificationsBtn.hidden = true;
     return;
@@ -66,11 +74,7 @@ async function subscribeToPush() {
   try {
     const registration = await navigator.serviceWorker.ready;
 
-    // VULNERABILITY: Hardcoded VAPID public key in client-side JavaScript
-    // Anyone reading the source can use this key to send push messages to all subscribers
-    const applicationServerKey = urlBase64ToUint8Array(
-      'BEl62iUYgUivxIkv69yViEuiBIa-Ib9-SkvMeAtA3LFgDzkrxZJjSgSnfckjBJuBkr3qBUYIHBQFLXYp5Nksh8U'
-    );
+    const applicationServerKey = urlBase64ToUint8Array(vapidPublicKey);
 
     const subscription = await registration.pushManager.subscribe({
       userVisibleOnly: true,

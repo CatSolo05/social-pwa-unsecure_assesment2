@@ -1,7 +1,11 @@
+import bcrypt
 import sqlite3 as sql
 import time
 import random
 import os
+  
+        
+
 # ─────────────────────────────────────────────────────────────────────────────
 #  user_management.py
 #  Handles all direct database operations for the Unsecure Social PWA.
@@ -23,13 +27,15 @@ LOG_PATH = os.path.join(BASE_DIR, "visitor_log.txt")
 def insertUser(username, password, DoB, bio=""):
     """
     Insert a new user.
-    VULNERABILITY: Password stored as plaintext — no bcrypt/argon2 hashing.
+    Passwords are stored as bcrypt hashes.
     """
+    password_hash = bcrypt.hashpw(password.encode("utf-8"), bcrypt.gensalt()).decode("utf-8")
+
     con = sql.connect(DB_PATH)
     cur = con.cursor()
     cur.execute(
         "INSERT INTO users (username, password, dateOfBirth, bio) VALUES (?,?,?,?)",
-        (username, password, DoB, bio),
+        (username, password_hash, DoB, bio),
     )
     con.commit()
     con.close()
@@ -38,12 +44,8 @@ def insertUser(username, password, DoB, bio=""):
 def retrieveUsers(username, password):
     """
     Authenticate a user.
-    VULNERABILITY 1 — SQL Injection via f-strings on both username and password.
-      Try: username = admin'--   (bypasses password check entirely)
-      Try: username = ' OR '1'='1'--
-    VULNERABILITY 2 — Timing Side-Channel:
-      sleep() only fires when username EXISTS, leaking valid usernames via response time.
-    VULNERABILITY 3 — No account lockout or rate limiting.
+        Fetch the user by username and verify the submitted password against the
+        stored bcrypt hash.
     """
     con = sql.connect(DB_PATH)
     cur = con.cursor()
@@ -66,11 +68,9 @@ def retrieveUsers(username, password):
         except Exception:
             pass
 
-        
-        cur.execute("SELECT * FROM users WHERE password = ?", (password,))
-        result = cur.fetchone()
+        stored_hash = user_row[2]
         con.close()
-        return result is not None
+        return bcrypt.checkpw(password.encode("utf-8"), stored_hash.encode("utf-8"))
 
 
 def insertPost(author, content):

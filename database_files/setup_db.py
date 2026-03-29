@@ -47,12 +47,12 @@ cur.execute('''
 
 # ── Seed Users ─────────────────────────────────────────────────────────────────
 users = [
-    ('admin',      'password123',  '01/01/1990', 'Site administrator. Here to keep things running.', 'admin'),
-    ('GamerGirl',  'qwerty',       '15/05/2002', 'Casual gamer | Indie titles and retro consoles.', 'user'),
-    ('TechNerd42', 'letmein',      '22/08/1998', 'Software dev by day, CTF player by night. Python fan.', 'user'),
-    ('CryptoKing', 'blockchain1',  '09/03/1995', 'Bitcoin maximalist. Not financial advice.', 'user'),
-    ('Sarah_J',    'ilovecats99',  '30/11/2001', 'Cat mum | Photography student | She/Her', 'user'),
-    ('x0_h4ck3r',  'supersecret!', '14/02/1999', "Security researcher. I find bugs so you don't have to.", 'user'),
+    ('admin',      '$2b$12$yA8bII4jcCipWIOa.B39ZuV/Wnffg3TINYDM2Bj58FOGrIqx9s5Rq', '01/01/1990', 'Site administrator. Here to keep things running.', 'admin'),
+    ('GamerGirl',  '$2b$12$iXk1D.NR0KmnP4xbUAnEQO1BYorE0WJMSoSzKoP3NfXh7lKncY3P6', '15/05/2002', 'Casual gamer | Indie titles and retro consoles.', 'user'),
+    ('TechNerd42', '$2b$12$puHlfNzCHSL2vSVAZfDKL.ylkSd2Ui8HVO5vRI4k5l3iWscr2Mb7G', '22/08/1998', 'Software dev by day, CTF player by night. Python fan.', 'user'),
+    ('CryptoKing', '$2b$12$d0OHmK2/0W0SHMu4jfCJcehnX4HerV8cJglL8yP9f8HA/6Jcng4pa', '09/03/1995', 'Bitcoin maximalist. Not financial advice.', 'user'),
+    ('Sarah_J',    '$2b$12$zvWvmIqM3yngn1oJr/TlEOfCXwCab5gvP9V/TqRN6SKLK//gf0aB6', '30/11/2001', 'Cat mum | Photography student | She/Her', 'user'),
+    ('x0_h4ck3r',  '$2b$12$gm7TT83KiXo8gAvuQUQBou5mMy6c8BtJ875jyQDwqXSmyzauOpdbO', '14/02/1999', "Security researcher. I find bugs so you don't have to.", 'user'),
 ]
 
 cur.executemany(
@@ -99,7 +99,7 @@ print("  database.db generated successfully!")
 print("=" * 55)
 print("  Users seeded:")
 for u in users:
-    print(f"    [{u[4]:5s}]  {u[0]:12s}  password: {u[1]}")
+    print(f"    [{u[4]:5s}]  {u[0]:12s}  password: <bcrypt hash>")
 print(f"  Posts seeded:     {len(posts)}")
 print(f"  Messages seeded:  {len(messages)}")
 print("=" * 55)

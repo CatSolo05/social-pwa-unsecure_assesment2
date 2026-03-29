@@ -6,12 +6,6 @@
   <h1>Join SocialPWA</h1>
   <p class="subtitle">Create your free account. Takes less than a minute.</p>
 
-  {% if msg %}
-  <div class="msg-box" id="js-msg-box">{{ msg | safe }}</div>
-  {% else %}
-  <div id="js-msg-box" style="display:none;"></div>
-  {% endif %}
-
   <!--
     VULNERABILITY: No CSRF token — cross-site form submission is possible.
     VULNERABILITY: No duplicate username check in the backend (insertUser).

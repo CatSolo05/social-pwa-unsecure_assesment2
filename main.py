@@ -2,7 +2,7 @@ import os
 import sys
 import sqlite3
 import subprocess
-from flask import Flask, render_template, request, redirect, session
+from flask import Flask, render_template, request, redirect, session, flash
 from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
 import user_management as db
@@ -71,10 +71,8 @@ def require_login():
 @app.route("/", methods=["POST", "GET"])
 @app.route("/index.html", methods=["POST", "GET"])
 def home():
-    # VULNERABILITY: Reflected XSS — 'msg' rendered with |safe in template
     if request.method == "GET":
-        msg = request.args.get("msg", "")
-        return render_template("index.html", msg=msg)
+        return render_template("index.html")
 
     elif request.method == "POST":
         username = request.form["username"]
@@ -85,7 +83,8 @@ def home():
             posts = db.getPosts()
             return render_template("feed.html", username=username, state=isLoggedIn, posts=posts)
         else:
-            return render_template("index.html", msg="Invalid credentials. Please try again.")
+            flash("Invalid credentials. Please try again.", "error")
+            return render_template("index.html")
 
 
 # ── Sign Up ───────────────────────────────────────────────────────────────────
@@ -100,7 +99,8 @@ def signup():
         # VULNERABILITY: No duplicate username check
         # VULNERABILITY: No input validation or password strength enforcement
         db.insertUser(username, password, DoB, bio)
-        return render_template("index.html", msg="Account created! Please log in.")
+        flash("Account created! Please log in.", "success")
+        return redirect("/")
     else:
         return render_template("signup.html")
 
@@ -165,8 +165,7 @@ def messages():
 
 @app.route("/success.html")
 def success():
-    msg = request.args.get("msg", "Your action was completed successfully.")
-    return render_template("success.html", msg=msg)
+    return render_template("success.html")
 
 
 # ── Run ───────────────────────────────────────────────────────────────────────

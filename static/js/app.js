@@ -79,20 +79,7 @@ function urlBase64ToUint8Array(base64String) {
 }
 
 // ── DOM-based XSS ─────────────────────────────────────────────────────────────
-// VULNERABILITY: Reads 'msg' from the URL query string and injects it via innerHTML
-// A crafted link like /?msg=<img src=x onerror=alert(1)> will execute JavaScript
-// This is separate from the server-side reflected XSS in index.html (double vuln)
 window.addEventListener('DOMContentLoaded', function () {
-  const params  = new URLSearchParams(window.location.search);
-  const msg     = params.get('msg');
-  const msgBox  = document.getElementById('js-msg-box');
-
-  if (msg && msgBox) {
-    // VULNERABILITY: innerHTML allows arbitrary HTML/JS execution from URL param
-    // Secure fix: use textContent instead
-    msgBox.innerHTML = msg;
-  }
-
   // ── Highlight active nav link ──────────────────────────────────────────────
   const currentPath = window.location.pathname;
   document.querySelectorAll('.nav-links a').forEach(function (link) {

@@ -14,9 +14,26 @@ import user_management as db
 BASE_DIR     = os.path.dirname(os.path.abspath(__file__))
 DB_PATH      = os.path.join(BASE_DIR, "database_files", "database.db")
 SETUP_SCRIPT = os.path.join(BASE_DIR, "database_files", "setup_db.py")
+ENV_PATH     = os.path.join(BASE_DIR, ".env")
 DEFAULT_VAPID_PUBLIC_KEY = (
     "BEl62iUYgUivxIkv69yViEuiBIa-Ib9-SkvMeAtA3LFgDzkrxZJjSgSnfckjBJuBkr3qBUYIHBQFLXYp5Nksh8U"
 )
+
+
+def load_env_file():
+    if not os.path.exists(ENV_PATH):
+        return
+
+    with open(ENV_PATH, "r", encoding="utf-8") as env_file:
+        for raw_line in env_file:
+            line = raw_line.strip()
+            if not line or line.startswith("#") or "=" not in line:
+                continue
+
+            key, value = line.split("=", 1)
+            key = key.strip()
+            value = value.strip().strip('"').strip("'")
+            os.environ.setdefault(key, value)
 
 def _tables_exist():
     """Return True if the required tables are all present."""
@@ -46,6 +63,7 @@ def init_db():
         print("[SocialPWA] Database already exists — skipping setup.")
 
 init_db()
+load_env_file()
 
 # ─────────────────────────────────────────────────────────────────────────────
 
@@ -225,4 +243,4 @@ def success():
 if __name__ == "__main__":
     app.config["TEMPLATES_AUTO_RELOAD"] = True
     app.config["SEND_FILE_MAX_AGE_DEFAULT"] = 0
-    app.run(host="127.0.0.1", port=5000)
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", "5000")))

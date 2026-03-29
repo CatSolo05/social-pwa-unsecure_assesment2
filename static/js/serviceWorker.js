@@ -10,8 +10,8 @@
 //    6. Hardcoded VAPID    — public key visible in source; anyone can send pushes
 // ─────────────────────────────────────────────────────────────────────────────
 
-// VULNERABILITY: Predictable, hardcoded cache name makes targeted cache poisoning easier
-const CACHE_NAME = 'social-pwa-cache-v1';
+// Use a versioned cache name so stale assets from older service workers are not reused.
+const CACHE_NAME = 'social-pwa-cache-v2';
 
 // Pre-cache only static application assets.
 const PRECACHE_URLS = [
@@ -37,7 +37,19 @@ self.addEventListener('install', function (event) {
 
 // ── ACTIVATE ─────────────────────────────────────────────────────────────────
 self.addEventListener('activate', function (event) {
-  event.waitUntil(Promise.resolve());
+  event.waitUntil(
+    caches.keys().then(function (cacheNames) {
+      return Promise.all(
+        cacheNames
+          .filter(function (cacheName) {
+            return cacheName !== CACHE_NAME;
+          })
+          .map(function (cacheName) {
+            return caches.delete(cacheName);
+          })
+      );
+    })
+  );
 });
 
 // ── FETCH ─────────────────────────────────────────────────────────────────────

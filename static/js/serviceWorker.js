@@ -24,10 +24,6 @@ const PRECACHE_URLS = [
 
 // ── INSTALL ───────────────────────────────────────────────────────────────────
 self.addEventListener('install', function (event) {
-  // VULNERABILITY: skipWaiting() means a malicious SW update activates instantly
-  // without waiting for existing tabs to close — all open sessions are taken over
-  self.skipWaiting();
-
   event.waitUntil(
     caches.open(CACHE_NAME).then(function (cache) {
       console.log('[SW] Pre-caching app shell');

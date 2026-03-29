@@ -5,12 +5,28 @@
 //    1. DOM-based XSS       — historical issue; URL-driven msg injection has been removed
 //    2. Aggressive push     — historical issue; permission prompt now requires a user click
 //    3. VAPID public key    — now supplied by the server at render time
-//    4. No CSRF protection  — fetch() calls include no CSRF token
+//    4. CSRF handling       — push subscription fetch now carries the CSRF token
 //    5. postMessage handling — now limited to same-origin messages and internal redirects
 // ─────────────────────────────────────────────────────────────────────────────
 
+const csrfTokenMeta = document.querySelector('meta[name="csrf-token"]');
 const vapidPublicKeyMeta = document.querySelector('meta[name="vapid-public-key"]');
+const csrfToken = csrfTokenMeta ? csrfTokenMeta.content : '';
 const vapidPublicKey = vapidPublicKeyMeta ? vapidPublicKeyMeta.content : '';
+
+function getCsrfToken() {
+  if (csrfToken) {
+    return csrfToken;
+  }
+
+  const csrfCookie = document.cookie
+    .split('; ')
+    .find(function (cookie) {
+      return cookie.startsWith('csrf_token=');
+    });
+
+  return csrfCookie ? decodeURIComponent(csrfCookie.split('=').slice(1).join('=')) : '';
+}
 
 // ── Service Worker Registration ───────────────────────────────────────────────
 if ('serviceWorker' in navigator) {
@@ -73,6 +89,7 @@ function setupNotificationsButton() {
 async function subscribeToPush() {
   try {
     const registration = await navigator.serviceWorker.ready;
+    const currentCsrfToken = getCsrfToken();
 
     const applicationServerKey = urlBase64ToUint8Array(vapidPublicKey);
 
@@ -85,7 +102,10 @@ async function subscribeToPush() {
     // An attacker who tricks the user into visiting a page can trigger this fetch
     await fetch('/subscribe', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: {
+        'Content-Type': 'application/json',
+        'X-CSRFToken': currentCsrfToken
+      },
       body: JSON.stringify(subscription)
     });
 

@@ -48,6 +48,26 @@ def _tables_exist():
     except Exception:
         return False
 
+
+def _ensure_unique_username_index():
+    con = sqlite3.connect(DB_PATH)
+    cur = con.cursor()
+
+    duplicates = cur.execute(
+        "SELECT username, COUNT(*) FROM users GROUP BY username HAVING COUNT(*) > 1"
+    ).fetchall()
+    if duplicates:
+        print("[SocialPWA] Removing duplicate user rows before enforcing uniqueness...")
+        cur.execute(
+            "DELETE FROM users WHERE id NOT IN (SELECT MIN(id) FROM users GROUP BY username)"
+        )
+
+    cur.execute(
+        "CREATE UNIQUE INDEX IF NOT EXISTS idx_users_username_unique ON users(username)"
+    )
+    con.commit()
+    con.close()
+
 def init_db():
     os.makedirs(os.path.join(BASE_DIR, "database_files"), exist_ok=True)
     if not os.path.exists(DB_PATH) or not _tables_exist():
@@ -61,6 +81,8 @@ def init_db():
             print("[SocialPWA] WARNING: setup_db failed:", result.stderr)
     else:
         print("[SocialPWA] Database already exists — skipping setup.")
+
+    _ensure_unique_username_index()
 
 init_db()
 load_env_file()

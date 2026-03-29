@@ -1,0 +1,4484 @@
+<!DOCTYPE html>
+<!-- saved from url=(0050)file:///C:/Users/CatSo/2026-03-29-ZAP-Report-.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ZAP by Checkmarx Scanning Report for social pwa after fixes r</title>
+<link href="./ZAP by Checkmarx Scanning Report for social pwa after fixes_files/normalize.css" rel="stylesheet">
+<link href="./ZAP by Checkmarx Scanning Report for social pwa after fixes_files/main.css" rel="stylesheet">
+<link href="./ZAP by Checkmarx Scanning Report for social pwa after fixes_files/colors.css" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<h1>ZAP by Checkmarx Scanning Report for social pwa after fixes r</h1>
+		<p>
+			<span>Generated with</span> <a href="https://zaproxy.org/"><img src="./ZAP by Checkmarx Scanning Report for social pwa after fixes_files/zap32x32.png" alt="The ZAP logo" class="zap-logo">ZAP</a>
+			<span>on Sun 29 Mar 2026, at 23:49:10</span>
+		</p>
+		<p>ZAP Version: 2.17.0</p>
+		<p>
+			ZAP by <a href="https://checkmarx.com/">Checkmarx</a>
+		</p>
+	</header>
+
+	<main>
+
+		<section id="contents" class="contents">
+			<h2>Contents</h2>
+			<nav>
+				<ol>
+					<li><a href="file:///C:/Users/CatSo/2026-03-29-ZAP-Report-.html#about-this-report">About This Report</a>
+						<ol>
+							
+							<li><a href="file:///C:/Users/CatSo/2026-03-29-ZAP-Report-.html#report-parameters">Report Parameters</a></li>
+						</ol></li>
+					<data-th-block>
+					<li><a href="file:///C:/Users/CatSo/2026-03-29-ZAP-Report-.html#summaries">Summaries</a>
+						<ol>
+							<li><a href="file:///C:/Users/CatSo/2026-03-29-ZAP-Report-.html#risk-confidence-counts">Alert Counts by Risk and Confidence</a></li>
+							<li><a href="file:///C:/Users/CatSo/2026-03-29-ZAP-Report-.html#site-risk-counts">Alert Counts by Site and Risk</a></li>
+							<li><a href="file:///C:/Users/CatSo/2026-03-29-ZAP-Report-.html#alert-type-counts">Alert Counts by Alert Type</a></li>
+							<li><a href="file:///C:/Users/CatSo/2026-03-29-ZAP-Report-.html#insights">Insights</a></li>
+						</ol></li>
+					<li><a href="file:///C:/Users/CatSo/2026-03-29-ZAP-Report-.html#alerts">Alerts</a>
+						<ol>
+							
+							
+							
+							
+							
+							
+							
+							<li><a href="file:///C:/Users/CatSo/2026-03-29-ZAP-Report-.html#alerts--risk-3-confidence-2"><span>Risk</span>=<span class="risk-level">High</span>, <span>Confidence</span>=<span class="confidence-level">Medium</span> <span>(1)</span></a></li>
+							
+							
+							  
+							
+							
+							
+							
+							<li><a href="file:///C:/Users/CatSo/2026-03-29-ZAP-Report-.html#alerts--risk-2-confidence-3"><span>Risk</span>=<span class="risk-level">Medium</span>, <span>Confidence</span>=<span class="confidence-level">High</span> <span>(2)</span></a></li>
+							
+							<li><a href="file:///C:/Users/CatSo/2026-03-29-ZAP-Report-.html#alerts--risk-2-confidence-2"><span>Risk</span>=<span class="risk-level">Medium</span>, <span>Confidence</span>=<span class="confidence-level">Medium</span> <span>(1)</span></a></li>
+							
+							
+							  
+							
+							
+							
+							
+							
+							
+							<li><a href="file:///C:/Users/CatSo/2026-03-29-ZAP-Report-.html#alerts--risk-1-confidence-2"><span>Risk</span>=<span class="risk-level">Low</span>, <span>Confidence</span>=<span class="confidence-level">Medium</span> <span>(4)</span></a></li>
+							
+							
+							  
+							
+							
+							
+							
+							
+							
+							<li><a href="file:///C:/Users/CatSo/2026-03-29-ZAP-Report-.html#alerts--risk-0-confidence-2"><span>Risk</span>=<span class="risk-level">Informational</span>, <span>Confidence</span>=<span class="confidence-level">Medium</span> <span>(3)</span></a></li>
+							
+							<li><a href="file:///C:/Users/CatSo/2026-03-29-ZAP-Report-.html#alerts--risk-0-confidence-1"><span>Risk</span>=<span class="risk-level">Informational</span>, <span>Confidence</span>=<span class="confidence-level">Low</span> <span>(3)</span></a></li>
+							  
+						</ol></li>
+					<li><a href="file:///C:/Users/CatSo/2026-03-29-ZAP-Report-.html#appendix">Appendix</a>
+						<ol>
+							<li><a href="file:///C:/Users/CatSo/2026-03-29-ZAP-Report-.html#alert-types">Alert Types</a></li>
+						</ol></li>
+					</data-th-block>
+				</ol>
+			</nav>
+		</section>
+
+		<section id="about-this-report" class="about-this-report">
+			<h2>About This Report</h2>
+
+			
+
+			<section id="report-parameters">
+				<h3>Report Parameters</h3>
+				<div class="report-parameters--container">
+					<h4>Contexts</h4>
+					
+					
+					<p>No contexts were selected, so all contexts were included by default.</p>
+					  
+
+					<h4>Sites</h4>
+					
+					<p>The following sites were included:</p>
+					<ul class="sites-list">
+						<li><span class="site">https://fictional-tribble-qw4r4gppx5g39rp7-5000.app.github.dev</span></li>
+					</ul>
+					
+					<p>(If no sites were selected, all sites were included by default.)</p>
+					<p>An included site must also be within one of the included contexts for its data to be included in the report.</p>
+
+					<h4>Risk levels</h4>
+					<p>
+						<span>Included</span>:
+						 
+						<span class="included-risk-codes"><span class="risk-level">High</span>, <span class="risk-level">Medium</span>, <span class="risk-level">Low</span>, <span class="risk-level">Informational</span></span>
+					</p>
+					<p>
+						<span>Excluded</span>:
+						 <span>None</span>
+						
+					</p>
+
+					<h4>Confidence levels</h4>
+					<p>
+						<span>Included</span>:
+						
+						
+						<span class="included-confidence-codes"><span class="confidence-level">User Confirmed</span>, <span class="confidence-level">High</span>, <span class="confidence-level">Medium</span>, <span class="confidence-level">Low</span></span>
+					</p>
+					<p>
+						<span>Excluded</span>:
+						
+						
+						<span class="included-confidence-codes"> <span class="confidence-level">User Confirmed</span>, <span class="confidence-level">High</span>, <span class="confidence-level">Medium</span>, <span class="confidence-level">Low</span>, <span class="confidence-level">False Positive</span></span>
+					</p>
+				</div>
+			</section>
+		</section>
+
+		
+		<section>
+			
+		</section>
+		
+		<section id="summaries" class="summaries">
+			<h2>Summaries</h2>
+
+			<section id="risk-confidence-counts">
+				<h3>Alert Counts by Risk and Confidence</h3>
+				<table class="risk-confidence-counts-table">
+					<caption>
+						<p>This table shows the number of alerts for each level of risk and confidence included in the report.</p>
+						<p>(The percentages in brackets represent the count as a percentage of the total number of alerts included in the report, rounded to one decimal place.)</p>
+					</caption>
+					<colgroup>
+						<col>
+						<col>
+					</colgroup>
+					<colgroup>
+						<col style="width: 14.0%"><col style="width: 14.0%"><col style="width: 14.0%"><col style="width: 14.0%">
+						<col style="width: 14.0%">
+					</colgroup>
+					<thead>
+						<tr>
+							<td colspan="2" rowspan="2"></td>
+							<th scope="colgroup" colspan="5">Confidence</th>
+						</tr>
+						<tr>
+							<th scope="col">User Confirmed</th>
+							<th scope="col">High</th>
+							<th scope="col">Medium</th>
+							<th scope="col">Low</th>
+							<th scope="col">Total</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="rowgroup" rowspan="5">Risk</th>
+							<th scope="row">High</th>
+							<td><span>0</span><br> <span class="additional-info-percentages">(0.0%)</span></td>
+							<td><span>0</span><br> <span class="additional-info-percentages">(0.0%)</span></td>
+							<td><span>1</span><br> <span class="additional-info-percentages">(7.1%)</span></td>
+							<td><span>0</span><br> <span class="additional-info-percentages">(0.0%)</span></td>
+							<td><span>1</span><br> <span class="additional-info-percentages">(7.1%)</span></td>
+						</tr>
+						<tr>
+							
+							<th scope="row">Medium</th>
+							<td><span>0</span><br> <span class="additional-info-percentages">(0.0%)</span></td>
+							<td><span>2</span><br> <span class="additional-info-percentages">(14.3%)</span></td>
+							<td><span>1</span><br> <span class="additional-info-percentages">(7.1%)</span></td>
+							<td><span>0</span><br> <span class="additional-info-percentages">(0.0%)</span></td>
+							<td><span>3</span><br> <span class="additional-info-percentages">(21.4%)</span></td>
+						</tr>
+						<tr>
+							
+							<th scope="row">Low</th>
+							<td><span>0</span><br> <span class="additional-info-percentages">(0.0%)</span></td>
+							<td><span>0</span><br> <span class="additional-info-percentages">(0.0%)</span></td>
+							<td><span>4</span><br> <span class="additional-info-percentages">(28.6%)</span></td>
+							<td><span>0</span><br> <span class="additional-info-percentages">(0.0%)</span></td>
+							<td><span>4</span><br> <span class="additional-info-percentages">(28.6%)</span></td>
+						</tr>
+						<tr>
+							
+							<th scope="row">Informational</th>
+							<td><span>0</span><br> <span class="additional-info-percentages">(0.0%)</span></td>
+							<td><span>0</span><br> <span class="additional-info-percentages">(0.0%)</span></td>
+							<td><span>3</span><br> <span class="additional-info-percentages">(21.4%)</span></td>
+							<td><span>3</span><br> <span class="additional-info-percentages">(21.4%)</span></td>
+							<td><span>6</span><br> <span class="additional-info-percentages">(42.9%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row">Total</th>
+							<td><span>0</span><br> <span class="additional-info-percentages">(0.0%)</span></td>
+							<td><span>2</span><br> <span class="additional-info-percentages">(14.3%)</span></td>
+							<td><span>9</span><br> <span class="additional-info-percentages">(64.3%)</span></td>
+							<td><span>3</span><br> <span class="additional-info-percentages">(21.4%)</span></td>
+							<td><span>14</span><br> <span class="additional-info-percentages">(100%)</span></td>
+						</tr>
+					</tbody>
+				</table>
+			</section>
+
+			<section id="site-risk-counts">
+				<h3>Alert Counts by Site and Risk</h3>
+				<table class="site-risk-counts-table">
+					<caption>
+						<p>This table shows, for each site for which one or more alerts were raised, the number of alerts raised at each risk level.</p>
+						<p>Alerts with a confidence level of "False Positive" have been excluded from these counts.</p>
+						<p>(The numbers in brackets are the number of alerts raised for the site at or above that risk level.)</p>
+					</caption>
+					<colgroup>
+						<col>
+						<col>
+					</colgroup>
+					<colgroup>
+						<col style="width: 16.25%"><col style="width: 16.25%"><col style="width: 16.25%"><col style="width: 16.25%">
+					</colgroup>
+					<thead>
+						<tr>
+							<td colspan="2" rowspan="2"></td>
+							<th scope="colgroup" colspan="4">Risk</th>
+						</tr>
+						<tr>
+							<th scope="col">
+								<span>High</span><br>  <span class="additional-info-percentages">(= High)</span>  
+							</th>
+							<th scope="col">
+								<span>Medium</span><br>   <span class="additional-info-percentages">(&gt;= Medium)</span> 
+							</th>
+							<th scope="col">
+								<span>Low</span><br>   <span class="additional-info-percentages">(&gt;= Low)</span> 
+							</th>
+							<th scope="col">
+								<span>Informational</span><br>   <span class="additional-info-percentages">(&gt;= Informational)</span> 
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="rowgroup" rowspan="1">Site</th>
+							<th scope="row">https://fictional-tribble-qw4r4gppx5g39rp7-5000.app.github.dev</th>
+							
+							<td><span>1</span><br> <span class="additional-info-percentages">(1)</span></td>
+							<td><span>3</span><br> <span class="additional-info-percentages">(4)</span></td>
+							<td><span>4</span><br> <span class="additional-info-percentages">(8)</span></td>
+							<td><span>6</span><br> <span class="additional-info-percentages">(14)</span></td>
+							
+						</tr>
+					</tbody>
+				</table>
+			</section>
+
+			<section id="alert-type-counts">
+				<h3>Alert Counts by Alert Type</h3>
+				<table class="alert-type-counts-table">
+					<caption>
+						<p>This table shows the number of alerts of each alert type, together with the alert type's risk level.</p>
+						<p>(The percentages in brackets represent each count as a percentage, rounded to one decimal place, of the total number of alerts included in this report.)</p>
+					</caption>
+					<thead>
+						<tr>
+							<th scope="col">Alert type</th>
+							<th scope="col">Risk</th>
+							<th scope="col">Count</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="row"><a href="file:///C:/Users/CatSo/2026-03-29-ZAP-Report-.html#alert-type-0">SQL Injection</a></th>
+							<td class="risk-level">High</td>
+							<td><span>1</span><br> <span class="additional-info-percentages">(7.1%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a href="file:///C:/Users/CatSo/2026-03-29-ZAP-Report-.html#alert-type-1">CSP: Failure to Define Directive with No Fallback</a></th>
+							<td class="risk-level">Medium</td>
+							<td><span>5</span><br> <span class="additional-info-percentages">(35.7%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a href="file:///C:/Users/CatSo/2026-03-29-ZAP-Report-.html#alert-type-2">CSP: style-src unsafe-inline</a></th>
+							<td class="risk-level">Medium</td>
+							<td><span>5</span><br> <span class="additional-info-percentages">(35.7%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a href="file:///C:/Users/CatSo/2026-03-29-ZAP-Report-.html#alert-type-3">Missing Anti-clickjacking Header</a></th>
+							<td class="risk-level">Medium</td>
+							<td><span>3</span><br> <span class="additional-info-percentages">(21.4%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a href="file:///C:/Users/CatSo/2026-03-29-ZAP-Report-.html#alert-type-4">Cookie No HttpOnly Flag</a></th>
+							<td class="risk-level">Low</td>
+							<td><span>3</span><br> <span class="additional-info-percentages">(21.4%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a href="file:///C:/Users/CatSo/2026-03-29-ZAP-Report-.html#alert-type-5">Cookie Without Secure Flag</a></th>
+							<td class="risk-level">Low</td>
+							<td><span>3</span><br> <span class="additional-info-percentages">(21.4%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a href="file:///C:/Users/CatSo/2026-03-29-ZAP-Report-.html#alert-type-6">Cookie with SameSite Attribute None</a></th>
+							<td class="risk-level">Low</td>
+							<td><span>3</span><br> <span class="additional-info-percentages">(21.4%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a href="file:///C:/Users/CatSo/2026-03-29-ZAP-Report-.html#alert-type-7">Cookie without SameSite Attribute</a></th>
+							<td class="risk-level">Low</td>
+							<td><span>3</span><br> <span class="additional-info-percentages">(21.4%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a href="file:///C:/Users/CatSo/2026-03-29-ZAP-Report-.html#alert-type-8">Authentication Request Identified</a></th>
+							<td class="risk-level">Informational</td>
+							<td><span>1</span><br> <span class="additional-info-percentages">(7.1%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a href="file:///C:/Users/CatSo/2026-03-29-ZAP-Report-.html#alert-type-9">Information Disclosure - Suspicious Comments</a></th>
+							<td class="risk-level">Informational</td>
+							<td><span>5</span><br> <span class="additional-info-percentages">(35.7%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a href="file:///C:/Users/CatSo/2026-03-29-ZAP-Report-.html#alert-type-10">Re-examine Cache-control Directives</a></th>
+							<td class="risk-level">Informational</td>
+							<td><span>3</span><br> <span class="additional-info-percentages">(21.4%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a href="file:///C:/Users/CatSo/2026-03-29-ZAP-Report-.html#alert-type-11">Session Management Response Identified</a></th>
+							<td class="risk-level">Informational</td>
+							<td><span>7</span><br> <span class="additional-info-percentages">(50.0%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a href="file:///C:/Users/CatSo/2026-03-29-ZAP-Report-.html#alert-type-12">User Agent Fuzzer</a></th>
+							<td class="risk-level">Informational</td>
+							<td><span>5</span><br> <span class="additional-info-percentages">(35.7%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a href="file:///C:/Users/CatSo/2026-03-29-ZAP-Report-.html#alert-type-13">User Controllable HTML Element Attribute (Potential XSS)</a></th>
+							<td class="risk-level">Informational</td>
+							<td><span>1</span><br> <span class="additional-info-percentages">(7.1%)</span></td>
+						</tr>
+					</tbody>
+					<tfoot>
+						<tr>
+							<th scope="row">Total</th>
+							<td></td>
+							<td>14</td>
+						</tr>
+					</tfoot>
+				</table>
+			</section>
+			
+			<section id="insights">
+				<h3 class="left-header">Insights</h3>
+				<table class="insights-table">
+						<caption>
+						<p>This table shows information that is likely to be very relevant to you, but which is not related to vulnerabilities, or potentially even related to the application in question.</p>
+					</caption>
+					<thead>
+					<tr>
+						<th scope="col">Level</th>
+						<th scope="col">Reason</th>
+						<th scope="col">Site</th>
+						<th scope="col">Description</th>
+						<th scope="col">Statistic</th>
+					</tr>
+					</thead>
+					<tbody>
+					
+						<tr>
+						<td class="risk-1">
+							<div>Low</div>
+						</td>
+						<td>
+							<div>Warning</div>
+						</td>
+						<td>
+							<div></div>
+						</td>
+						<td>
+							<div>ZAP errors logged - see the zap.log file for details</div>
+						</td>
+						<td align="center">
+							<div>2   </div>
+						</td>
+						</tr>
+					
+						<tr>
+						<td class="risk-1">
+							<div>Low</div>
+						</td>
+						<td>
+							<div>Warning</div>
+						</td>
+						<td>
+							<div></div>
+						</td>
+						<td>
+							<div>ZAP warnings logged - see the zap.log file for details</div>
+						</td>
+						<td align="center">
+							<div>378   </div>
+						</td>
+						</tr>
+					
+						<tr>
+						<td class="risk-1">
+							<div>Low</div>
+						</td>
+						<td>
+							<div>Exceeded Low</div>
+						</td>
+						<td>
+							<div></div>
+						</td>
+						<td>
+							<div>Percentage of network failures</div>
+						</td>
+						<td align="center">
+							<div>20 %</div>
+						</td>
+						</tr>
+					
+						<tr>
+						<td class="risk-1">
+							<div>Low</div>
+						</td>
+						<td>
+							<div>Exceeded High</div>
+						</td>
+						<td>
+							<div>https://fictional-tribble-qw4r4gppx5g39rp7-5000.app.github.dev</div>
+						</td>
+						<td>
+							<div>Percentage of slow responses</div>
+						</td>
+						<td align="center">
+							<div>96 %</div>
+						</td>
+						</tr>
+					
+						<tr>
+						<td class="risk-0">
+							<div>Info</div>
+						</td>
+						<td>
+							<div>Informational</div>
+						</td>
+						<td>
+							<div>http://fictional-tribble-qw4r4gppx5g39rp7-5000.app.github.dev</div>
+						</td>
+						<td>
+							<div>Percentage of responses with status code 3xx</div>
+						</td>
+						<td align="center">
+							<div>100 %</div>
+						</td>
+						</tr>
+					
+						<tr>
+						<td class="risk-0">
+							<div>Info</div>
+						</td>
+						<td>
+							<div>Informational</div>
+						</td>
+						<td>
+							<div>https://fictional-tribble-qw4r4gppx5g39rp7-5000.app.github.dev</div>
+						</td>
+						<td>
+							<div>Percentage of responses with status code 2xx</div>
+						</td>
+						<td align="center">
+							<div>24 %</div>
+						</td>
+						</tr>
+					
+						<tr>
+						<td class="risk-0">
+							<div>Info</div>
+						</td>
+						<td>
+							<div>Informational</div>
+						</td>
+						<td>
+							<div>https://fictional-tribble-qw4r4gppx5g39rp7-5000.app.github.dev</div>
+						</td>
+						<td>
+							<div>Percentage of responses with status code 3xx</div>
+						</td>
+						<td align="center">
+							<div>25 %</div>
+						</td>
+						</tr>
+					
+						<tr>
+						<td class="risk-0">
+							<div>Info</div>
+						</td>
+						<td>
+							<div>Exceeded Low</div>
+						</td>
+						<td>
+							<div>https://fictional-tribble-qw4r4gppx5g39rp7-5000.app.github.dev</div>
+						</td>
+						<td>
+							<div>Percentage of responses with status code 4xx</div>
+						</td>
+						<td align="center">
+							<div>48 %</div>
+						</td>
+						</tr>
+					
+						<tr>
+						<td class="risk-0">
+							<div>Info</div>
+						</td>
+						<td>
+							<div>Informational</div>
+						</td>
+						<td>
+							<div>https://fictional-tribble-qw4r4gppx5g39rp7-5000.app.github.dev</div>
+						</td>
+						<td>
+							<div>Percentage of responses with status code 5xx</div>
+						</td>
+						<td align="center">
+							<div>1 %</div>
+						</td>
+						</tr>
+					
+						<tr>
+						<td class="risk-0">
+							<div>Info</div>
+						</td>
+						<td>
+							<div>Informational</div>
+						</td>
+						<td>
+							<div>https://fictional-tribble-qw4r4gppx5g39rp7-5000.app.github.dev</div>
+						</td>
+						<td>
+							<div>Percentage of endpoints with content type application/json</div>
+						</td>
+						<td align="center">
+							<div>8 %</div>
+						</td>
+						</tr>
+					
+						<tr>
+						<td class="risk-0">
+							<div>Info</div>
+						</td>
+						<td>
+							<div>Informational</div>
+						</td>
+						<td>
+							<div>https://fictional-tribble-qw4r4gppx5g39rp7-5000.app.github.dev</div>
+						</td>
+						<td>
+							<div>Percentage of endpoints with content type image/png</div>
+						</td>
+						<td align="center">
+							<div>8 %</div>
+						</td>
+						</tr>
+					
+						<tr>
+						<td class="risk-0">
+							<div>Info</div>
+						</td>
+						<td>
+							<div>Informational</div>
+						</td>
+						<td>
+							<div>https://fictional-tribble-qw4r4gppx5g39rp7-5000.app.github.dev</div>
+						</td>
+						<td>
+							<div>Percentage of endpoints with content type text/css</div>
+						</td>
+						<td align="center">
+							<div>8 %</div>
+						</td>
+						</tr>
+					
+						<tr>
+						<td class="risk-0">
+							<div>Info</div>
+						</td>
+						<td>
+							<div>Informational</div>
+						</td>
+						<td>
+							<div>https://fictional-tribble-qw4r4gppx5g39rp7-5000.app.github.dev</div>
+						</td>
+						<td>
+							<div>Percentage of endpoints with content type text/html</div>
+						</td>
+						<td align="center">
+							<div>66 %</div>
+						</td>
+						</tr>
+					
+						<tr>
+						<td class="risk-0">
+							<div>Info</div>
+						</td>
+						<td>
+							<div>Informational</div>
+						</td>
+						<td>
+							<div>https://fictional-tribble-qw4r4gppx5g39rp7-5000.app.github.dev</div>
+						</td>
+						<td>
+							<div>Percentage of endpoints with content type text/javascript</div>
+						</td>
+						<td align="center">
+							<div>8 %</div>
+						</td>
+						</tr>
+					
+						<tr>
+						<td class="risk-0">
+							<div>Info</div>
+						</td>
+						<td>
+							<div>Informational</div>
+						</td>
+						<td>
+							<div>https://fictional-tribble-qw4r4gppx5g39rp7-5000.app.github.dev</div>
+						</td>
+						<td>
+							<div>Percentage of endpoints with method GET</div>
+						</td>
+						<td align="center">
+							<div>83 %</div>
+						</td>
+						</tr>
+					
+						<tr>
+						<td class="risk-0">
+							<div>Info</div>
+						</td>
+						<td>
+							<div>Informational</div>
+						</td>
+						<td>
+							<div>https://fictional-tribble-qw4r4gppx5g39rp7-5000.app.github.dev</div>
+						</td>
+						<td>
+							<div>Percentage of endpoints with method POST</div>
+						</td>
+						<td align="center">
+							<div>16 %</div>
+						</td>
+						</tr>
+					
+						<tr>
+						<td class="risk-0">
+							<div>Info</div>
+						</td>
+						<td>
+							<div>Informational</div>
+						</td>
+						<td>
+							<div>https://fictional-tribble-qw4r4gppx5g39rp7-5000.app.github.dev</div>
+						</td>
+						<td>
+							<div>Count of total endpoints</div>
+						</td>
+						<td align="center">
+							<div>12   </div>
+						</td>
+						</tr>
+					
+					</tbody>
+				</table>
+			</section>
+		</section>
+
+		<section id="alerts" class="alerts">
+			<h2>Alerts</h2>
+			<ol>
+				
+				 
+				
+				
+				
+				
+				<li id="alerts--risk-3-confidence-2">
+					<h3>
+						<span>Risk</span>=<span class="risk-level">High</span>, <span>Confidence</span>=<span class="confidence-level">Medium</span> <span>(1)</span>
+					</h3>
+					<ol>
+						
+						<li class="alerts--site-li">
+							<h4>
+								<span class="site">https://fictional-tribble-qw4r4gppx5g39rp7-5000.app.github.dev</span> <span>(1)</span>
+							</h4>
+							<ol>
+								
+								<li>
+									<h5>
+										<a href="file:///C:/Users/CatSo/2026-03-29-ZAP-Report-.html#alert-type-0">SQL Injection</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">POST https://fictional-tribble-qw4r4gppx5g39rp7-5000.app.github.dev/</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tbody><tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					 <span>POLICY_SEQUENCE = </span>
+				</li>
+				<li>
+					<span><a href="https://owasp.org/Top10/A03_2021-Injection/">OWASP_2021_A03</a></span> 
+				</li>
+				<li>
+					<span><a href="https://www.zaproxy.org/docs/desktop/addons/common-library/alerttags/#compliance">PCI_DSS</a></span> 
+				</li>
+				<li>
+					<span><a href="https://cwe.mitre.org/data/definitions/89.html">CWE-89</a></span> 
+				</li>
+				<li>
+					 <span>POLICY_QA_CICD = </span>
+				</li>
+				<li>
+					 <span>POLICY_DEV_CICD = </span>
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-web-security-testing-guide/v42/4-Web_Application_Security_Testing/07-Input_Validation_Testing/05-Testing_for_SQL_Injection">WSTG-v42-INPV-05</a></span> 
+				</li>
+				<li>
+					 <span>POLICY_API = </span>
+				</li>
+				<li>
+					 <span>POLICY_DEV_FULL = </span>
+				</li>
+				<li>
+					 <span>POLICY_QA_STD = </span>
+				</li>
+				<li>
+					 <span>POLICY_QA_FULL = </span>
+				</li>
+				<li>
+					 <span>POLICY_PENTEST = </span>
+				</li>
+				<li>
+					<span><a href="https://www.zaproxy.org/docs/desktop/addons/common-library/alerttags/#compliance">HIPAA</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-top-ten/2017/A1_2017-Injection.html">OWASP_2017_A01</a></span> 
+				</li>
+				<li>
+					 <span>POLICY_DEV_STD = </span>
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>SQL injection may be possible.</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Other info</th>
+		<td> 
+<p>The page results were successfully manipulated using the boolean conditions [ZAP AND 1=1 -- ] and [ZAP OR 1=1 -- ]</p>
+
+<p>The parameter value being modified was stripped from the HTML output for the purposes of the comparison.</p>
+
+<p>Data was NOT returned for the original parameter.</p>
+
+<p>The vulnerability was detected by successfully retrieving more data than originally returned, by manipulating the parameter.</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (1631 bytes)</summary>
+				
+				<pre><code>POST https://fictional-tribble-qw4r4gppx5g39rp7-5000.app.github.dev/ HTTP/1.1
+host: fictional-tribble-qw4r4gppx5g39rp7-5000.app.github.dev
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+pragma: no-cache
+cache-control: no-cache
+content-type: application/x-www-form-urlencoded
+referer: https://fictional-tribble-qw4r4gppx5g39rp7-5000.app.github.dev/
+content-length: 142
+Cookie: .Tunnels.Relay.WebForwarding.Cookies=CfDJ8NJJuTEdEi5KqensronCVW3YJf3R3fI9s-NG5KbYZJ0RRjlxSG2KurrFsdEBvujDwyRproqfvlKTGrkzLn3T288VfFNpGQmGyUHgI59AqQ7gfiyG2wETJJ-JzN51xDClZDf5WcfXE2tZ1IiHy0uFxpSDTNXU6V24W3EffA8fuM-I9Hizz4cZFMpSK_ukX7OtXWbSCkQFeNQFgOjYE25OqbHVo-2D0leymTbKo34mfZhxPqiqo7opL0rKWVlFXUXzb6ipcJP56x-RvBdlRpUcMuvzOOHvCRnqpHG9PZCNKjFzXVrwISVCWmzWqm-FFtDut0m9O2dIgWlIQex57BSkMHocTsm-GvgVVheR29_bImRbbdbgCUpsnFLLH2aP8cSp6yEbFRXsyyqzHpwjEYCmLoj6s9GIUZpZSjjBbxGGG8p2PdBS5ovrgZOSnSm0bgbj4jPYeUTX4OAd0tEsEXZ-Vc0V7iitVZVYledNY9K17Cv-NSz9GOcC9VNK7Nkqr_j16_TN4pp3NbVg6Wulw7t62VGJw2X6nCfkg7KfN0g1WyLk5bLko1OjaaUZsHzx6GAKd27MSb_eARP9R0dmBmayPElGu3-45aBWgf5IoBBegupk97QcSqphgueKaPPStAM_H6qnXS1aaSTQauSONcPLn5XeEZ8bfj20ekZitb1Cnfm7Tbbv85ZFsyzGqAgw_lna-X4izslWDYtGe5HSUFvRPnF-0x5hMWC5LqenbT2Qv6vm4h-vPuMoOesP5lULfJUIQCAW0FJdD0nEfA2FDuXpNHH6HuB4a8i4bAr6CTKUZHPtfK-HOtB_Z86JRE1D2eQx4rRw6RVwRGBaJ-SWlSAFrYWGepgrZpKDbAIzDDsKT3MqZ0Sxjbfd5zgjRzb7V64l2Aw47qO28aEsJhfyfBXTwpcGmMULbPaoeNELc8rQnIs4K54mo9xPSxE98XjOFeUcL1l_BSD-EdEiDxj_SlzQkpbr61nt69zKJPiXIZVzbiUH; session=eyJjc3JmX3Rva2VuIjoiNGVlNDNjZWYyMzE4NTQwODg4MDdhOTYzZDdmMmFiYzBkOThmNzBhMCJ9.ackIHQ.tY3KzY-Lc1yx8K1vkXQ_3H2AwnM
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (142 bytes)</summary>
+				
+				<pre><code>csrf_token=IjRlZTQzY2VmMjMxODU0MDg4ODA3YTk2M2Q3ZjJhYmMwZDk4ZjcwYTAi.ackIHQ.pZuHADdsONQlKr2O5VYl1LuoOSo&amp;username=ZAP&amp;password=ZAP+AND+1%3D1+--+</code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details>
+				<summary>Status line and header section (2568 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 200 OK
+Date: Sun, 29 Mar 2026 11:09:37 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 3305
+Connection: keep-alive
+Cache-Control: no-cache,no-store
+Expires: Thu, 01 Jan 1970 00:00:00 GMT
+Pragma: no-cache
+Set-Cookie: session=eyJjc3JmX3Rva2VuIjoiNGVlNDNjZWYyMzE4NTQwODg4MDdhOTYzZDdmMmFiYzBkOThmNzBhMCJ9.ackIcQ.KRBrDg_0vX32PMIIl3mcc53gF2I; HttpOnly; Path=/
+Set-Cookie: .Tunnels.Relay.WebForwarding.Cookies=CfDJ8NJJuTEdEi5KqensronCVW3omYLfrmffP80SS8Y0yuaxflNzAPqQr9UbwWht1qV8YVFV61q9YyY04EoxYQtzyoyCAR83vYgIJCFtgL7sJxnyGywlo0ZhyhGBMqFjdf9DzxEeD7ZfHlHgf2ZgRgHTGbMeYfW00Mgv5RenGvuc9uqT4XVwTB8Nl35rFOyNAoK87DV2Byu1oyWIp36aAA87loCllTk7gyNRXn-FDMtMDmrgRx78DAWXHDDjfH2ir-jh4TVhUqS1-ANf11KOw02byQOHhKt7dhYrmecKvtHpoJiMj9QBeAvz2rEkfa74uLELAmj0CnsvdKEf4RN6hfWTRhMk2LnNwNnAfIa4q_EHlyLXBWCxjUtO7NXXWbslLdZUQSNjc-MHxrmcnQZhj6sT_xWVyXiCU7_jS2TAfy59FNO7GFusSC-YRYkQHUgz48hZMg83VGMYHfOg2w7fC1UclpkYDYmJgiLycKsZOXTu0VJyUHxL9lmqSE2QZytMUfLaBc9dQDsChzt1UXoxypTXnX7Kol7CykBhl1Urpoaouf1p8_D5h72GDbpH5k5ehsGTegFsFdldEOakkMie5PkyE6j7Qu5XS7L_3NUGW0ltZLpCx1ZprMWjHjINkeuJvZ07MfWGDziici_cpkE1b-Ez8WaVWj4U4i-yyVahistZhY9gQv69x2S_C4lybYP_eqKRKeDB1LA5nLXAn_FgctsSEvOd_NSWk32979vbrZxAwJINBAUtwqxqdsDmER81m8bLecI4XLZbCgvg3I959jRpL426QaIxBkONR2Te30d5qZDm978zGE2GBGg7M-uWQOhmIy2uxEi5W1Xft3Ywa1mHkUzHH5F4difTmBSSdJ77A7h99EEtjd_Qmgzd74E9lR3Nva8bzVZYC8asiz6Vsu0nH0LysCTObIbtd3uCIz1dbaaMpfe-4H_Z5BEEiZN4v32gmblLL-i9To-wl7hyNVoRGruN5fe7uOlM-fQB0rFdGnHd; path=/; secure; samesite=none; Partitioned
+Vary: Cookie
+X-Content-Type-Options: nosniff
+X-Content-Type-Options: nosniff
+RateLimit-Limit: HttpRequestRatePerPort:1500/m
+RateLimit-Limit: HttpRequestRatePerPort:1500/m
+RateLimit-Limit: ClientConnectionsPerPort: max 1000
+RateLimit-Remaining: HttpRequestRatePerPort:1493
+RateLimit-Remaining: HttpRequestRatePerPort:1478
+RateLimit-Remaining: ClientConnectionsPerPort:999
+RateLimit-Reset: HttpRequestRatePerPort:57s
+RateLimit-Reset: HttpRequestRatePerPort:25s
+X-Report-Abuse: https://msrc.microsoft.com/report/abuse
+X-Report-Abuse: https://msrc.microsoft.com/report/abuse
+x-ms-ratelimit-limit: 1500
+x-ms-ratelimit-remaining: 1488
+x-ms-ratelimit-used: 12
+x-ms-ratelimit-reset: 0
+Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; object-src 'none'; base-uri 'self'
+vssaas-request-id: 7d0689a8-cf0c-4c0e-80e3-92b2f4c75341
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+x-served-by: tunnels-prod-rel-aue-v3-cluster
+X-Robots-Tag: noindex, nofollow
+Referrer-Policy: same-origin
+
+</code></pre>
+				
+				
+			</details> <details class="response-body">
+				<summary>Response body (3305 bytes)</summary>
+				
+				<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8" /&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+  &lt;title&gt;Login — SocialPWA&lt;/title&gt;
+
+  &lt;!-- VULNERABILITY: No Content-Security-Policy header or meta tag.
+       Inline scripts, eval(), and external resource loading are all unrestricted.
+       A proper CSP would block XSS execution even if injection occurs. --&gt;
+
+  &lt;link rel="stylesheet" href="/static/css/style.css" /&gt;
+  &lt;link rel="manifest"   href="/static/manifest.json" /&gt;
+  &lt;meta name="theme-color" content="#e94560" /&gt;
+  &lt;meta name="csrf-token" content="IjRlZTQzY2VmMjMxODU0MDg4ODA3YTk2M2Q3ZjJhYmMwZDk4ZjcwYTAi.ackIcQ.SLVymgfGBwa5dmU7Ah2fHUEFesw" /&gt;
+  &lt;meta name="vapid-public-key" content="BEl62iUYgUivxIkv69yViEuiBIa-Ib9-SkvMeAtA3LFgDzkrxZJjSgSnfckjBJuBkr3qBUYIHBQFLXYp5Nksh8U" /&gt;
+  &lt;link rel="icon" href="/static/icons/icon-192.png" type="image/png" /&gt;
+
+  
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;nav class="navbar"&gt;
+    &lt;a href="/" class="brand"&gt;&amp;#9733; SocialPWA&lt;/a&gt;
+    &lt;div class="nav-links"&gt;
+      &lt;a href="/"&gt;Login&lt;/a&gt;
+      &lt;a href="/signup.html"&gt;Sign Up&lt;/a&gt;
+      &lt;a href="/feed.html"&gt;Feed&lt;/a&gt;
+      &lt;a href="/messages"&gt;Messages&lt;/a&gt;
+      &lt;button id="enable-notifications-btn" class="btn btn-sm" hidden&gt;Enable Notifications&lt;/button&gt;
+      &lt;button id="install-btn" class="btn btn-sm"&gt;&amp;#8627; Install App&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/nav&gt;
+
+  &lt;main&gt;
+    
+      
+        &lt;div class="msg-box" id="js-msg-box"&gt;
+          
+            &lt;div class="flash-message flash-error"&gt;Invalid credentials. Please try again.&lt;/div&gt;
+          
+        &lt;/div&gt;
+      
+    
+
+    
+&lt;div class="card"&gt;
+  &lt;h1&gt;Welcome back&lt;/h1&gt;
+  &lt;p class="subtitle"&gt;Log in to your SocialPWA account to see the latest posts.&lt;/p&gt;
+
+  &lt;!--
+    VULNERABILITY: No CSRF token on the login form.
+    A malicious site can submit a cross-origin form POST to this endpoint.
+  --&gt;
+  &lt;form action="/" method="POST"&gt;
+    &lt;input type="hidden" name="csrf_token" value="IjRlZTQzY2VmMjMxODU0MDg4ODA3YTk2M2Q3ZjJhYmMwZDk4ZjcwYTAi.ackIcQ.SLVymgfGBwa5dmU7Ah2fHUEFesw" /&gt;
+    &lt;div class="form-group"&gt;
+      &lt;label for="username"&gt;Username&lt;/label&gt;
+      &lt;input
+        type="text"
+        id="username"
+        name="username"
+        placeholder="Enter your username"
+        required
+        autocomplete="username"
+      /&gt;
+    &lt;/div&gt;
+    &lt;div class="form-group"&gt;
+      &lt;label for="password"&gt;Password&lt;/label&gt;
+      &lt;!--
+        VULNERABILITY: autocomplete="current-password" lets the browser save
+        the plaintext password locally. Combined with plaintext DB storage this
+        doubles the exposure.
+      --&gt;
+      &lt;input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="Enter your password"
+        required
+        autocomplete="current-password"
+      /&gt;
+    &lt;/div&gt;
+    &lt;button type="submit" class="btn btn-primary"&gt;Log In&lt;/button&gt;
+  &lt;/form&gt;
+
+  &lt;a href="/signup.html" class="btn btn-secondary"&gt;Don't have an account? Sign Up&lt;/a&gt;
+&lt;/div&gt;
+
+  &lt;/main&gt;
+
+  &lt;footer&gt;
+    &lt;p&gt;
+      &amp;copy; 2025 Unsecure Social PWA &amp;mdash; For Educational Purposes Only &amp;mdash;
+      &lt;a href="https://owasp.org/www-project-top-ten/" target="_blank" rel="noopener"&gt;OWASP Top 10&lt;/a&gt;
+    &lt;/p&gt;
+  &lt;/footer&gt;
+
+  &lt;!-- app.js loaded last so DOM is ready --&gt;
+  &lt;script src="/static/js/app.js"&gt;&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Parameter</th>
+		<td><pre><code>password</code></pre></td>
+	</tr>
+	<tr>
+		<th scope="row">Attack</th>
+		<td><pre><code>ZAP OR 1=1 -- </code></pre></td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>Do not trust client side input, even if there is client side validation in place.</p>
+
+<p>In general, type check all data on the server side.</p>
+
+<p>If the application uses JDBC, use PreparedStatement or CallableStatement, with parameters passed by '?'</p>
+
+<p>If the application uses ASP, use ADO Command Objects with strong type checking and parameterized queries.</p>
+
+<p>If database Stored Procedures can be used, use them.</p>
+
+<p>Do *not* concatenate strings into queries in the stored procedure, or use 'exec', 'exec immediate', or equivalent functionality!</p>
+
+<p>Do not create dynamic SQL queries using simple string concatenation.</p>
+
+<p>Escape all data received from the client.</p>
+
+<p>Apply an 'allow list' of allowed characters, or a 'deny list' of disallowed characters in user input.</p>
+
+<p>Apply the principle of least privilege by using the least privileged database user possible.</p>
+
+<p>In particular, avoid using the 'sa' or 'db-owner' database users. This does not eliminate SQL injection, but minimizes its impact.</p>
+
+<p>Grant the minimum database access that is necessary for the application.</p>
+ </td>
+	</tr>
+</tbody></table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+							</ol>
+						</li>
+						
+					</ol>
+				</li>
+				
+				
+				  
+				 
+				
+				
+				<li id="alerts--risk-2-confidence-3">
+					<h3>
+						<span>Risk</span>=<span class="risk-level">Medium</span>, <span>Confidence</span>=<span class="confidence-level">High</span> <span>(2)</span>
+					</h3>
+					<ol>
+						
+						<li class="alerts--site-li">
+							<h4>
+								<span class="site">https://fictional-tribble-qw4r4gppx5g39rp7-5000.app.github.dev</span> <span>(2)</span>
+							</h4>
+							<ol>
+								
+								<li>
+									<h5>
+										<a href="file:///C:/Users/CatSo/2026-03-29-ZAP-Report-.html#alert-type-1">CSP: Failure to Define Directive with No Fallback</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">GET https://fictional-tribble-qw4r4gppx5g39rp7-5000.app.github.dev/</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tbody><tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://owasp.org/Top10/A05_2021-Security_Misconfiguration/">OWASP_2021_A05</a></span> 
+				</li>
+				<li>
+					 <span>POLICY_QA_STD = </span>
+				</li>
+				<li>
+					 <span>POLICY_PENTEST = </span>
+				</li>
+				<li>
+					<span><a href="https://www.zaproxy.org/docs/desktop/addons/common-library/alerttags/#systemic">SYSTEMIC</a></span> 
+				</li>
+				<li>
+					<span><a href="https://cwe.mitre.org/data/definitions/693.html">CWE-693</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-top-ten/2017/A6_2017-Security_Misconfiguration.html">OWASP_2017_A06</a></span> 
+				</li>
+				<li>
+					 <span>POLICY_DEV_STD = </span>
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>The Content Security Policy fails to define one of the directives that has no fallback. Missing/excluding them is the same as allowing anything.</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Other info</th>
+		<td> 
+<p>The directive(s): frame-ancestors, form-action is/are among the directives that do not fallback to default-src.</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (310 bytes)</summary>
+				
+				<pre><code>GET https://fictional-tribble-qw4r4gppx5g39rp7-5000.app.github.dev/ HTTP/1.1
+host: fictional-tribble-qw4r4gppx5g39rp7-5000.app.github.dev
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+pragma: no-cache
+cache-control: no-cache
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details>
+				<summary>Status line and header section (2454 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 200 OK
+Date: Sun, 29 Mar 2026 11:08:11 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 3119
+Connection: keep-alive
+Cache-Control: no-cache,no-store
+Expires: Thu, 01 Jan 1970 00:00:00 GMT
+Pragma: no-cache
+Set-Cookie: .Tunnels.Relay.WebForwarding.Cookies=CfDJ8NJJuTEdEi5KqensronCVW0owOthbnDBvGjcC0JJnZaitijbHTHbXWcM-ZjFCmmbcCTKcZ65PPvvei2Ikef-iiyMRkox0ldELNzopuB8eqWmxRm2xqV0Y1YXFmv2pEsURMJnVz_muH8I4XlsOcU0hp9ig0s2BMjXmQQ3b8y-aVkRjli28AHRp4ZOrW5lLUpnyIwbJth9FKtggAMXJ5xAT26VWZlBsRe_m_lP2HN_yLrlHjEezPhFJj1sg6j2U4vulxxax5PI-BpdGnIdgyvb744LM1g7NUwMAfqp5S_PkKDNRkOgUmR8dZi2Ctzvv111JJG0UKEYEy1Vgoz1HC3BZFzKO33dUjhgxoeBCU7XPTgX5W0gdwywuALw0fxLGEp0BC-FfIfNvS7HLDRo_dFbAlqZRISoFesR4z_ScyS2MHF8j-igwUqwrJLLr406XksFC0QGKQH_OcBFkPK9mY8ErDOg2m8Dsjayr2QXy-3X1qV27XBKJnkb86AMtJ8RWt1oPbgV9tQ4WLLrR-I9jyRAoxj-6nHxeSzpmQXPpHFt5XoHTxW2tO6NcqumKVyMgcyF19Xiuf61oT-b2hFQqiFzob2MHsyg1_RILqMdxSJnt0t0ynJ60qfIhokBjGLW-hILLVFTJAmrxPyd8zomCy0cn0WwBQ3f4SGmoOd1NXqW9eGEOTG_Ix8Qs-O2rq525YO31T-WyQkhljYwpc-MzqlJjAuyOAw8lFLUGRMklHcyL4fnCcUpy5ZP75VtPbhXo_Ty06nurWHZX8U-pA80wr4BIRzyeFQjA183e8ISlQ-hYv_1WkhMnD8XOy1h91sa1agGEmWsoat2I2fmkeNo1TmY0L5-lvlBe7K6Xl3N5r0E9Jm04ZcqQ72Cu8AN4GsUzHh4f_ly9baWs1OBLtBXX-qMVaIbOAmqs8rtWjPHrZDhOrryMVB0NEyFExWJ6kGXdtusnaq_d_PMOBNfFFBok0V7ojrUatMi06lnB-3oNWj9JmAr; path=/; secure; samesite=none; Partitioned
+Set-Cookie: session=eyJjc3JmX3Rva2VuIjoiZmQyMWQzM2ZiNTM4NTdlOWNjYWU4NTM5ZTdmMTJmMDdmYTcyNTUwMiJ9.ackIGw.Ze8c_xznEaYD4KzfW_UeX5OLC8M; HttpOnly; Path=/
+Vary: Cookie
+X-Content-Type-Options: nosniff
+X-Content-Type-Options: nosniff
+RateLimit-Limit: HttpRequestRatePerPort:1500/m
+RateLimit-Limit: HttpRequestRatePerPort:1500/m
+RateLimit-Remaining: HttpRequestRatePerPort:1499
+RateLimit-Remaining: HttpRequestRatePerPort:1499
+RateLimit-Reset: HttpRequestRatePerPort:53s
+RateLimit-Reset: HttpRequestRatePerPort:14s
+X-Report-Abuse: https://msrc.microsoft.com/report/abuse
+X-Report-Abuse: https://msrc.microsoft.com/report/abuse
+x-ms-ratelimit-limit: 
+x-ms-ratelimit-remaining: 
+x-ms-ratelimit-used: 1
+x-ms-ratelimit-reset: 
+Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; object-src 'none'; base-uri 'self'
+vssaas-request-id: 6d15f514-283c-4564-9cc3-bc2674448b0d
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+x-served-by: tunnels-prod-rel-aue-v3-cluster
+X-Robots-Tag: noindex, nofollow
+Referrer-Policy: same-origin
+
+</code></pre>
+				
+				
+			</details> <details class="response-body">
+				<summary>Response body (3119 bytes)</summary>
+				
+				<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8" /&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+  &lt;title&gt;Login — SocialPWA&lt;/title&gt;
+
+  &lt;!-- VULNERABILITY: No Content-Security-Policy header or meta tag.
+       Inline scripts, eval(), and external resource loading are all unrestricted.
+       A proper CSP would block XSS execution even if injection occurs. --&gt;
+
+  &lt;link rel="stylesheet" href="/static/css/style.css" /&gt;
+  &lt;link rel="manifest"   href="/static/manifest.json" /&gt;
+  &lt;meta name="theme-color" content="#e94560" /&gt;
+  &lt;meta name="csrf-token" content="ImZkMjFkMzNmYjUzODU3ZTljY2FlODUzOWU3ZjEyZjA3ZmE3MjU1MDIi.ackIGw.mm-g4T8TwwY7lIMPyqOxOY1hhTI" /&gt;
+  &lt;meta name="vapid-public-key" content="BEl62iUYgUivxIkv69yViEuiBIa-Ib9-SkvMeAtA3LFgDzkrxZJjSgSnfckjBJuBkr3qBUYIHBQFLXYp5Nksh8U" /&gt;
+  &lt;link rel="icon" href="/static/icons/icon-192.png" type="image/png" /&gt;
+
+  
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;nav class="navbar"&gt;
+    &lt;a href="/" class="brand"&gt;&amp;#9733; SocialPWA&lt;/a&gt;
+    &lt;div class="nav-links"&gt;
+      &lt;a href="/"&gt;Login&lt;/a&gt;
+      &lt;a href="/signup.html"&gt;Sign Up&lt;/a&gt;
+      &lt;a href="/feed.html"&gt;Feed&lt;/a&gt;
+      &lt;a href="/messages"&gt;Messages&lt;/a&gt;
+      &lt;button id="enable-notifications-btn" class="btn btn-sm" hidden&gt;Enable Notifications&lt;/button&gt;
+      &lt;button id="install-btn" class="btn btn-sm"&gt;&amp;#8627; Install App&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/nav&gt;
+
+  &lt;main&gt;
+    
+      
+    
+
+    
+&lt;div class="card"&gt;
+  &lt;h1&gt;Welcome back&lt;/h1&gt;
+  &lt;p class="subtitle"&gt;Log in to your SocialPWA account to see the latest posts.&lt;/p&gt;
+
+  &lt;!--
+    VULNERABILITY: No CSRF token on the login form.
+    A malicious site can submit a cross-origin form POST to this endpoint.
+  --&gt;
+  &lt;form action="/" method="POST"&gt;
+    &lt;input type="hidden" name="csrf_token" value="ImZkMjFkMzNmYjUzODU3ZTljY2FlODUzOWU3ZjEyZjA3ZmE3MjU1MDIi.ackIGw.mm-g4T8TwwY7lIMPyqOxOY1hhTI" /&gt;
+    &lt;div class="form-group"&gt;
+      &lt;label for="username"&gt;Username&lt;/label&gt;
+      &lt;input
+        type="text"
+        id="username"
+        name="username"
+        placeholder="Enter your username"
+        required
+        autocomplete="username"
+      /&gt;
+    &lt;/div&gt;
+    &lt;div class="form-group"&gt;
+      &lt;label for="password"&gt;Password&lt;/label&gt;
+      &lt;!--
+        VULNERABILITY: autocomplete="current-password" lets the browser save
+        the plaintext password locally. Combined with plaintext DB storage this
+        doubles the exposure.
+      --&gt;
+      &lt;input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="Enter your password"
+        required
+        autocomplete="current-password"
+      /&gt;
+    &lt;/div&gt;
+    &lt;button type="submit" class="btn btn-primary"&gt;Log In&lt;/button&gt;
+  &lt;/form&gt;
+
+  &lt;a href="/signup.html" class="btn btn-secondary"&gt;Don't have an account? Sign Up&lt;/a&gt;
+&lt;/div&gt;
+
+  &lt;/main&gt;
+
+  &lt;footer&gt;
+    &lt;p&gt;
+      &amp;copy; 2025 Unsecure Social PWA &amp;mdash; For Educational Purposes Only &amp;mdash;
+      &lt;a href="https://owasp.org/www-project-top-ten/" target="_blank" rel="noopener"&gt;OWASP Top 10&lt;/a&gt;
+    &lt;/p&gt;
+  &lt;/footer&gt;
+
+  &lt;!-- app.js loaded last so DOM is ready --&gt;
+  &lt;script src="/static/js/app.js"&gt;&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Parameter</th>
+		<td><pre><code>Content-Security-Policy</code></pre></td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Evidence</th>
+		<td><pre><code>default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; object-src 'none'; base-uri 'self'</code></pre></td>
+	</tr>
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>Ensure that your web server, application server, load balancer, etc. is properly configured to set the Content-Security-Policy header.</p>
+ </td>
+	</tr>
+</tbody></table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+								<li>
+									<h5>
+										<a href="file:///C:/Users/CatSo/2026-03-29-ZAP-Report-.html#alert-type-2">CSP: style-src unsafe-inline</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">GET https://fictional-tribble-qw4r4gppx5g39rp7-5000.app.github.dev/</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tbody><tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://owasp.org/Top10/A05_2021-Security_Misconfiguration/">OWASP_2021_A05</a></span> 
+				</li>
+				<li>
+					 <span>POLICY_QA_STD = </span>
+				</li>
+				<li>
+					 <span>POLICY_PENTEST = </span>
+				</li>
+				<li>
+					<span><a href="https://www.zaproxy.org/docs/desktop/addons/common-library/alerttags/#systemic">SYSTEMIC</a></span> 
+				</li>
+				<li>
+					<span><a href="https://cwe.mitre.org/data/definitions/693.html">CWE-693</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-top-ten/2017/A6_2017-Security_Misconfiguration.html">OWASP_2017_A06</a></span> 
+				</li>
+				<li>
+					 <span>POLICY_DEV_STD = </span>
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks. Including (but not limited to) Cross Site Scripting (XSS), and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page — covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Other info</th>
+		<td> 
+<p>style-src includes unsafe-inline.</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (310 bytes)</summary>
+				
+				<pre><code>GET https://fictional-tribble-qw4r4gppx5g39rp7-5000.app.github.dev/ HTTP/1.1
+host: fictional-tribble-qw4r4gppx5g39rp7-5000.app.github.dev
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+pragma: no-cache
+cache-control: no-cache
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details>
+				<summary>Status line and header section (2454 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 200 OK
+Date: Sun, 29 Mar 2026 11:08:11 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 3119
+Connection: keep-alive
+Cache-Control: no-cache,no-store
+Expires: Thu, 01 Jan 1970 00:00:00 GMT
+Pragma: no-cache
+Set-Cookie: .Tunnels.Relay.WebForwarding.Cookies=CfDJ8NJJuTEdEi5KqensronCVW0owOthbnDBvGjcC0JJnZaitijbHTHbXWcM-ZjFCmmbcCTKcZ65PPvvei2Ikef-iiyMRkox0ldELNzopuB8eqWmxRm2xqV0Y1YXFmv2pEsURMJnVz_muH8I4XlsOcU0hp9ig0s2BMjXmQQ3b8y-aVkRjli28AHRp4ZOrW5lLUpnyIwbJth9FKtggAMXJ5xAT26VWZlBsRe_m_lP2HN_yLrlHjEezPhFJj1sg6j2U4vulxxax5PI-BpdGnIdgyvb744LM1g7NUwMAfqp5S_PkKDNRkOgUmR8dZi2Ctzvv111JJG0UKEYEy1Vgoz1HC3BZFzKO33dUjhgxoeBCU7XPTgX5W0gdwywuALw0fxLGEp0BC-FfIfNvS7HLDRo_dFbAlqZRISoFesR4z_ScyS2MHF8j-igwUqwrJLLr406XksFC0QGKQH_OcBFkPK9mY8ErDOg2m8Dsjayr2QXy-3X1qV27XBKJnkb86AMtJ8RWt1oPbgV9tQ4WLLrR-I9jyRAoxj-6nHxeSzpmQXPpHFt5XoHTxW2tO6NcqumKVyMgcyF19Xiuf61oT-b2hFQqiFzob2MHsyg1_RILqMdxSJnt0t0ynJ60qfIhokBjGLW-hILLVFTJAmrxPyd8zomCy0cn0WwBQ3f4SGmoOd1NXqW9eGEOTG_Ix8Qs-O2rq525YO31T-WyQkhljYwpc-MzqlJjAuyOAw8lFLUGRMklHcyL4fnCcUpy5ZP75VtPbhXo_Ty06nurWHZX8U-pA80wr4BIRzyeFQjA183e8ISlQ-hYv_1WkhMnD8XOy1h91sa1agGEmWsoat2I2fmkeNo1TmY0L5-lvlBe7K6Xl3N5r0E9Jm04ZcqQ72Cu8AN4GsUzHh4f_ly9baWs1OBLtBXX-qMVaIbOAmqs8rtWjPHrZDhOrryMVB0NEyFExWJ6kGXdtusnaq_d_PMOBNfFFBok0V7ojrUatMi06lnB-3oNWj9JmAr; path=/; secure; samesite=none; Partitioned
+Set-Cookie: session=eyJjc3JmX3Rva2VuIjoiZmQyMWQzM2ZiNTM4NTdlOWNjYWU4NTM5ZTdmMTJmMDdmYTcyNTUwMiJ9.ackIGw.Ze8c_xznEaYD4KzfW_UeX5OLC8M; HttpOnly; Path=/
+Vary: Cookie
+X-Content-Type-Options: nosniff
+X-Content-Type-Options: nosniff
+RateLimit-Limit: HttpRequestRatePerPort:1500/m
+RateLimit-Limit: HttpRequestRatePerPort:1500/m
+RateLimit-Remaining: HttpRequestRatePerPort:1499
+RateLimit-Remaining: HttpRequestRatePerPort:1499
+RateLimit-Reset: HttpRequestRatePerPort:53s
+RateLimit-Reset: HttpRequestRatePerPort:14s
+X-Report-Abuse: https://msrc.microsoft.com/report/abuse
+X-Report-Abuse: https://msrc.microsoft.com/report/abuse
+x-ms-ratelimit-limit: 
+x-ms-ratelimit-remaining: 
+x-ms-ratelimit-used: 1
+x-ms-ratelimit-reset: 
+Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; object-src 'none'; base-uri 'self'
+vssaas-request-id: 6d15f514-283c-4564-9cc3-bc2674448b0d
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+x-served-by: tunnels-prod-rel-aue-v3-cluster
+X-Robots-Tag: noindex, nofollow
+Referrer-Policy: same-origin
+
+</code></pre>
+				
+				
+			</details> <details class="response-body">
+				<summary>Response body (3119 bytes)</summary>
+				
+				<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8" /&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+  &lt;title&gt;Login — SocialPWA&lt;/title&gt;
+
+  &lt;!-- VULNERABILITY: No Content-Security-Policy header or meta tag.
+       Inline scripts, eval(), and external resource loading are all unrestricted.
+       A proper CSP would block XSS execution even if injection occurs. --&gt;
+
+  &lt;link rel="stylesheet" href="/static/css/style.css" /&gt;
+  &lt;link rel="manifest"   href="/static/manifest.json" /&gt;
+  &lt;meta name="theme-color" content="#e94560" /&gt;
+  &lt;meta name="csrf-token" content="ImZkMjFkMzNmYjUzODU3ZTljY2FlODUzOWU3ZjEyZjA3ZmE3MjU1MDIi.ackIGw.mm-g4T8TwwY7lIMPyqOxOY1hhTI" /&gt;
+  &lt;meta name="vapid-public-key" content="BEl62iUYgUivxIkv69yViEuiBIa-Ib9-SkvMeAtA3LFgDzkrxZJjSgSnfckjBJuBkr3qBUYIHBQFLXYp5Nksh8U" /&gt;
+  &lt;link rel="icon" href="/static/icons/icon-192.png" type="image/png" /&gt;
+
+  
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;nav class="navbar"&gt;
+    &lt;a href="/" class="brand"&gt;&amp;#9733; SocialPWA&lt;/a&gt;
+    &lt;div class="nav-links"&gt;
+      &lt;a href="/"&gt;Login&lt;/a&gt;
+      &lt;a href="/signup.html"&gt;Sign Up&lt;/a&gt;
+      &lt;a href="/feed.html"&gt;Feed&lt;/a&gt;
+      &lt;a href="/messages"&gt;Messages&lt;/a&gt;
+      &lt;button id="enable-notifications-btn" class="btn btn-sm" hidden&gt;Enable Notifications&lt;/button&gt;
+      &lt;button id="install-btn" class="btn btn-sm"&gt;&amp;#8627; Install App&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/nav&gt;
+
+  &lt;main&gt;
+    
+      
+    
+
+    
+&lt;div class="card"&gt;
+  &lt;h1&gt;Welcome back&lt;/h1&gt;
+  &lt;p class="subtitle"&gt;Log in to your SocialPWA account to see the latest posts.&lt;/p&gt;
+
+  &lt;!--
+    VULNERABILITY: No CSRF token on the login form.
+    A malicious site can submit a cross-origin form POST to this endpoint.
+  --&gt;
+  &lt;form action="/" method="POST"&gt;
+    &lt;input type="hidden" name="csrf_token" value="ImZkMjFkMzNmYjUzODU3ZTljY2FlODUzOWU3ZjEyZjA3ZmE3MjU1MDIi.ackIGw.mm-g4T8TwwY7lIMPyqOxOY1hhTI" /&gt;
+    &lt;div class="form-group"&gt;
+      &lt;label for="username"&gt;Username&lt;/label&gt;
+      &lt;input
+        type="text"
+        id="username"
+        name="username"
+        placeholder="Enter your username"
+        required
+        autocomplete="username"
+      /&gt;
+    &lt;/div&gt;
+    &lt;div class="form-group"&gt;
+      &lt;label for="password"&gt;Password&lt;/label&gt;
+      &lt;!--
+        VULNERABILITY: autocomplete="current-password" lets the browser save
+        the plaintext password locally. Combined with plaintext DB storage this
+        doubles the exposure.
+      --&gt;
+      &lt;input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="Enter your password"
+        required
+        autocomplete="current-password"
+      /&gt;
+    &lt;/div&gt;
+    &lt;button type="submit" class="btn btn-primary"&gt;Log In&lt;/button&gt;
+  &lt;/form&gt;
+
+  &lt;a href="/signup.html" class="btn btn-secondary"&gt;Don't have an account? Sign Up&lt;/a&gt;
+&lt;/div&gt;
+
+  &lt;/main&gt;
+
+  &lt;footer&gt;
+    &lt;p&gt;
+      &amp;copy; 2025 Unsecure Social PWA &amp;mdash; For Educational Purposes Only &amp;mdash;
+      &lt;a href="https://owasp.org/www-project-top-ten/" target="_blank" rel="noopener"&gt;OWASP Top 10&lt;/a&gt;
+    &lt;/p&gt;
+  &lt;/footer&gt;
+
+  &lt;!-- app.js loaded last so DOM is ready --&gt;
+  &lt;script src="/static/js/app.js"&gt;&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Parameter</th>
+		<td><pre><code>Content-Security-Policy</code></pre></td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Evidence</th>
+		<td><pre><code>default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; object-src 'none'; base-uri 'self'</code></pre></td>
+	</tr>
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>Ensure that your web server, application server, load balancer, etc. is properly configured to set the Content-Security-Policy header.</p>
+ </td>
+	</tr>
+</tbody></table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+							</ol>
+						</li>
+						
+					</ol>
+				</li>
+				
+				<li id="alerts--risk-2-confidence-2">
+					<h3>
+						<span>Risk</span>=<span class="risk-level">Medium</span>, <span>Confidence</span>=<span class="confidence-level">Medium</span> <span>(1)</span>
+					</h3>
+					<ol>
+						
+						<li class="alerts--site-li">
+							<h4>
+								<span class="site">https://fictional-tribble-qw4r4gppx5g39rp7-5000.app.github.dev</span> <span>(1)</span>
+							</h4>
+							<ol>
+								
+								<li>
+									<h5>
+										<a href="file:///C:/Users/CatSo/2026-03-29-ZAP-Report-.html#alert-type-3">Missing Anti-clickjacking Header</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">GET https://fictional-tribble-qw4r4gppx5g39rp7-5000.app.github.dev/</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tbody><tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://owasp.org/Top10/A05_2021-Security_Misconfiguration/">OWASP_2021_A05</a></span> 
+				</li>
+				<li>
+					 <span>POLICY_QA_STD = </span>
+				</li>
+				<li>
+					 <span>POLICY_PENTEST = </span>
+				</li>
+				<li>
+					<span><a href="https://cwe.mitre.org/data/definitions/1021.html">CWE-1021</a></span> 
+				</li>
+				<li>
+					<span><a href="https://www.zaproxy.org/docs/desktop/addons/common-library/alerttags/#systemic">SYSTEMIC</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-web-security-testing-guide/v42/4-Web_Application_Security_Testing/11-Client-side_Testing/09-Testing_for_Clickjacking">WSTG-v42-CLNT-09</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-top-ten/2017/A6_2017-Security_Misconfiguration.html">OWASP_2017_A06</a></span> 
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>The response does not protect against 'ClickJacking' attacks. It should include either Content-Security-Policy with 'frame-ancestors' directive or X-Frame-Options.</p>
+ </td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (310 bytes)</summary>
+				
+				<pre><code>GET https://fictional-tribble-qw4r4gppx5g39rp7-5000.app.github.dev/ HTTP/1.1
+host: fictional-tribble-qw4r4gppx5g39rp7-5000.app.github.dev
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+pragma: no-cache
+cache-control: no-cache
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details>
+				<summary>Status line and header section (2454 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 200 OK
+Date: Sun, 29 Mar 2026 11:08:11 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 3119
+Connection: keep-alive
+Cache-Control: no-cache,no-store
+Expires: Thu, 01 Jan 1970 00:00:00 GMT
+Pragma: no-cache
+Set-Cookie: .Tunnels.Relay.WebForwarding.Cookies=CfDJ8NJJuTEdEi5KqensronCVW0owOthbnDBvGjcC0JJnZaitijbHTHbXWcM-ZjFCmmbcCTKcZ65PPvvei2Ikef-iiyMRkox0ldELNzopuB8eqWmxRm2xqV0Y1YXFmv2pEsURMJnVz_muH8I4XlsOcU0hp9ig0s2BMjXmQQ3b8y-aVkRjli28AHRp4ZOrW5lLUpnyIwbJth9FKtggAMXJ5xAT26VWZlBsRe_m_lP2HN_yLrlHjEezPhFJj1sg6j2U4vulxxax5PI-BpdGnIdgyvb744LM1g7NUwMAfqp5S_PkKDNRkOgUmR8dZi2Ctzvv111JJG0UKEYEy1Vgoz1HC3BZFzKO33dUjhgxoeBCU7XPTgX5W0gdwywuALw0fxLGEp0BC-FfIfNvS7HLDRo_dFbAlqZRISoFesR4z_ScyS2MHF8j-igwUqwrJLLr406XksFC0QGKQH_OcBFkPK9mY8ErDOg2m8Dsjayr2QXy-3X1qV27XBKJnkb86AMtJ8RWt1oPbgV9tQ4WLLrR-I9jyRAoxj-6nHxeSzpmQXPpHFt5XoHTxW2tO6NcqumKVyMgcyF19Xiuf61oT-b2hFQqiFzob2MHsyg1_RILqMdxSJnt0t0ynJ60qfIhokBjGLW-hILLVFTJAmrxPyd8zomCy0cn0WwBQ3f4SGmoOd1NXqW9eGEOTG_Ix8Qs-O2rq525YO31T-WyQkhljYwpc-MzqlJjAuyOAw8lFLUGRMklHcyL4fnCcUpy5ZP75VtPbhXo_Ty06nurWHZX8U-pA80wr4BIRzyeFQjA183e8ISlQ-hYv_1WkhMnD8XOy1h91sa1agGEmWsoat2I2fmkeNo1TmY0L5-lvlBe7K6Xl3N5r0E9Jm04ZcqQ72Cu8AN4GsUzHh4f_ly9baWs1OBLtBXX-qMVaIbOAmqs8rtWjPHrZDhOrryMVB0NEyFExWJ6kGXdtusnaq_d_PMOBNfFFBok0V7ojrUatMi06lnB-3oNWj9JmAr; path=/; secure; samesite=none; Partitioned
+Set-Cookie: session=eyJjc3JmX3Rva2VuIjoiZmQyMWQzM2ZiNTM4NTdlOWNjYWU4NTM5ZTdmMTJmMDdmYTcyNTUwMiJ9.ackIGw.Ze8c_xznEaYD4KzfW_UeX5OLC8M; HttpOnly; Path=/
+Vary: Cookie
+X-Content-Type-Options: nosniff
+X-Content-Type-Options: nosniff
+RateLimit-Limit: HttpRequestRatePerPort:1500/m
+RateLimit-Limit: HttpRequestRatePerPort:1500/m
+RateLimit-Remaining: HttpRequestRatePerPort:1499
+RateLimit-Remaining: HttpRequestRatePerPort:1499
+RateLimit-Reset: HttpRequestRatePerPort:53s
+RateLimit-Reset: HttpRequestRatePerPort:14s
+X-Report-Abuse: https://msrc.microsoft.com/report/abuse
+X-Report-Abuse: https://msrc.microsoft.com/report/abuse
+x-ms-ratelimit-limit: 
+x-ms-ratelimit-remaining: 
+x-ms-ratelimit-used: 1
+x-ms-ratelimit-reset: 
+Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; object-src 'none'; base-uri 'self'
+vssaas-request-id: 6d15f514-283c-4564-9cc3-bc2674448b0d
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+x-served-by: tunnels-prod-rel-aue-v3-cluster
+X-Robots-Tag: noindex, nofollow
+Referrer-Policy: same-origin
+
+</code></pre>
+				
+				
+			</details> <details class="response-body">
+				<summary>Response body (3119 bytes)</summary>
+				
+				<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8" /&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+  &lt;title&gt;Login — SocialPWA&lt;/title&gt;
+
+  &lt;!-- VULNERABILITY: No Content-Security-Policy header or meta tag.
+       Inline scripts, eval(), and external resource loading are all unrestricted.
+       A proper CSP would block XSS execution even if injection occurs. --&gt;
+
+  &lt;link rel="stylesheet" href="/static/css/style.css" /&gt;
+  &lt;link rel="manifest"   href="/static/manifest.json" /&gt;
+  &lt;meta name="theme-color" content="#e94560" /&gt;
+  &lt;meta name="csrf-token" content="ImZkMjFkMzNmYjUzODU3ZTljY2FlODUzOWU3ZjEyZjA3ZmE3MjU1MDIi.ackIGw.mm-g4T8TwwY7lIMPyqOxOY1hhTI" /&gt;
+  &lt;meta name="vapid-public-key" content="BEl62iUYgUivxIkv69yViEuiBIa-Ib9-SkvMeAtA3LFgDzkrxZJjSgSnfckjBJuBkr3qBUYIHBQFLXYp5Nksh8U" /&gt;
+  &lt;link rel="icon" href="/static/icons/icon-192.png" type="image/png" /&gt;
+
+  
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;nav class="navbar"&gt;
+    &lt;a href="/" class="brand"&gt;&amp;#9733; SocialPWA&lt;/a&gt;
+    &lt;div class="nav-links"&gt;
+      &lt;a href="/"&gt;Login&lt;/a&gt;
+      &lt;a href="/signup.html"&gt;Sign Up&lt;/a&gt;
+      &lt;a href="/feed.html"&gt;Feed&lt;/a&gt;
+      &lt;a href="/messages"&gt;Messages&lt;/a&gt;
+      &lt;button id="enable-notifications-btn" class="btn btn-sm" hidden&gt;Enable Notifications&lt;/button&gt;
+      &lt;button id="install-btn" class="btn btn-sm"&gt;&amp;#8627; Install App&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/nav&gt;
+
+  &lt;main&gt;
+    
+      
+    
+
+    
+&lt;div class="card"&gt;
+  &lt;h1&gt;Welcome back&lt;/h1&gt;
+  &lt;p class="subtitle"&gt;Log in to your SocialPWA account to see the latest posts.&lt;/p&gt;
+
+  &lt;!--
+    VULNERABILITY: No CSRF token on the login form.
+    A malicious site can submit a cross-origin form POST to this endpoint.
+  --&gt;
+  &lt;form action="/" method="POST"&gt;
+    &lt;input type="hidden" name="csrf_token" value="ImZkMjFkMzNmYjUzODU3ZTljY2FlODUzOWU3ZjEyZjA3ZmE3MjU1MDIi.ackIGw.mm-g4T8TwwY7lIMPyqOxOY1hhTI" /&gt;
+    &lt;div class="form-group"&gt;
+      &lt;label for="username"&gt;Username&lt;/label&gt;
+      &lt;input
+        type="text"
+        id="username"
+        name="username"
+        placeholder="Enter your username"
+        required
+        autocomplete="username"
+      /&gt;
+    &lt;/div&gt;
+    &lt;div class="form-group"&gt;
+      &lt;label for="password"&gt;Password&lt;/label&gt;
+      &lt;!--
+        VULNERABILITY: autocomplete="current-password" lets the browser save
+        the plaintext password locally. Combined with plaintext DB storage this
+        doubles the exposure.
+      --&gt;
+      &lt;input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="Enter your password"
+        required
+        autocomplete="current-password"
+      /&gt;
+    &lt;/div&gt;
+    &lt;button type="submit" class="btn btn-primary"&gt;Log In&lt;/button&gt;
+  &lt;/form&gt;
+
+  &lt;a href="/signup.html" class="btn btn-secondary"&gt;Don't have an account? Sign Up&lt;/a&gt;
+&lt;/div&gt;
+
+  &lt;/main&gt;
+
+  &lt;footer&gt;
+    &lt;p&gt;
+      &amp;copy; 2025 Unsecure Social PWA &amp;mdash; For Educational Purposes Only &amp;mdash;
+      &lt;a href="https://owasp.org/www-project-top-ten/" target="_blank" rel="noopener"&gt;OWASP Top 10&lt;/a&gt;
+    &lt;/p&gt;
+  &lt;/footer&gt;
+
+  &lt;!-- app.js loaded last so DOM is ready --&gt;
+  &lt;script src="/static/js/app.js"&gt;&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Parameter</th>
+		<td><pre><code>x-frame-options</code></pre></td>
+	</tr>
+	
+	
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>Modern Web browsers support the Content-Security-Policy and X-Frame-Options HTTP headers. Ensure one of them is set on all web pages returned by your site/app.</p>
+
+<p>If you expect the page to be framed only by pages on your server (e.g. it's part of a FRAMESET) then you'll want to use SAMEORIGIN, otherwise if you never expect the page to be framed, you should use DENY. Alternatively consider implementing Content Security Policy's "frame-ancestors" directive.</p>
+ </td>
+	</tr>
+</tbody></table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+							</ol>
+						</li>
+						
+					</ol>
+				</li>
+				
+				
+				  
+				 
+				
+				
+				
+				
+				<li id="alerts--risk-1-confidence-2">
+					<h3>
+						<span>Risk</span>=<span class="risk-level">Low</span>, <span>Confidence</span>=<span class="confidence-level">Medium</span> <span>(4)</span>
+					</h3>
+					<ol>
+						
+						<li class="alerts--site-li">
+							<h4>
+								<span class="site">https://fictional-tribble-qw4r4gppx5g39rp7-5000.app.github.dev</span> <span>(4)</span>
+							</h4>
+							<ol>
+								
+								<li>
+									<h5>
+										<a href="file:///C:/Users/CatSo/2026-03-29-ZAP-Report-.html#alert-type-4">Cookie No HttpOnly Flag</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">GET https://fictional-tribble-qw4r4gppx5g39rp7-5000.app.github.dev/</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tbody><tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://cwe.mitre.org/data/definitions/1004.html">CWE-1004</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/Top10/A05_2021-Security_Misconfiguration/">OWASP_2021_A05</a></span> 
+				</li>
+				<li>
+					 <span>POLICY_QA_STD = </span>
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-web-security-testing-guide/v42/4-Web_Application_Security_Testing/06-Session_Management_Testing/02-Testing_for_Cookies_Attributes">WSTG-v42-SESS-02</a></span> 
+				</li>
+				<li>
+					 <span>POLICY_PENTEST = </span>
+				</li>
+				<li>
+					<span><a href="https://www.zaproxy.org/docs/desktop/addons/common-library/alerttags/#systemic">SYSTEMIC</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-top-ten/2017/A6_2017-Security_Misconfiguration.html">OWASP_2017_A06</a></span> 
+				</li>
+				<li>
+					 <span>POLICY_DEV_STD = </span>
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>A cookie has been set without the HttpOnly flag, which means that the cookie can be accessed by JavaScript. If a malicious script can be run on this page then the cookie will be accessible and can be transmitted to another site. If this is a session cookie then session hijacking may be possible.</p>
+ </td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (310 bytes)</summary>
+				
+				<pre><code>GET https://fictional-tribble-qw4r4gppx5g39rp7-5000.app.github.dev/ HTTP/1.1
+host: fictional-tribble-qw4r4gppx5g39rp7-5000.app.github.dev
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+pragma: no-cache
+cache-control: no-cache
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details>
+				<summary>Status line and header section (2454 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 200 OK
+Date: Sun, 29 Mar 2026 11:08:11 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 3119
+Connection: keep-alive
+Cache-Control: no-cache,no-store
+Expires: Thu, 01 Jan 1970 00:00:00 GMT
+Pragma: no-cache
+Set-Cookie: .Tunnels.Relay.WebForwarding.Cookies=CfDJ8NJJuTEdEi5KqensronCVW0owOthbnDBvGjcC0JJnZaitijbHTHbXWcM-ZjFCmmbcCTKcZ65PPvvei2Ikef-iiyMRkox0ldELNzopuB8eqWmxRm2xqV0Y1YXFmv2pEsURMJnVz_muH8I4XlsOcU0hp9ig0s2BMjXmQQ3b8y-aVkRjli28AHRp4ZOrW5lLUpnyIwbJth9FKtggAMXJ5xAT26VWZlBsRe_m_lP2HN_yLrlHjEezPhFJj1sg6j2U4vulxxax5PI-BpdGnIdgyvb744LM1g7NUwMAfqp5S_PkKDNRkOgUmR8dZi2Ctzvv111JJG0UKEYEy1Vgoz1HC3BZFzKO33dUjhgxoeBCU7XPTgX5W0gdwywuALw0fxLGEp0BC-FfIfNvS7HLDRo_dFbAlqZRISoFesR4z_ScyS2MHF8j-igwUqwrJLLr406XksFC0QGKQH_OcBFkPK9mY8ErDOg2m8Dsjayr2QXy-3X1qV27XBKJnkb86AMtJ8RWt1oPbgV9tQ4WLLrR-I9jyRAoxj-6nHxeSzpmQXPpHFt5XoHTxW2tO6NcqumKVyMgcyF19Xiuf61oT-b2hFQqiFzob2MHsyg1_RILqMdxSJnt0t0ynJ60qfIhokBjGLW-hILLVFTJAmrxPyd8zomCy0cn0WwBQ3f4SGmoOd1NXqW9eGEOTG_Ix8Qs-O2rq525YO31T-WyQkhljYwpc-MzqlJjAuyOAw8lFLUGRMklHcyL4fnCcUpy5ZP75VtPbhXo_Ty06nurWHZX8U-pA80wr4BIRzyeFQjA183e8ISlQ-hYv_1WkhMnD8XOy1h91sa1agGEmWsoat2I2fmkeNo1TmY0L5-lvlBe7K6Xl3N5r0E9Jm04ZcqQ72Cu8AN4GsUzHh4f_ly9baWs1OBLtBXX-qMVaIbOAmqs8rtWjPHrZDhOrryMVB0NEyFExWJ6kGXdtusnaq_d_PMOBNfFFBok0V7ojrUatMi06lnB-3oNWj9JmAr; path=/; secure; samesite=none; Partitioned
+Set-Cookie: session=eyJjc3JmX3Rva2VuIjoiZmQyMWQzM2ZiNTM4NTdlOWNjYWU4NTM5ZTdmMTJmMDdmYTcyNTUwMiJ9.ackIGw.Ze8c_xznEaYD4KzfW_UeX5OLC8M; HttpOnly; Path=/
+Vary: Cookie
+X-Content-Type-Options: nosniff
+X-Content-Type-Options: nosniff
+RateLimit-Limit: HttpRequestRatePerPort:1500/m
+RateLimit-Limit: HttpRequestRatePerPort:1500/m
+RateLimit-Remaining: HttpRequestRatePerPort:1499
+RateLimit-Remaining: HttpRequestRatePerPort:1499
+RateLimit-Reset: HttpRequestRatePerPort:53s
+RateLimit-Reset: HttpRequestRatePerPort:14s
+X-Report-Abuse: https://msrc.microsoft.com/report/abuse
+X-Report-Abuse: https://msrc.microsoft.com/report/abuse
+x-ms-ratelimit-limit: 
+x-ms-ratelimit-remaining: 
+x-ms-ratelimit-used: 1
+x-ms-ratelimit-reset: 
+Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; object-src 'none'; base-uri 'self'
+vssaas-request-id: 6d15f514-283c-4564-9cc3-bc2674448b0d
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+x-served-by: tunnels-prod-rel-aue-v3-cluster
+X-Robots-Tag: noindex, nofollow
+Referrer-Policy: same-origin
+
+</code></pre>
+				
+				
+			</details> <details class="response-body">
+				<summary>Response body (3119 bytes)</summary>
+				
+				<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8" /&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+  &lt;title&gt;Login — SocialPWA&lt;/title&gt;
+
+  &lt;!-- VULNERABILITY: No Content-Security-Policy header or meta tag.
+       Inline scripts, eval(), and external resource loading are all unrestricted.
+       A proper CSP would block XSS execution even if injection occurs. --&gt;
+
+  &lt;link rel="stylesheet" href="/static/css/style.css" /&gt;
+  &lt;link rel="manifest"   href="/static/manifest.json" /&gt;
+  &lt;meta name="theme-color" content="#e94560" /&gt;
+  &lt;meta name="csrf-token" content="ImZkMjFkMzNmYjUzODU3ZTljY2FlODUzOWU3ZjEyZjA3ZmE3MjU1MDIi.ackIGw.mm-g4T8TwwY7lIMPyqOxOY1hhTI" /&gt;
+  &lt;meta name="vapid-public-key" content="BEl62iUYgUivxIkv69yViEuiBIa-Ib9-SkvMeAtA3LFgDzkrxZJjSgSnfckjBJuBkr3qBUYIHBQFLXYp5Nksh8U" /&gt;
+  &lt;link rel="icon" href="/static/icons/icon-192.png" type="image/png" /&gt;
+
+  
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;nav class="navbar"&gt;
+    &lt;a href="/" class="brand"&gt;&amp;#9733; SocialPWA&lt;/a&gt;
+    &lt;div class="nav-links"&gt;
+      &lt;a href="/"&gt;Login&lt;/a&gt;
+      &lt;a href="/signup.html"&gt;Sign Up&lt;/a&gt;
+      &lt;a href="/feed.html"&gt;Feed&lt;/a&gt;
+      &lt;a href="/messages"&gt;Messages&lt;/a&gt;
+      &lt;button id="enable-notifications-btn" class="btn btn-sm" hidden&gt;Enable Notifications&lt;/button&gt;
+      &lt;button id="install-btn" class="btn btn-sm"&gt;&amp;#8627; Install App&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/nav&gt;
+
+  &lt;main&gt;
+    
+      
+    
+
+    
+&lt;div class="card"&gt;
+  &lt;h1&gt;Welcome back&lt;/h1&gt;
+  &lt;p class="subtitle"&gt;Log in to your SocialPWA account to see the latest posts.&lt;/p&gt;
+
+  &lt;!--
+    VULNERABILITY: No CSRF token on the login form.
+    A malicious site can submit a cross-origin form POST to this endpoint.
+  --&gt;
+  &lt;form action="/" method="POST"&gt;
+    &lt;input type="hidden" name="csrf_token" value="ImZkMjFkMzNmYjUzODU3ZTljY2FlODUzOWU3ZjEyZjA3ZmE3MjU1MDIi.ackIGw.mm-g4T8TwwY7lIMPyqOxOY1hhTI" /&gt;
+    &lt;div class="form-group"&gt;
+      &lt;label for="username"&gt;Username&lt;/label&gt;
+      &lt;input
+        type="text"
+        id="username"
+        name="username"
+        placeholder="Enter your username"
+        required
+        autocomplete="username"
+      /&gt;
+    &lt;/div&gt;
+    &lt;div class="form-group"&gt;
+      &lt;label for="password"&gt;Password&lt;/label&gt;
+      &lt;!--
+        VULNERABILITY: autocomplete="current-password" lets the browser save
+        the plaintext password locally. Combined with plaintext DB storage this
+        doubles the exposure.
+      --&gt;
+      &lt;input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="Enter your password"
+        required
+        autocomplete="current-password"
+      /&gt;
+    &lt;/div&gt;
+    &lt;button type="submit" class="btn btn-primary"&gt;Log In&lt;/button&gt;
+  &lt;/form&gt;
+
+  &lt;a href="/signup.html" class="btn btn-secondary"&gt;Don't have an account? Sign Up&lt;/a&gt;
+&lt;/div&gt;
+
+  &lt;/main&gt;
+
+  &lt;footer&gt;
+    &lt;p&gt;
+      &amp;copy; 2025 Unsecure Social PWA &amp;mdash; For Educational Purposes Only &amp;mdash;
+      &lt;a href="https://owasp.org/www-project-top-ten/" target="_blank" rel="noopener"&gt;OWASP Top 10&lt;/a&gt;
+    &lt;/p&gt;
+  &lt;/footer&gt;
+
+  &lt;!-- app.js loaded last so DOM is ready --&gt;
+  &lt;script src="/static/js/app.js"&gt;&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Parameter</th>
+		<td><pre><code>.Tunnels.Relay.WebForwarding.Cookies</code></pre></td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Evidence</th>
+		<td><pre><code>Set-Cookie: .Tunnels.Relay.WebForwarding.Cookies</code></pre></td>
+	</tr>
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>Ensure that the HttpOnly flag is set for all cookies.</p>
+ </td>
+	</tr>
+</tbody></table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+								<li>
+									<h5>
+										<a href="file:///C:/Users/CatSo/2026-03-29-ZAP-Report-.html#alert-type-5">Cookie Without Secure Flag</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">GET https://fictional-tribble-qw4r4gppx5g39rp7-5000.app.github.dev/</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tbody><tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://owasp.org/Top10/A05_2021-Security_Misconfiguration/">OWASP_2021_A05</a></span> 
+				</li>
+				<li>
+					 <span>POLICY_QA_STD = </span>
+				</li>
+				<li>
+					<span><a href="https://cwe.mitre.org/data/definitions/614.html">CWE-614</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-web-security-testing-guide/v42/4-Web_Application_Security_Testing/06-Session_Management_Testing/02-Testing_for_Cookies_Attributes">WSTG-v42-SESS-02</a></span> 
+				</li>
+				<li>
+					 <span>POLICY_PENTEST = </span>
+				</li>
+				<li>
+					<span><a href="https://www.zaproxy.org/docs/desktop/addons/common-library/alerttags/#systemic">SYSTEMIC</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-top-ten/2017/A6_2017-Security_Misconfiguration.html">OWASP_2017_A06</a></span> 
+				</li>
+				<li>
+					 <span>POLICY_DEV_STD = </span>
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>A cookie has been set without the secure flag, which means that the cookie can be accessed via unencrypted connections.</p>
+ </td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (310 bytes)</summary>
+				
+				<pre><code>GET https://fictional-tribble-qw4r4gppx5g39rp7-5000.app.github.dev/ HTTP/1.1
+host: fictional-tribble-qw4r4gppx5g39rp7-5000.app.github.dev
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+pragma: no-cache
+cache-control: no-cache
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details>
+				<summary>Status line and header section (2454 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 200 OK
+Date: Sun, 29 Mar 2026 11:08:11 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 3119
+Connection: keep-alive
+Cache-Control: no-cache,no-store
+Expires: Thu, 01 Jan 1970 00:00:00 GMT
+Pragma: no-cache
+Set-Cookie: .Tunnels.Relay.WebForwarding.Cookies=CfDJ8NJJuTEdEi5KqensronCVW0owOthbnDBvGjcC0JJnZaitijbHTHbXWcM-ZjFCmmbcCTKcZ65PPvvei2Ikef-iiyMRkox0ldELNzopuB8eqWmxRm2xqV0Y1YXFmv2pEsURMJnVz_muH8I4XlsOcU0hp9ig0s2BMjXmQQ3b8y-aVkRjli28AHRp4ZOrW5lLUpnyIwbJth9FKtggAMXJ5xAT26VWZlBsRe_m_lP2HN_yLrlHjEezPhFJj1sg6j2U4vulxxax5PI-BpdGnIdgyvb744LM1g7NUwMAfqp5S_PkKDNRkOgUmR8dZi2Ctzvv111JJG0UKEYEy1Vgoz1HC3BZFzKO33dUjhgxoeBCU7XPTgX5W0gdwywuALw0fxLGEp0BC-FfIfNvS7HLDRo_dFbAlqZRISoFesR4z_ScyS2MHF8j-igwUqwrJLLr406XksFC0QGKQH_OcBFkPK9mY8ErDOg2m8Dsjayr2QXy-3X1qV27XBKJnkb86AMtJ8RWt1oPbgV9tQ4WLLrR-I9jyRAoxj-6nHxeSzpmQXPpHFt5XoHTxW2tO6NcqumKVyMgcyF19Xiuf61oT-b2hFQqiFzob2MHsyg1_RILqMdxSJnt0t0ynJ60qfIhokBjGLW-hILLVFTJAmrxPyd8zomCy0cn0WwBQ3f4SGmoOd1NXqW9eGEOTG_Ix8Qs-O2rq525YO31T-WyQkhljYwpc-MzqlJjAuyOAw8lFLUGRMklHcyL4fnCcUpy5ZP75VtPbhXo_Ty06nurWHZX8U-pA80wr4BIRzyeFQjA183e8ISlQ-hYv_1WkhMnD8XOy1h91sa1agGEmWsoat2I2fmkeNo1TmY0L5-lvlBe7K6Xl3N5r0E9Jm04ZcqQ72Cu8AN4GsUzHh4f_ly9baWs1OBLtBXX-qMVaIbOAmqs8rtWjPHrZDhOrryMVB0NEyFExWJ6kGXdtusnaq_d_PMOBNfFFBok0V7ojrUatMi06lnB-3oNWj9JmAr; path=/; secure; samesite=none; Partitioned
+Set-Cookie: session=eyJjc3JmX3Rva2VuIjoiZmQyMWQzM2ZiNTM4NTdlOWNjYWU4NTM5ZTdmMTJmMDdmYTcyNTUwMiJ9.ackIGw.Ze8c_xznEaYD4KzfW_UeX5OLC8M; HttpOnly; Path=/
+Vary: Cookie
+X-Content-Type-Options: nosniff
+X-Content-Type-Options: nosniff
+RateLimit-Limit: HttpRequestRatePerPort:1500/m
+RateLimit-Limit: HttpRequestRatePerPort:1500/m
+RateLimit-Remaining: HttpRequestRatePerPort:1499
+RateLimit-Remaining: HttpRequestRatePerPort:1499
+RateLimit-Reset: HttpRequestRatePerPort:53s
+RateLimit-Reset: HttpRequestRatePerPort:14s
+X-Report-Abuse: https://msrc.microsoft.com/report/abuse
+X-Report-Abuse: https://msrc.microsoft.com/report/abuse
+x-ms-ratelimit-limit: 
+x-ms-ratelimit-remaining: 
+x-ms-ratelimit-used: 1
+x-ms-ratelimit-reset: 
+Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; object-src 'none'; base-uri 'self'
+vssaas-request-id: 6d15f514-283c-4564-9cc3-bc2674448b0d
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+x-served-by: tunnels-prod-rel-aue-v3-cluster
+X-Robots-Tag: noindex, nofollow
+Referrer-Policy: same-origin
+
+</code></pre>
+				
+				
+			</details> <details class="response-body">
+				<summary>Response body (3119 bytes)</summary>
+				
+				<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8" /&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+  &lt;title&gt;Login — SocialPWA&lt;/title&gt;
+
+  &lt;!-- VULNERABILITY: No Content-Security-Policy header or meta tag.
+       Inline scripts, eval(), and external resource loading are all unrestricted.
+       A proper CSP would block XSS execution even if injection occurs. --&gt;
+
+  &lt;link rel="stylesheet" href="/static/css/style.css" /&gt;
+  &lt;link rel="manifest"   href="/static/manifest.json" /&gt;
+  &lt;meta name="theme-color" content="#e94560" /&gt;
+  &lt;meta name="csrf-token" content="ImZkMjFkMzNmYjUzODU3ZTljY2FlODUzOWU3ZjEyZjA3ZmE3MjU1MDIi.ackIGw.mm-g4T8TwwY7lIMPyqOxOY1hhTI" /&gt;
+  &lt;meta name="vapid-public-key" content="BEl62iUYgUivxIkv69yViEuiBIa-Ib9-SkvMeAtA3LFgDzkrxZJjSgSnfckjBJuBkr3qBUYIHBQFLXYp5Nksh8U" /&gt;
+  &lt;link rel="icon" href="/static/icons/icon-192.png" type="image/png" /&gt;
+
+  
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;nav class="navbar"&gt;
+    &lt;a href="/" class="brand"&gt;&amp;#9733; SocialPWA&lt;/a&gt;
+    &lt;div class="nav-links"&gt;
+      &lt;a href="/"&gt;Login&lt;/a&gt;
+      &lt;a href="/signup.html"&gt;Sign Up&lt;/a&gt;
+      &lt;a href="/feed.html"&gt;Feed&lt;/a&gt;
+      &lt;a href="/messages"&gt;Messages&lt;/a&gt;
+      &lt;button id="enable-notifications-btn" class="btn btn-sm" hidden&gt;Enable Notifications&lt;/button&gt;
+      &lt;button id="install-btn" class="btn btn-sm"&gt;&amp;#8627; Install App&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/nav&gt;
+
+  &lt;main&gt;
+    
+      
+    
+
+    
+&lt;div class="card"&gt;
+  &lt;h1&gt;Welcome back&lt;/h1&gt;
+  &lt;p class="subtitle"&gt;Log in to your SocialPWA account to see the latest posts.&lt;/p&gt;
+
+  &lt;!--
+    VULNERABILITY: No CSRF token on the login form.
+    A malicious site can submit a cross-origin form POST to this endpoint.
+  --&gt;
+  &lt;form action="/" method="POST"&gt;
+    &lt;input type="hidden" name="csrf_token" value="ImZkMjFkMzNmYjUzODU3ZTljY2FlODUzOWU3ZjEyZjA3ZmE3MjU1MDIi.ackIGw.mm-g4T8TwwY7lIMPyqOxOY1hhTI" /&gt;
+    &lt;div class="form-group"&gt;
+      &lt;label for="username"&gt;Username&lt;/label&gt;
+      &lt;input
+        type="text"
+        id="username"
+        name="username"
+        placeholder="Enter your username"
+        required
+        autocomplete="username"
+      /&gt;
+    &lt;/div&gt;
+    &lt;div class="form-group"&gt;
+      &lt;label for="password"&gt;Password&lt;/label&gt;
+      &lt;!--
+        VULNERABILITY: autocomplete="current-password" lets the browser save
+        the plaintext password locally. Combined with plaintext DB storage this
+        doubles the exposure.
+      --&gt;
+      &lt;input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="Enter your password"
+        required
+        autocomplete="current-password"
+      /&gt;
+    &lt;/div&gt;
+    &lt;button type="submit" class="btn btn-primary"&gt;Log In&lt;/button&gt;
+  &lt;/form&gt;
+
+  &lt;a href="/signup.html" class="btn btn-secondary"&gt;Don't have an account? Sign Up&lt;/a&gt;
+&lt;/div&gt;
+
+  &lt;/main&gt;
+
+  &lt;footer&gt;
+    &lt;p&gt;
+      &amp;copy; 2025 Unsecure Social PWA &amp;mdash; For Educational Purposes Only &amp;mdash;
+      &lt;a href="https://owasp.org/www-project-top-ten/" target="_blank" rel="noopener"&gt;OWASP Top 10&lt;/a&gt;
+    &lt;/p&gt;
+  &lt;/footer&gt;
+
+  &lt;!-- app.js loaded last so DOM is ready --&gt;
+  &lt;script src="/static/js/app.js"&gt;&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Parameter</th>
+		<td><pre><code>session</code></pre></td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Evidence</th>
+		<td><pre><code>Set-Cookie: session</code></pre></td>
+	</tr>
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>Whenever a cookie contains sensitive information or is a session token, then it should always be passed using an encrypted channel. Ensure that the secure flag is set for cookies containing such sensitive information.</p>
+ </td>
+	</tr>
+</tbody></table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+								<li>
+									<h5>
+										<a href="file:///C:/Users/CatSo/2026-03-29-ZAP-Report-.html#alert-type-6">Cookie with SameSite Attribute None</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">GET https://fictional-tribble-qw4r4gppx5g39rp7-5000.app.github.dev/</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tbody><tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://owasp.org/Top10/A01_2021-Broken_Access_Control/">OWASP_2021_A01</a></span> 
+				</li>
+				<li>
+					 <span>POLICY_QA_STD = </span>
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-web-security-testing-guide/v42/4-Web_Application_Security_Testing/06-Session_Management_Testing/02-Testing_for_Cookies_Attributes">WSTG-v42-SESS-02</a></span> 
+				</li>
+				<li>
+					 <span>POLICY_PENTEST = </span>
+				</li>
+				<li>
+					<span><a href="https://www.zaproxy.org/docs/desktop/addons/common-library/alerttags/#systemic">SYSTEMIC</a></span> 
+				</li>
+				<li>
+					<span><a href="https://cwe.mitre.org/data/definitions/1275.html">CWE-1275</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-top-ten/2017/A5_2017-Broken_Access_Control.html">OWASP_2017_A05</a></span> 
+				</li>
+				<li>
+					 <span>POLICY_DEV_STD = </span>
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>A cookie has been set with its SameSite attribute set to "none", which means that the cookie can be sent as a result of a 'cross-site' request. The SameSite attribute is an effective counter measure to cross-site request forgery, cross-site script inclusion, and timing attacks.</p>
+ </td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (310 bytes)</summary>
+				
+				<pre><code>GET https://fictional-tribble-qw4r4gppx5g39rp7-5000.app.github.dev/ HTTP/1.1
+host: fictional-tribble-qw4r4gppx5g39rp7-5000.app.github.dev
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+pragma: no-cache
+cache-control: no-cache
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details>
+				<summary>Status line and header section (2454 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 200 OK
+Date: Sun, 29 Mar 2026 11:08:11 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 3119
+Connection: keep-alive
+Cache-Control: no-cache,no-store
+Expires: Thu, 01 Jan 1970 00:00:00 GMT
+Pragma: no-cache
+Set-Cookie: .Tunnels.Relay.WebForwarding.Cookies=CfDJ8NJJuTEdEi5KqensronCVW0owOthbnDBvGjcC0JJnZaitijbHTHbXWcM-ZjFCmmbcCTKcZ65PPvvei2Ikef-iiyMRkox0ldELNzopuB8eqWmxRm2xqV0Y1YXFmv2pEsURMJnVz_muH8I4XlsOcU0hp9ig0s2BMjXmQQ3b8y-aVkRjli28AHRp4ZOrW5lLUpnyIwbJth9FKtggAMXJ5xAT26VWZlBsRe_m_lP2HN_yLrlHjEezPhFJj1sg6j2U4vulxxax5PI-BpdGnIdgyvb744LM1g7NUwMAfqp5S_PkKDNRkOgUmR8dZi2Ctzvv111JJG0UKEYEy1Vgoz1HC3BZFzKO33dUjhgxoeBCU7XPTgX5W0gdwywuALw0fxLGEp0BC-FfIfNvS7HLDRo_dFbAlqZRISoFesR4z_ScyS2MHF8j-igwUqwrJLLr406XksFC0QGKQH_OcBFkPK9mY8ErDOg2m8Dsjayr2QXy-3X1qV27XBKJnkb86AMtJ8RWt1oPbgV9tQ4WLLrR-I9jyRAoxj-6nHxeSzpmQXPpHFt5XoHTxW2tO6NcqumKVyMgcyF19Xiuf61oT-b2hFQqiFzob2MHsyg1_RILqMdxSJnt0t0ynJ60qfIhokBjGLW-hILLVFTJAmrxPyd8zomCy0cn0WwBQ3f4SGmoOd1NXqW9eGEOTG_Ix8Qs-O2rq525YO31T-WyQkhljYwpc-MzqlJjAuyOAw8lFLUGRMklHcyL4fnCcUpy5ZP75VtPbhXo_Ty06nurWHZX8U-pA80wr4BIRzyeFQjA183e8ISlQ-hYv_1WkhMnD8XOy1h91sa1agGEmWsoat2I2fmkeNo1TmY0L5-lvlBe7K6Xl3N5r0E9Jm04ZcqQ72Cu8AN4GsUzHh4f_ly9baWs1OBLtBXX-qMVaIbOAmqs8rtWjPHrZDhOrryMVB0NEyFExWJ6kGXdtusnaq_d_PMOBNfFFBok0V7ojrUatMi06lnB-3oNWj9JmAr; path=/; secure; samesite=none; Partitioned
+Set-Cookie: session=eyJjc3JmX3Rva2VuIjoiZmQyMWQzM2ZiNTM4NTdlOWNjYWU4NTM5ZTdmMTJmMDdmYTcyNTUwMiJ9.ackIGw.Ze8c_xznEaYD4KzfW_UeX5OLC8M; HttpOnly; Path=/
+Vary: Cookie
+X-Content-Type-Options: nosniff
+X-Content-Type-Options: nosniff
+RateLimit-Limit: HttpRequestRatePerPort:1500/m
+RateLimit-Limit: HttpRequestRatePerPort:1500/m
+RateLimit-Remaining: HttpRequestRatePerPort:1499
+RateLimit-Remaining: HttpRequestRatePerPort:1499
+RateLimit-Reset: HttpRequestRatePerPort:53s
+RateLimit-Reset: HttpRequestRatePerPort:14s
+X-Report-Abuse: https://msrc.microsoft.com/report/abuse
+X-Report-Abuse: https://msrc.microsoft.com/report/abuse
+x-ms-ratelimit-limit: 
+x-ms-ratelimit-remaining: 
+x-ms-ratelimit-used: 1
+x-ms-ratelimit-reset: 
+Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; object-src 'none'; base-uri 'self'
+vssaas-request-id: 6d15f514-283c-4564-9cc3-bc2674448b0d
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+x-served-by: tunnels-prod-rel-aue-v3-cluster
+X-Robots-Tag: noindex, nofollow
+Referrer-Policy: same-origin
+
+</code></pre>
+				
+				
+			</details> <details class="response-body">
+				<summary>Response body (3119 bytes)</summary>
+				
+				<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8" /&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+  &lt;title&gt;Login — SocialPWA&lt;/title&gt;
+
+  &lt;!-- VULNERABILITY: No Content-Security-Policy header or meta tag.
+       Inline scripts, eval(), and external resource loading are all unrestricted.
+       A proper CSP would block XSS execution even if injection occurs. --&gt;
+
+  &lt;link rel="stylesheet" href="/static/css/style.css" /&gt;
+  &lt;link rel="manifest"   href="/static/manifest.json" /&gt;
+  &lt;meta name="theme-color" content="#e94560" /&gt;
+  &lt;meta name="csrf-token" content="ImZkMjFkMzNmYjUzODU3ZTljY2FlODUzOWU3ZjEyZjA3ZmE3MjU1MDIi.ackIGw.mm-g4T8TwwY7lIMPyqOxOY1hhTI" /&gt;
+  &lt;meta name="vapid-public-key" content="BEl62iUYgUivxIkv69yViEuiBIa-Ib9-SkvMeAtA3LFgDzkrxZJjSgSnfckjBJuBkr3qBUYIHBQFLXYp5Nksh8U" /&gt;
+  &lt;link rel="icon" href="/static/icons/icon-192.png" type="image/png" /&gt;
+
+  
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;nav class="navbar"&gt;
+    &lt;a href="/" class="brand"&gt;&amp;#9733; SocialPWA&lt;/a&gt;
+    &lt;div class="nav-links"&gt;
+      &lt;a href="/"&gt;Login&lt;/a&gt;
+      &lt;a href="/signup.html"&gt;Sign Up&lt;/a&gt;
+      &lt;a href="/feed.html"&gt;Feed&lt;/a&gt;
+      &lt;a href="/messages"&gt;Messages&lt;/a&gt;
+      &lt;button id="enable-notifications-btn" class="btn btn-sm" hidden&gt;Enable Notifications&lt;/button&gt;
+      &lt;button id="install-btn" class="btn btn-sm"&gt;&amp;#8627; Install App&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/nav&gt;
+
+  &lt;main&gt;
+    
+      
+    
+
+    
+&lt;div class="card"&gt;
+  &lt;h1&gt;Welcome back&lt;/h1&gt;
+  &lt;p class="subtitle"&gt;Log in to your SocialPWA account to see the latest posts.&lt;/p&gt;
+
+  &lt;!--
+    VULNERABILITY: No CSRF token on the login form.
+    A malicious site can submit a cross-origin form POST to this endpoint.
+  --&gt;
+  &lt;form action="/" method="POST"&gt;
+    &lt;input type="hidden" name="csrf_token" value="ImZkMjFkMzNmYjUzODU3ZTljY2FlODUzOWU3ZjEyZjA3ZmE3MjU1MDIi.ackIGw.mm-g4T8TwwY7lIMPyqOxOY1hhTI" /&gt;
+    &lt;div class="form-group"&gt;
+      &lt;label for="username"&gt;Username&lt;/label&gt;
+      &lt;input
+        type="text"
+        id="username"
+        name="username"
+        placeholder="Enter your username"
+        required
+        autocomplete="username"
+      /&gt;
+    &lt;/div&gt;
+    &lt;div class="form-group"&gt;
+      &lt;label for="password"&gt;Password&lt;/label&gt;
+      &lt;!--
+        VULNERABILITY: autocomplete="current-password" lets the browser save
+        the plaintext password locally. Combined with plaintext DB storage this
+        doubles the exposure.
+      --&gt;
+      &lt;input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="Enter your password"
+        required
+        autocomplete="current-password"
+      /&gt;
+    &lt;/div&gt;
+    &lt;button type="submit" class="btn btn-primary"&gt;Log In&lt;/button&gt;
+  &lt;/form&gt;
+
+  &lt;a href="/signup.html" class="btn btn-secondary"&gt;Don't have an account? Sign Up&lt;/a&gt;
+&lt;/div&gt;
+
+  &lt;/main&gt;
+
+  &lt;footer&gt;
+    &lt;p&gt;
+      &amp;copy; 2025 Unsecure Social PWA &amp;mdash; For Educational Purposes Only &amp;mdash;
+      &lt;a href="https://owasp.org/www-project-top-ten/" target="_blank" rel="noopener"&gt;OWASP Top 10&lt;/a&gt;
+    &lt;/p&gt;
+  &lt;/footer&gt;
+
+  &lt;!-- app.js loaded last so DOM is ready --&gt;
+  &lt;script src="/static/js/app.js"&gt;&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Parameter</th>
+		<td><pre><code>.Tunnels.Relay.WebForwarding.Cookies</code></pre></td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Evidence</th>
+		<td><pre><code>Set-Cookie: .Tunnels.Relay.WebForwarding.Cookies</code></pre></td>
+	</tr>
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>Ensure that the SameSite attribute is set to either 'lax' or ideally 'strict' for all cookies.</p>
+ </td>
+	</tr>
+</tbody></table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+								<li>
+									<h5>
+										<a href="file:///C:/Users/CatSo/2026-03-29-ZAP-Report-.html#alert-type-7">Cookie without SameSite Attribute</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">GET https://fictional-tribble-qw4r4gppx5g39rp7-5000.app.github.dev/</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tbody><tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://owasp.org/Top10/A01_2021-Broken_Access_Control/">OWASP_2021_A01</a></span> 
+				</li>
+				<li>
+					 <span>POLICY_QA_STD = </span>
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-web-security-testing-guide/v42/4-Web_Application_Security_Testing/06-Session_Management_Testing/02-Testing_for_Cookies_Attributes">WSTG-v42-SESS-02</a></span> 
+				</li>
+				<li>
+					 <span>POLICY_PENTEST = </span>
+				</li>
+				<li>
+					<span><a href="https://www.zaproxy.org/docs/desktop/addons/common-library/alerttags/#systemic">SYSTEMIC</a></span> 
+				</li>
+				<li>
+					<span><a href="https://cwe.mitre.org/data/definitions/1275.html">CWE-1275</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-top-ten/2017/A5_2017-Broken_Access_Control.html">OWASP_2017_A05</a></span> 
+				</li>
+				<li>
+					 <span>POLICY_DEV_STD = </span>
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>A cookie has been set without the SameSite attribute, which means that the cookie can be sent as a result of a 'cross-site' request. The SameSite attribute is an effective counter measure to cross-site request forgery, cross-site script inclusion, and timing attacks.</p>
+ </td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (310 bytes)</summary>
+				
+				<pre><code>GET https://fictional-tribble-qw4r4gppx5g39rp7-5000.app.github.dev/ HTTP/1.1
+host: fictional-tribble-qw4r4gppx5g39rp7-5000.app.github.dev
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+pragma: no-cache
+cache-control: no-cache
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details>
+				<summary>Status line and header section (2454 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 200 OK
+Date: Sun, 29 Mar 2026 11:08:11 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 3119
+Connection: keep-alive
+Cache-Control: no-cache,no-store
+Expires: Thu, 01 Jan 1970 00:00:00 GMT
+Pragma: no-cache
+Set-Cookie: .Tunnels.Relay.WebForwarding.Cookies=CfDJ8NJJuTEdEi5KqensronCVW0owOthbnDBvGjcC0JJnZaitijbHTHbXWcM-ZjFCmmbcCTKcZ65PPvvei2Ikef-iiyMRkox0ldELNzopuB8eqWmxRm2xqV0Y1YXFmv2pEsURMJnVz_muH8I4XlsOcU0hp9ig0s2BMjXmQQ3b8y-aVkRjli28AHRp4ZOrW5lLUpnyIwbJth9FKtggAMXJ5xAT26VWZlBsRe_m_lP2HN_yLrlHjEezPhFJj1sg6j2U4vulxxax5PI-BpdGnIdgyvb744LM1g7NUwMAfqp5S_PkKDNRkOgUmR8dZi2Ctzvv111JJG0UKEYEy1Vgoz1HC3BZFzKO33dUjhgxoeBCU7XPTgX5W0gdwywuALw0fxLGEp0BC-FfIfNvS7HLDRo_dFbAlqZRISoFesR4z_ScyS2MHF8j-igwUqwrJLLr406XksFC0QGKQH_OcBFkPK9mY8ErDOg2m8Dsjayr2QXy-3X1qV27XBKJnkb86AMtJ8RWt1oPbgV9tQ4WLLrR-I9jyRAoxj-6nHxeSzpmQXPpHFt5XoHTxW2tO6NcqumKVyMgcyF19Xiuf61oT-b2hFQqiFzob2MHsyg1_RILqMdxSJnt0t0ynJ60qfIhokBjGLW-hILLVFTJAmrxPyd8zomCy0cn0WwBQ3f4SGmoOd1NXqW9eGEOTG_Ix8Qs-O2rq525YO31T-WyQkhljYwpc-MzqlJjAuyOAw8lFLUGRMklHcyL4fnCcUpy5ZP75VtPbhXo_Ty06nurWHZX8U-pA80wr4BIRzyeFQjA183e8ISlQ-hYv_1WkhMnD8XOy1h91sa1agGEmWsoat2I2fmkeNo1TmY0L5-lvlBe7K6Xl3N5r0E9Jm04ZcqQ72Cu8AN4GsUzHh4f_ly9baWs1OBLtBXX-qMVaIbOAmqs8rtWjPHrZDhOrryMVB0NEyFExWJ6kGXdtusnaq_d_PMOBNfFFBok0V7ojrUatMi06lnB-3oNWj9JmAr; path=/; secure; samesite=none; Partitioned
+Set-Cookie: session=eyJjc3JmX3Rva2VuIjoiZmQyMWQzM2ZiNTM4NTdlOWNjYWU4NTM5ZTdmMTJmMDdmYTcyNTUwMiJ9.ackIGw.Ze8c_xznEaYD4KzfW_UeX5OLC8M; HttpOnly; Path=/
+Vary: Cookie
+X-Content-Type-Options: nosniff
+X-Content-Type-Options: nosniff
+RateLimit-Limit: HttpRequestRatePerPort:1500/m
+RateLimit-Limit: HttpRequestRatePerPort:1500/m
+RateLimit-Remaining: HttpRequestRatePerPort:1499
+RateLimit-Remaining: HttpRequestRatePerPort:1499
+RateLimit-Reset: HttpRequestRatePerPort:53s
+RateLimit-Reset: HttpRequestRatePerPort:14s
+X-Report-Abuse: https://msrc.microsoft.com/report/abuse
+X-Report-Abuse: https://msrc.microsoft.com/report/abuse
+x-ms-ratelimit-limit: 
+x-ms-ratelimit-remaining: 
+x-ms-ratelimit-used: 1
+x-ms-ratelimit-reset: 
+Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; object-src 'none'; base-uri 'self'
+vssaas-request-id: 6d15f514-283c-4564-9cc3-bc2674448b0d
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+x-served-by: tunnels-prod-rel-aue-v3-cluster
+X-Robots-Tag: noindex, nofollow
+Referrer-Policy: same-origin
+
+</code></pre>
+				
+				
+			</details> <details class="response-body">
+				<summary>Response body (3119 bytes)</summary>
+				
+				<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8" /&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+  &lt;title&gt;Login — SocialPWA&lt;/title&gt;
+
+  &lt;!-- VULNERABILITY: No Content-Security-Policy header or meta tag.
+       Inline scripts, eval(), and external resource loading are all unrestricted.
+       A proper CSP would block XSS execution even if injection occurs. --&gt;
+
+  &lt;link rel="stylesheet" href="/static/css/style.css" /&gt;
+  &lt;link rel="manifest"   href="/static/manifest.json" /&gt;
+  &lt;meta name="theme-color" content="#e94560" /&gt;
+  &lt;meta name="csrf-token" content="ImZkMjFkMzNmYjUzODU3ZTljY2FlODUzOWU3ZjEyZjA3ZmE3MjU1MDIi.ackIGw.mm-g4T8TwwY7lIMPyqOxOY1hhTI" /&gt;
+  &lt;meta name="vapid-public-key" content="BEl62iUYgUivxIkv69yViEuiBIa-Ib9-SkvMeAtA3LFgDzkrxZJjSgSnfckjBJuBkr3qBUYIHBQFLXYp5Nksh8U" /&gt;
+  &lt;link rel="icon" href="/static/icons/icon-192.png" type="image/png" /&gt;
+
+  
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;nav class="navbar"&gt;
+    &lt;a href="/" class="brand"&gt;&amp;#9733; SocialPWA&lt;/a&gt;
+    &lt;div class="nav-links"&gt;
+      &lt;a href="/"&gt;Login&lt;/a&gt;
+      &lt;a href="/signup.html"&gt;Sign Up&lt;/a&gt;
+      &lt;a href="/feed.html"&gt;Feed&lt;/a&gt;
+      &lt;a href="/messages"&gt;Messages&lt;/a&gt;
+      &lt;button id="enable-notifications-btn" class="btn btn-sm" hidden&gt;Enable Notifications&lt;/button&gt;
+      &lt;button id="install-btn" class="btn btn-sm"&gt;&amp;#8627; Install App&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/nav&gt;
+
+  &lt;main&gt;
+    
+      
+    
+
+    
+&lt;div class="card"&gt;
+  &lt;h1&gt;Welcome back&lt;/h1&gt;
+  &lt;p class="subtitle"&gt;Log in to your SocialPWA account to see the latest posts.&lt;/p&gt;
+
+  &lt;!--
+    VULNERABILITY: No CSRF token on the login form.
+    A malicious site can submit a cross-origin form POST to this endpoint.
+  --&gt;
+  &lt;form action="/" method="POST"&gt;
+    &lt;input type="hidden" name="csrf_token" value="ImZkMjFkMzNmYjUzODU3ZTljY2FlODUzOWU3ZjEyZjA3ZmE3MjU1MDIi.ackIGw.mm-g4T8TwwY7lIMPyqOxOY1hhTI" /&gt;
+    &lt;div class="form-group"&gt;
+      &lt;label for="username"&gt;Username&lt;/label&gt;
+      &lt;input
+        type="text"
+        id="username"
+        name="username"
+        placeholder="Enter your username"
+        required
+        autocomplete="username"
+      /&gt;
+    &lt;/div&gt;
+    &lt;div class="form-group"&gt;
+      &lt;label for="password"&gt;Password&lt;/label&gt;
+      &lt;!--
+        VULNERABILITY: autocomplete="current-password" lets the browser save
+        the plaintext password locally. Combined with plaintext DB storage this
+        doubles the exposure.
+      --&gt;
+      &lt;input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="Enter your password"
+        required
+        autocomplete="current-password"
+      /&gt;
+    &lt;/div&gt;
+    &lt;button type="submit" class="btn btn-primary"&gt;Log In&lt;/button&gt;
+  &lt;/form&gt;
+
+  &lt;a href="/signup.html" class="btn btn-secondary"&gt;Don't have an account? Sign Up&lt;/a&gt;
+&lt;/div&gt;
+
+  &lt;/main&gt;
+
+  &lt;footer&gt;
+    &lt;p&gt;
+      &amp;copy; 2025 Unsecure Social PWA &amp;mdash; For Educational Purposes Only &amp;mdash;
+      &lt;a href="https://owasp.org/www-project-top-ten/" target="_blank" rel="noopener"&gt;OWASP Top 10&lt;/a&gt;
+    &lt;/p&gt;
+  &lt;/footer&gt;
+
+  &lt;!-- app.js loaded last so DOM is ready --&gt;
+  &lt;script src="/static/js/app.js"&gt;&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Parameter</th>
+		<td><pre><code>session</code></pre></td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Evidence</th>
+		<td><pre><code>Set-Cookie: session</code></pre></td>
+	</tr>
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>Ensure that the SameSite attribute is set to either 'lax' or ideally 'strict' for all cookies.</p>
+ </td>
+	</tr>
+</tbody></table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+							</ol>
+						</li>
+						
+					</ol>
+				</li>
+				
+				
+				  
+				 
+				
+				
+				
+				
+				<li id="alerts--risk-0-confidence-2">
+					<h3>
+						<span>Risk</span>=<span class="risk-level">Informational</span>, <span>Confidence</span>=<span class="confidence-level">Medium</span> <span>(3)</span>
+					</h3>
+					<ol>
+						
+						<li class="alerts--site-li">
+							<h4>
+								<span class="site">https://fictional-tribble-qw4r4gppx5g39rp7-5000.app.github.dev</span> <span>(3)</span>
+							</h4>
+							<ol>
+								
+								<li>
+									<h5>
+										<a href="file:///C:/Users/CatSo/2026-03-29-ZAP-Report-.html#alert-type-9">Information Disclosure - Suspicious Comments</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">GET https://fictional-tribble-qw4r4gppx5g39rp7-5000.app.github.dev/</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tbody><tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://owasp.org/Top10/A01_2021-Broken_Access_Control/">OWASP_2021_A01</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-web-security-testing-guide/v42/4-Web_Application_Security_Testing/01-Information_Gathering/05-Review_Webpage_Content_for_Information_Leakage">WSTG-v42-INFO-05</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-top-ten/2017/A3_2017-Sensitive_Data_Exposure.html">OWASP_2017_A03</a></span> 
+				</li>
+				<li>
+					 <span>POLICY_PENTEST = </span>
+				</li>
+				<li>
+					<span><a href="https://cwe.mitre.org/data/definitions/615.html">CWE-615</a></span> 
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>The response appears to contain suspicious comments which may help an attacker.</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Other info</th>
+		<td> 
+<p>The following pattern was used: \bDB\b and was detected in likely comment: "&lt;!--</p>
+
+<p>        VULNERABILITY: autocomplete="current-password" lets the browser save</p>
+
+<p>        the plaintext password locally. Combin", see evidence field for the suspicious comment/snippet.</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (310 bytes)</summary>
+				
+				<pre><code>GET https://fictional-tribble-qw4r4gppx5g39rp7-5000.app.github.dev/ HTTP/1.1
+host: fictional-tribble-qw4r4gppx5g39rp7-5000.app.github.dev
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+pragma: no-cache
+cache-control: no-cache
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details>
+				<summary>Status line and header section (2454 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 200 OK
+Date: Sun, 29 Mar 2026 11:08:11 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 3119
+Connection: keep-alive
+Cache-Control: no-cache,no-store
+Expires: Thu, 01 Jan 1970 00:00:00 GMT
+Pragma: no-cache
+Set-Cookie: .Tunnels.Relay.WebForwarding.Cookies=CfDJ8NJJuTEdEi5KqensronCVW0owOthbnDBvGjcC0JJnZaitijbHTHbXWcM-ZjFCmmbcCTKcZ65PPvvei2Ikef-iiyMRkox0ldELNzopuB8eqWmxRm2xqV0Y1YXFmv2pEsURMJnVz_muH8I4XlsOcU0hp9ig0s2BMjXmQQ3b8y-aVkRjli28AHRp4ZOrW5lLUpnyIwbJth9FKtggAMXJ5xAT26VWZlBsRe_m_lP2HN_yLrlHjEezPhFJj1sg6j2U4vulxxax5PI-BpdGnIdgyvb744LM1g7NUwMAfqp5S_PkKDNRkOgUmR8dZi2Ctzvv111JJG0UKEYEy1Vgoz1HC3BZFzKO33dUjhgxoeBCU7XPTgX5W0gdwywuALw0fxLGEp0BC-FfIfNvS7HLDRo_dFbAlqZRISoFesR4z_ScyS2MHF8j-igwUqwrJLLr406XksFC0QGKQH_OcBFkPK9mY8ErDOg2m8Dsjayr2QXy-3X1qV27XBKJnkb86AMtJ8RWt1oPbgV9tQ4WLLrR-I9jyRAoxj-6nHxeSzpmQXPpHFt5XoHTxW2tO6NcqumKVyMgcyF19Xiuf61oT-b2hFQqiFzob2MHsyg1_RILqMdxSJnt0t0ynJ60qfIhokBjGLW-hILLVFTJAmrxPyd8zomCy0cn0WwBQ3f4SGmoOd1NXqW9eGEOTG_Ix8Qs-O2rq525YO31T-WyQkhljYwpc-MzqlJjAuyOAw8lFLUGRMklHcyL4fnCcUpy5ZP75VtPbhXo_Ty06nurWHZX8U-pA80wr4BIRzyeFQjA183e8ISlQ-hYv_1WkhMnD8XOy1h91sa1agGEmWsoat2I2fmkeNo1TmY0L5-lvlBe7K6Xl3N5r0E9Jm04ZcqQ72Cu8AN4GsUzHh4f_ly9baWs1OBLtBXX-qMVaIbOAmqs8rtWjPHrZDhOrryMVB0NEyFExWJ6kGXdtusnaq_d_PMOBNfFFBok0V7ojrUatMi06lnB-3oNWj9JmAr; path=/; secure; samesite=none; Partitioned
+Set-Cookie: session=eyJjc3JmX3Rva2VuIjoiZmQyMWQzM2ZiNTM4NTdlOWNjYWU4NTM5ZTdmMTJmMDdmYTcyNTUwMiJ9.ackIGw.Ze8c_xznEaYD4KzfW_UeX5OLC8M; HttpOnly; Path=/
+Vary: Cookie
+X-Content-Type-Options: nosniff
+X-Content-Type-Options: nosniff
+RateLimit-Limit: HttpRequestRatePerPort:1500/m
+RateLimit-Limit: HttpRequestRatePerPort:1500/m
+RateLimit-Remaining: HttpRequestRatePerPort:1499
+RateLimit-Remaining: HttpRequestRatePerPort:1499
+RateLimit-Reset: HttpRequestRatePerPort:53s
+RateLimit-Reset: HttpRequestRatePerPort:14s
+X-Report-Abuse: https://msrc.microsoft.com/report/abuse
+X-Report-Abuse: https://msrc.microsoft.com/report/abuse
+x-ms-ratelimit-limit: 
+x-ms-ratelimit-remaining: 
+x-ms-ratelimit-used: 1
+x-ms-ratelimit-reset: 
+Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; object-src 'none'; base-uri 'self'
+vssaas-request-id: 6d15f514-283c-4564-9cc3-bc2674448b0d
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+x-served-by: tunnels-prod-rel-aue-v3-cluster
+X-Robots-Tag: noindex, nofollow
+Referrer-Policy: same-origin
+
+</code></pre>
+				
+				
+			</details> <details class="response-body">
+				<summary>Response body (3119 bytes)</summary>
+				
+				<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8" /&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+  &lt;title&gt;Login — SocialPWA&lt;/title&gt;
+
+  &lt;!-- VULNERABILITY: No Content-Security-Policy header or meta tag.
+       Inline scripts, eval(), and external resource loading are all unrestricted.
+       A proper CSP would block XSS execution even if injection occurs. --&gt;
+
+  &lt;link rel="stylesheet" href="/static/css/style.css" /&gt;
+  &lt;link rel="manifest"   href="/static/manifest.json" /&gt;
+  &lt;meta name="theme-color" content="#e94560" /&gt;
+  &lt;meta name="csrf-token" content="ImZkMjFkMzNmYjUzODU3ZTljY2FlODUzOWU3ZjEyZjA3ZmE3MjU1MDIi.ackIGw.mm-g4T8TwwY7lIMPyqOxOY1hhTI" /&gt;
+  &lt;meta name="vapid-public-key" content="BEl62iUYgUivxIkv69yViEuiBIa-Ib9-SkvMeAtA3LFgDzkrxZJjSgSnfckjBJuBkr3qBUYIHBQFLXYp5Nksh8U" /&gt;
+  &lt;link rel="icon" href="/static/icons/icon-192.png" type="image/png" /&gt;
+
+  
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;nav class="navbar"&gt;
+    &lt;a href="/" class="brand"&gt;&amp;#9733; SocialPWA&lt;/a&gt;
+    &lt;div class="nav-links"&gt;
+      &lt;a href="/"&gt;Login&lt;/a&gt;
+      &lt;a href="/signup.html"&gt;Sign Up&lt;/a&gt;
+      &lt;a href="/feed.html"&gt;Feed&lt;/a&gt;
+      &lt;a href="/messages"&gt;Messages&lt;/a&gt;
+      &lt;button id="enable-notifications-btn" class="btn btn-sm" hidden&gt;Enable Notifications&lt;/button&gt;
+      &lt;button id="install-btn" class="btn btn-sm"&gt;&amp;#8627; Install App&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/nav&gt;
+
+  &lt;main&gt;
+    
+      
+    
+
+    
+&lt;div class="card"&gt;
+  &lt;h1&gt;Welcome back&lt;/h1&gt;
+  &lt;p class="subtitle"&gt;Log in to your SocialPWA account to see the latest posts.&lt;/p&gt;
+
+  &lt;!--
+    VULNERABILITY: No CSRF token on the login form.
+    A malicious site can submit a cross-origin form POST to this endpoint.
+  --&gt;
+  &lt;form action="/" method="POST"&gt;
+    &lt;input type="hidden" name="csrf_token" value="ImZkMjFkMzNmYjUzODU3ZTljY2FlODUzOWU3ZjEyZjA3ZmE3MjU1MDIi.ackIGw.mm-g4T8TwwY7lIMPyqOxOY1hhTI" /&gt;
+    &lt;div class="form-group"&gt;
+      &lt;label for="username"&gt;Username&lt;/label&gt;
+      &lt;input
+        type="text"
+        id="username"
+        name="username"
+        placeholder="Enter your username"
+        required
+        autocomplete="username"
+      /&gt;
+    &lt;/div&gt;
+    &lt;div class="form-group"&gt;
+      &lt;label for="password"&gt;Password&lt;/label&gt;
+      &lt;!--
+        VULNERABILITY: autocomplete="current-password" lets the browser save
+        the plaintext password locally. Combined with plaintext DB storage this
+        doubles the exposure.
+      --&gt;
+      &lt;input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="Enter your password"
+        required
+        autocomplete="current-password"
+      /&gt;
+    &lt;/div&gt;
+    &lt;button type="submit" class="btn btn-primary"&gt;Log In&lt;/button&gt;
+  &lt;/form&gt;
+
+  &lt;a href="/signup.html" class="btn btn-secondary"&gt;Don't have an account? Sign Up&lt;/a&gt;
+&lt;/div&gt;
+
+  &lt;/main&gt;
+
+  &lt;footer&gt;
+    &lt;p&gt;
+      &amp;copy; 2025 Unsecure Social PWA &amp;mdash; For Educational Purposes Only &amp;mdash;
+      &lt;a href="https://owasp.org/www-project-top-ten/" target="_blank" rel="noopener"&gt;OWASP Top 10&lt;/a&gt;
+    &lt;/p&gt;
+  &lt;/footer&gt;
+
+  &lt;!-- app.js loaded last so DOM is ready --&gt;
+  &lt;script src="/static/js/app.js"&gt;&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+				
+				
+			</details></td>
+	</tr>
+	
+	
+	<tr>
+		<th scope="row">Evidence</th>
+		<td><pre><code>ined with plaintext DB storage this
+      </code></pre></td>
+	</tr>
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>Remove all comments that return information that may help an attacker and fix any underlying problems they refer to.</p>
+ </td>
+	</tr>
+</tbody></table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+								<li>
+									<h5>
+										<a href="file:///C:/Users/CatSo/2026-03-29-ZAP-Report-.html#alert-type-11">Session Management Response Identified</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">GET https://fictional-tribble-qw4r4gppx5g39rp7-5000.app.github.dev/</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tbody><tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>The given response has been identified as containing a session management token. The 'Other Info' field contains a set of header tokens that can be used in the Header Based Session Management Method. If the request is in a context which has a Session Management Method set to "Auto-Detect" then this rule will change the session management to use the tokens identified.</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Other info</th>
+		<td> 
+<p>cookie:session</p>
+
+<p>cookie:.Tunnels.Relay.WebForwarding.Cookies</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (310 bytes)</summary>
+				
+				<pre><code>GET https://fictional-tribble-qw4r4gppx5g39rp7-5000.app.github.dev/ HTTP/1.1
+host: fictional-tribble-qw4r4gppx5g39rp7-5000.app.github.dev
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+pragma: no-cache
+cache-control: no-cache
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details>
+				<summary>Status line and header section (2454 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 200 OK
+Date: Sun, 29 Mar 2026 11:08:11 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 3119
+Connection: keep-alive
+Cache-Control: no-cache,no-store
+Expires: Thu, 01 Jan 1970 00:00:00 GMT
+Pragma: no-cache
+Set-Cookie: .Tunnels.Relay.WebForwarding.Cookies=CfDJ8NJJuTEdEi5KqensronCVW0owOthbnDBvGjcC0JJnZaitijbHTHbXWcM-ZjFCmmbcCTKcZ65PPvvei2Ikef-iiyMRkox0ldELNzopuB8eqWmxRm2xqV0Y1YXFmv2pEsURMJnVz_muH8I4XlsOcU0hp9ig0s2BMjXmQQ3b8y-aVkRjli28AHRp4ZOrW5lLUpnyIwbJth9FKtggAMXJ5xAT26VWZlBsRe_m_lP2HN_yLrlHjEezPhFJj1sg6j2U4vulxxax5PI-BpdGnIdgyvb744LM1g7NUwMAfqp5S_PkKDNRkOgUmR8dZi2Ctzvv111JJG0UKEYEy1Vgoz1HC3BZFzKO33dUjhgxoeBCU7XPTgX5W0gdwywuALw0fxLGEp0BC-FfIfNvS7HLDRo_dFbAlqZRISoFesR4z_ScyS2MHF8j-igwUqwrJLLr406XksFC0QGKQH_OcBFkPK9mY8ErDOg2m8Dsjayr2QXy-3X1qV27XBKJnkb86AMtJ8RWt1oPbgV9tQ4WLLrR-I9jyRAoxj-6nHxeSzpmQXPpHFt5XoHTxW2tO6NcqumKVyMgcyF19Xiuf61oT-b2hFQqiFzob2MHsyg1_RILqMdxSJnt0t0ynJ60qfIhokBjGLW-hILLVFTJAmrxPyd8zomCy0cn0WwBQ3f4SGmoOd1NXqW9eGEOTG_Ix8Qs-O2rq525YO31T-WyQkhljYwpc-MzqlJjAuyOAw8lFLUGRMklHcyL4fnCcUpy5ZP75VtPbhXo_Ty06nurWHZX8U-pA80wr4BIRzyeFQjA183e8ISlQ-hYv_1WkhMnD8XOy1h91sa1agGEmWsoat2I2fmkeNo1TmY0L5-lvlBe7K6Xl3N5r0E9Jm04ZcqQ72Cu8AN4GsUzHh4f_ly9baWs1OBLtBXX-qMVaIbOAmqs8rtWjPHrZDhOrryMVB0NEyFExWJ6kGXdtusnaq_d_PMOBNfFFBok0V7ojrUatMi06lnB-3oNWj9JmAr; path=/; secure; samesite=none; Partitioned
+Set-Cookie: session=eyJjc3JmX3Rva2VuIjoiZmQyMWQzM2ZiNTM4NTdlOWNjYWU4NTM5ZTdmMTJmMDdmYTcyNTUwMiJ9.ackIGw.Ze8c_xznEaYD4KzfW_UeX5OLC8M; HttpOnly; Path=/
+Vary: Cookie
+X-Content-Type-Options: nosniff
+X-Content-Type-Options: nosniff
+RateLimit-Limit: HttpRequestRatePerPort:1500/m
+RateLimit-Limit: HttpRequestRatePerPort:1500/m
+RateLimit-Remaining: HttpRequestRatePerPort:1499
+RateLimit-Remaining: HttpRequestRatePerPort:1499
+RateLimit-Reset: HttpRequestRatePerPort:53s
+RateLimit-Reset: HttpRequestRatePerPort:14s
+X-Report-Abuse: https://msrc.microsoft.com/report/abuse
+X-Report-Abuse: https://msrc.microsoft.com/report/abuse
+x-ms-ratelimit-limit: 
+x-ms-ratelimit-remaining: 
+x-ms-ratelimit-used: 1
+x-ms-ratelimit-reset: 
+Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; object-src 'none'; base-uri 'self'
+vssaas-request-id: 6d15f514-283c-4564-9cc3-bc2674448b0d
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+x-served-by: tunnels-prod-rel-aue-v3-cluster
+X-Robots-Tag: noindex, nofollow
+Referrer-Policy: same-origin
+
+</code></pre>
+				
+				
+			</details> <details class="response-body">
+				<summary>Response body (3119 bytes)</summary>
+				
+				<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8" /&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+  &lt;title&gt;Login — SocialPWA&lt;/title&gt;
+
+  &lt;!-- VULNERABILITY: No Content-Security-Policy header or meta tag.
+       Inline scripts, eval(), and external resource loading are all unrestricted.
+       A proper CSP would block XSS execution even if injection occurs. --&gt;
+
+  &lt;link rel="stylesheet" href="/static/css/style.css" /&gt;
+  &lt;link rel="manifest"   href="/static/manifest.json" /&gt;
+  &lt;meta name="theme-color" content="#e94560" /&gt;
+  &lt;meta name="csrf-token" content="ImZkMjFkMzNmYjUzODU3ZTljY2FlODUzOWU3ZjEyZjA3ZmE3MjU1MDIi.ackIGw.mm-g4T8TwwY7lIMPyqOxOY1hhTI" /&gt;
+  &lt;meta name="vapid-public-key" content="BEl62iUYgUivxIkv69yViEuiBIa-Ib9-SkvMeAtA3LFgDzkrxZJjSgSnfckjBJuBkr3qBUYIHBQFLXYp5Nksh8U" /&gt;
+  &lt;link rel="icon" href="/static/icons/icon-192.png" type="image/png" /&gt;
+
+  
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;nav class="navbar"&gt;
+    &lt;a href="/" class="brand"&gt;&amp;#9733; SocialPWA&lt;/a&gt;
+    &lt;div class="nav-links"&gt;
+      &lt;a href="/"&gt;Login&lt;/a&gt;
+      &lt;a href="/signup.html"&gt;Sign Up&lt;/a&gt;
+      &lt;a href="/feed.html"&gt;Feed&lt;/a&gt;
+      &lt;a href="/messages"&gt;Messages&lt;/a&gt;
+      &lt;button id="enable-notifications-btn" class="btn btn-sm" hidden&gt;Enable Notifications&lt;/button&gt;
+      &lt;button id="install-btn" class="btn btn-sm"&gt;&amp;#8627; Install App&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/nav&gt;
+
+  &lt;main&gt;
+    
+      
+    
+
+    
+&lt;div class="card"&gt;
+  &lt;h1&gt;Welcome back&lt;/h1&gt;
+  &lt;p class="subtitle"&gt;Log in to your SocialPWA account to see the latest posts.&lt;/p&gt;
+
+  &lt;!--
+    VULNERABILITY: No CSRF token on the login form.
+    A malicious site can submit a cross-origin form POST to this endpoint.
+  --&gt;
+  &lt;form action="/" method="POST"&gt;
+    &lt;input type="hidden" name="csrf_token" value="ImZkMjFkMzNmYjUzODU3ZTljY2FlODUzOWU3ZjEyZjA3ZmE3MjU1MDIi.ackIGw.mm-g4T8TwwY7lIMPyqOxOY1hhTI" /&gt;
+    &lt;div class="form-group"&gt;
+      &lt;label for="username"&gt;Username&lt;/label&gt;
+      &lt;input
+        type="text"
+        id="username"
+        name="username"
+        placeholder="Enter your username"
+        required
+        autocomplete="username"
+      /&gt;
+    &lt;/div&gt;
+    &lt;div class="form-group"&gt;
+      &lt;label for="password"&gt;Password&lt;/label&gt;
+      &lt;!--
+        VULNERABILITY: autocomplete="current-password" lets the browser save
+        the plaintext password locally. Combined with plaintext DB storage this
+        doubles the exposure.
+      --&gt;
+      &lt;input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="Enter your password"
+        required
+        autocomplete="current-password"
+      /&gt;
+    &lt;/div&gt;
+    &lt;button type="submit" class="btn btn-primary"&gt;Log In&lt;/button&gt;
+  &lt;/form&gt;
+
+  &lt;a href="/signup.html" class="btn btn-secondary"&gt;Don't have an account? Sign Up&lt;/a&gt;
+&lt;/div&gt;
+
+  &lt;/main&gt;
+
+  &lt;footer&gt;
+    &lt;p&gt;
+      &amp;copy; 2025 Unsecure Social PWA &amp;mdash; For Educational Purposes Only &amp;mdash;
+      &lt;a href="https://owasp.org/www-project-top-ten/" target="_blank" rel="noopener"&gt;OWASP Top 10&lt;/a&gt;
+    &lt;/p&gt;
+  &lt;/footer&gt;
+
+  &lt;!-- app.js loaded last so DOM is ready --&gt;
+  &lt;script src="/static/js/app.js"&gt;&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Parameter</th>
+		<td><pre><code>session</code></pre></td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Evidence</th>
+		<td><pre><code>session</code></pre></td>
+	</tr>
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>This is an informational alert rather than a vulnerability and so there is nothing to fix.</p>
+ </td>
+	</tr>
+</tbody></table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+								<li>
+									<h5>
+										<a href="file:///C:/Users/CatSo/2026-03-29-ZAP-Report-.html#alert-type-12">User Agent Fuzzer</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">POST https://fictional-tribble-qw4r4gppx5g39rp7-5000.app.github.dev/signup.html</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tbody><tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					 <span>CUSTOM_PAYLOADS = </span>
+				</li>
+				<li>
+					 <span>POLICY_PENTEST = </span>
+				</li>
+				<li>
+					<span><a href="https://www.zaproxy.org/docs/desktop/addons/common-library/alerttags/#systemic">SYSTEMIC</a></span> 
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the original response.</p>
+ </td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (1592 bytes)</summary>
+				
+				<pre><code>POST https://fictional-tribble-qw4r4gppx5g39rp7-5000.app.github.dev/signup.html HTTP/1.1
+host: fictional-tribble-qw4r4gppx5g39rp7-5000.app.github.dev
+user-agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)
+pragma: no-cache
+cache-control: no-cache
+content-type: application/x-www-form-urlencoded
+referer: https://fictional-tribble-qw4r4gppx5g39rp7-5000.app.github.dev/signup.html
+content-length: 141
+Cookie: session=eyJjc3JmX3Rva2VuIjoiNGVlNDNjZWYyMzE4NTQwODg4MDdhOTYzZDdmMmFiYzBkOThmNzBhMCJ9.ackIHQ.tY3KzY-Lc1yx8K1vkXQ_3H2AwnM; .Tunnels.Relay.WebForwarding.Cookies=CfDJ8NJJuTEdEi5KqensronCVW0k1tgQ_Cdk1ULGImpLJjce5QVO4xQ08k5mwGGTPBgLNfB3Nhmx76HPPbBUr3Tp4uWcwzbBWNZVtkdIxr8GAWHT3uwaNJnEmyYVPd44aoNGXuKAq2QCbzYNjq0-dezM2BGEceKdSoQ4pJYgsr-IvseOqNS7nT2lSPQgEGN5rlrzXFlt9ycr2cX1F0hUC_9I3eEDETKQtFV1fYu5o0O_WD6fqxSZ4pEMixMECM_xAH-eybVKOL8akb7HHzG16ma50vBMoaW9NDg_R2nmn9am-bvLWeDcyjmdmNg0ORQ9pX4tyIO9dHBaKnhqZsoC25ljJn0CPUXDhQfZA389XlxuCj_G63Fg7jjsSDhy4ErWjQ-brSE4f7mpsLhXUTTuRR_BU9yR3LrjSqTfOKeSfwqg4DcQ7iRKCvLkfLuIW2rzHSWIUIm4-ExWbu90q_sFHUjoh-ESHa8DE8xdF_6_sX-e8N8A2w7hghjs6YPdGCBGFd7qT4jytjnCqtO3RQVuM0ensk-JACdEVo3jNeguNYSjz6vWUVryEpKoTpnizCvfN5tCMizjVwQUD2bIS5B3YDR5ZRTFCkl3R96eowaIHR4VOJ3hvVD-B87mZgDQytB4pwhf7zZqfWChteWSr6GsOo9LtzSMbIfN4ySA3Dcm_OwRffBrVZv83Tpe6h686PmQ95dnPzbUOGaJdSDo4Dffnse3sqJj9Qx14Rb0eFH8_fTFY_zmncVXTo4ek3wBq-ZDuCHqQz99POGE8cfFUVimd8k5D3oAE_EMj2Z4gJxpiWDpDYs03UIN2177oeh2487pJLinSNC5Frc2y0JtYlE4U9jJlwyPNAEmUDo7wZzpQkRNi5QB2_cZswTO8J83MOZQnl9xJr46Szw3_q3KPfRH2FxymFwgLDksIxMQ5bcJ4VURQmorxXX6x41q41I6S0kVTf0vtjPsOokyWnyUNXBtjoAckxdHgaIOMzW5A8xF8ErPzZXQ
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (141 bytes)</summary>
+				
+				<pre><code>csrf_token=IjRlZTQzY2VmMjMxODU0MDg4ODA3YTk2M2Q3ZjJhYmMwZDk4ZjcwYTAi.ackIHQ.pZuHADdsONQlKr2O5VYl1LuoOSo&amp;username=ZAP&amp;password=ZAP&amp;dob=ZAP&amp;bio=</code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details>
+				<summary>Status line and header section (2135 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 401 Unauthorized
+Date: Sun, 29 Mar 2026 12:18:17 GMT
+Content-Length: 0
+Connection: keep-alive
+Cache-Control: no-cache,no-store
+Expires: Thu, 01 Jan 1970 00:00:00 GMT
+Pragma: no-cache
+Set-Cookie: .Tunnels.Relay.WebForwarding.Cookies=CfDJ8NJJuTEdEi5KqensronCVW2qFSNOr83X-bgmdOWfPtFNt1jQ3K1uB1rZTo3F9fIakRQb_EB_ilUIz8jh_M_m8MXwjfaoq9ALc9q2qGbMzXB8sBUoFrqOJjnY723l15N0F7PNE70D1wrXarlFSY5dy26N6WNglaeXDu3883QWoa2VyZSxd9AVnLxEg_FCpMI4XpRTwP-2XItl3_tPCOcc8fdWKsA9SsVIPYC01gnYNldN9452-eO8ArnJlu7o29vlqdhbaKHzscGLD5t8X7PKNMAU0CuGPFHAxG82MpJqlZPOBEy4z_aVP9jxeOOCTiEemduHfn6Yacthlgaa385kZDcSPmjGN9rVyCWVbYY0VWB0_BEC0vfv9L97bCWVbo4PdInNkV0CZGkvH7Y3qaXpFHD6h7WhJz-J69nT-RY00fFdgWMog72S__ntcq6iz3cg9J7W-hs1u7lIDV0p-BVZdFDDmzwiynclzm6r9cFfC66hdtkbLaHeZrVJXm1rjSf1xJq5FSKYs60ZA8yXZGhS11cGMb4w6taEq-jWcksla4U3Q6wbt7l2dcsDB555gw26ptQajRKCCeCtKM4bD5OiuEDbzhKxYygO2NDrP4fXMiO5wRdLtRliOYX3aOuDMTSVhdc-ZV1SNDY4zcUHvOwaUNoCEWir7yFGxuwTG6vtYwek8UYupLxJW-ZrsahtsWG-r-6CIn6HKaciFJg1ZjmeqDNTAvDl-1OhPQj-Vz--ejNqL1aB8bHHW-o5MXrZcB-iGlWyh9gaMZQrF5QPXGNcmXdg8fO8OFcGQ2w2CLYj-DhpjxZrITF2Ohu4K2ZBCXLanAflP2BR9M2DetTAif1u4ALAOhHljh3vu8IdQVUILJxEoTxiRAa9cG6-B82de4JclT3IF776ZqUQ9pZEH9bx9Y8ehRa9U3104EIPkUc6uR5bABSgHjzjvGRSZcwRCTyLOXwYG5ZPbyZJpaIvj1vfusHR14oqWXBvo8TnK7yehJoL; path=/; secure; samesite=none; Partitioned
+WWW-Authenticate: Bearer
+X-Content-Type-Options: nosniff
+X-Content-Type-Options: nosniff
+RateLimit-Limit: HttpRequestRatePerPort:1500/m
+RateLimit-Limit: HttpRequestRatePerPort:1500/m
+RateLimit-Remaining: HttpRequestRatePerPort:1485
+RateLimit-Remaining: HttpRequestRatePerPort:1484
+RateLimit-Reset: HttpRequestRatePerPort:41s
+RateLimit-Reset: HttpRequestRatePerPort:1s
+X-Report-Abuse: https://msrc.microsoft.com/report/abuse
+X-Report-Abuse: https://msrc.microsoft.com/report/abuse
+x-ms-ratelimit-limit: 1500
+x-ms-ratelimit-remaining: 1488
+x-ms-ratelimit-used: 12
+x-ms-ratelimit-reset: 0
+vssaas-request-id: 0c80036f-d19b-47af-baa4-5a25f051b4b7
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+x-served-by: tunnels-prod-rel-aue-v3-cluster
+X-Robots-Tag: noindex, nofollow
+Referrer-Policy: same-origin
+
+</code></pre>
+				
+				
+			</details> <details class="response-body" open="open">
+				<summary>Response body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Parameter</th>
+		<td><pre><code>Header User-Agent</code></pre></td>
+	</tr>
+	<tr>
+		<th scope="row">Attack</th>
+		<td><pre><code>Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)</code></pre></td>
+	</tr>
+	
+	
+</tbody></table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+							</ol>
+						</li>
+						
+					</ol>
+				</li>
+				
+				<li id="alerts--risk-0-confidence-1">
+					<h3>
+						<span>Risk</span>=<span class="risk-level">Informational</span>, <span>Confidence</span>=<span class="confidence-level">Low</span> <span>(3)</span>
+					</h3>
+					<ol>
+						
+						<li class="alerts--site-li">
+							<h4>
+								<span class="site">https://fictional-tribble-qw4r4gppx5g39rp7-5000.app.github.dev</span> <span>(3)</span>
+							</h4>
+							<ol>
+								
+								<li>
+									<h5>
+										<a href="file:///C:/Users/CatSo/2026-03-29-ZAP-Report-.html#alert-type-8">Authentication Request Identified</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">POST https://fictional-tribble-qw4r4gppx5g39rp7-5000.app.github.dev/</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tbody><tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>The given request has been identified as an authentication request. The 'Other Info' field contains a set of key=value lines which identify any relevant fields. If the request is in a context which has an Authentication Method set to "Auto-Detect" then this rule will change the authentication to match the request identified.</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Other info</th>
+		<td> 
+<p>userParam=username</p>
+
+<p>userValue=ZAP</p>
+
+<p>passwordParam=password</p>
+
+<p>referer=https://fictional-tribble-qw4r4gppx5g39rp7-5000.app.github.dev/</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (1631 bytes)</summary>
+				
+				<pre><code>POST https://fictional-tribble-qw4r4gppx5g39rp7-5000.app.github.dev/ HTTP/1.1
+host: fictional-tribble-qw4r4gppx5g39rp7-5000.app.github.dev
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+pragma: no-cache
+cache-control: no-cache
+content-type: application/x-www-form-urlencoded
+referer: https://fictional-tribble-qw4r4gppx5g39rp7-5000.app.github.dev/
+content-length: 128
+Cookie: .Tunnels.Relay.WebForwarding.Cookies=CfDJ8NJJuTEdEi5KqensronCVW3YJf3R3fI9s-NG5KbYZJ0RRjlxSG2KurrFsdEBvujDwyRproqfvlKTGrkzLn3T288VfFNpGQmGyUHgI59AqQ7gfiyG2wETJJ-JzN51xDClZDf5WcfXE2tZ1IiHy0uFxpSDTNXU6V24W3EffA8fuM-I9Hizz4cZFMpSK_ukX7OtXWbSCkQFeNQFgOjYE25OqbHVo-2D0leymTbKo34mfZhxPqiqo7opL0rKWVlFXUXzb6ipcJP56x-RvBdlRpUcMuvzOOHvCRnqpHG9PZCNKjFzXVrwISVCWmzWqm-FFtDut0m9O2dIgWlIQex57BSkMHocTsm-GvgVVheR29_bImRbbdbgCUpsnFLLH2aP8cSp6yEbFRXsyyqzHpwjEYCmLoj6s9GIUZpZSjjBbxGGG8p2PdBS5ovrgZOSnSm0bgbj4jPYeUTX4OAd0tEsEXZ-Vc0V7iitVZVYledNY9K17Cv-NSz9GOcC9VNK7Nkqr_j16_TN4pp3NbVg6Wulw7t62VGJw2X6nCfkg7KfN0g1WyLk5bLko1OjaaUZsHzx6GAKd27MSb_eARP9R0dmBmayPElGu3-45aBWgf5IoBBegupk97QcSqphgueKaPPStAM_H6qnXS1aaSTQauSONcPLn5XeEZ8bfj20ekZitb1Cnfm7Tbbv85ZFsyzGqAgw_lna-X4izslWDYtGe5HSUFvRPnF-0x5hMWC5LqenbT2Qv6vm4h-vPuMoOesP5lULfJUIQCAW0FJdD0nEfA2FDuXpNHH6HuB4a8i4bAr6CTKUZHPtfK-HOtB_Z86JRE1D2eQx4rRw6RVwRGBaJ-SWlSAFrYWGepgrZpKDbAIzDDsKT3MqZ0Sxjbfd5zgjRzb7V64l2Aw47qO28aEsJhfyfBXTwpcGmMULbPaoeNELc8rQnIs4K54mo9xPSxE98XjOFeUcL1l_BSD-EdEiDxj_SlzQkpbr61nt69zKJPiXIZVzbiUH; session=eyJjc3JmX3Rva2VuIjoiNGVlNDNjZWYyMzE4NTQwODg4MDdhOTYzZDdmMmFiYzBkOThmNzBhMCJ9.ackIHQ.tY3KzY-Lc1yx8K1vkXQ_3H2AwnM
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (128 bytes)</summary>
+				
+				<pre><code>csrf_token=IjRlZTQzY2VmMjMxODU0MDg4ODA3YTk2M2Q3ZjJhYmMwZDk4ZjcwYTAi.ackIHQ.pZuHADdsONQlKr2O5VYl1LuoOSo&amp;username=ZAP&amp;password=ZAP</code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details open="open">
+				<summary>Status line and header section (1258 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 200 OK
+Date: Sun, 29 Mar 2026 11:08:13 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 3305
+Connection: keep-alive
+Set-Cookie: session=eyJjc3JmX3Rva2VuIjoiNGVlNDNjZWYyMzE4NTQwODg4MDdhOTYzZDdmMmFiYzBkOThmNzBhMCJ9.ackIHQ.tY3KzY-Lc1yx8K1vkXQ_3H2AwnM; HttpOnly; Path=/
+Vary: Cookie
+X-Content-Type-Options: nosniff
+X-Content-Type-Options: nosniff
+RateLimit-Limit: HttpRequestRatePerPort:1500/m
+RateLimit-Limit: HttpRequestRatePerPort:1500/m
+RateLimit-Remaining: HttpRequestRatePerPort:1497
+RateLimit-Remaining: HttpRequestRatePerPort:1499
+RateLimit-Reset: HttpRequestRatePerPort:51s
+RateLimit-Reset: HttpRequestRatePerPort:2s
+X-Report-Abuse: https://msrc.microsoft.com/report/abuse
+X-Report-Abuse: https://msrc.microsoft.com/report/abuse
+x-ms-ratelimit-limit: 
+x-ms-ratelimit-remaining: 
+x-ms-ratelimit-used: 1
+x-ms-ratelimit-reset: 
+Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; object-src 'none'; base-uri 'self'
+vssaas-request-id: 61fe48d3-748e-435b-a957-cf2a6121e94f
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+x-served-by: tunnels-prod-rel-aue-v3-cluster
+X-Robots-Tag: noindex, nofollow
+Referrer-Policy: same-origin
+
+</code></pre>
+				
+				
+			</details> <details class="response-body">
+				<summary>Response body (3305 bytes)</summary>
+				
+				<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8" /&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+  &lt;title&gt;Login — SocialPWA&lt;/title&gt;
+
+  &lt;!-- VULNERABILITY: No Content-Security-Policy header or meta tag.
+       Inline scripts, eval(), and external resource loading are all unrestricted.
+       A proper CSP would block XSS execution even if injection occurs. --&gt;
+
+  &lt;link rel="stylesheet" href="/static/css/style.css" /&gt;
+  &lt;link rel="manifest"   href="/static/manifest.json" /&gt;
+  &lt;meta name="theme-color" content="#e94560" /&gt;
+  &lt;meta name="csrf-token" content="IjRlZTQzY2VmMjMxODU0MDg4ODA3YTk2M2Q3ZjJhYmMwZDk4ZjcwYTAi.ackIHQ.pZuHADdsONQlKr2O5VYl1LuoOSo" /&gt;
+  &lt;meta name="vapid-public-key" content="BEl62iUYgUivxIkv69yViEuiBIa-Ib9-SkvMeAtA3LFgDzkrxZJjSgSnfckjBJuBkr3qBUYIHBQFLXYp5Nksh8U" /&gt;
+  &lt;link rel="icon" href="/static/icons/icon-192.png" type="image/png" /&gt;
+
+  
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;nav class="navbar"&gt;
+    &lt;a href="/" class="brand"&gt;&amp;#9733; SocialPWA&lt;/a&gt;
+    &lt;div class="nav-links"&gt;
+      &lt;a href="/"&gt;Login&lt;/a&gt;
+      &lt;a href="/signup.html"&gt;Sign Up&lt;/a&gt;
+      &lt;a href="/feed.html"&gt;Feed&lt;/a&gt;
+      &lt;a href="/messages"&gt;Messages&lt;/a&gt;
+      &lt;button id="enable-notifications-btn" class="btn btn-sm" hidden&gt;Enable Notifications&lt;/button&gt;
+      &lt;button id="install-btn" class="btn btn-sm"&gt;&amp;#8627; Install App&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/nav&gt;
+
+  &lt;main&gt;
+    
+      
+        &lt;div class="msg-box" id="js-msg-box"&gt;
+          
+            &lt;div class="flash-message flash-error"&gt;Invalid credentials. Please try again.&lt;/div&gt;
+          
+        &lt;/div&gt;
+      
+    
+
+    
+&lt;div class="card"&gt;
+  &lt;h1&gt;Welcome back&lt;/h1&gt;
+  &lt;p class="subtitle"&gt;Log in to your SocialPWA account to see the latest posts.&lt;/p&gt;
+
+  &lt;!--
+    VULNERABILITY: No CSRF token on the login form.
+    A malicious site can submit a cross-origin form POST to this endpoint.
+  --&gt;
+  &lt;form action="/" method="POST"&gt;
+    &lt;input type="hidden" name="csrf_token" value="IjRlZTQzY2VmMjMxODU0MDg4ODA3YTk2M2Q3ZjJhYmMwZDk4ZjcwYTAi.ackIHQ.pZuHADdsONQlKr2O5VYl1LuoOSo" /&gt;
+    &lt;div class="form-group"&gt;
+      &lt;label for="username"&gt;Username&lt;/label&gt;
+      &lt;input
+        type="text"
+        id="username"
+        name="username"
+        placeholder="Enter your username"
+        required
+        autocomplete="username"
+      /&gt;
+    &lt;/div&gt;
+    &lt;div class="form-group"&gt;
+      &lt;label for="password"&gt;Password&lt;/label&gt;
+      &lt;!--
+        VULNERABILITY: autocomplete="current-password" lets the browser save
+        the plaintext password locally. Combined with plaintext DB storage this
+        doubles the exposure.
+      --&gt;
+      &lt;input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="Enter your password"
+        required
+        autocomplete="current-password"
+      /&gt;
+    &lt;/div&gt;
+    &lt;button type="submit" class="btn btn-primary"&gt;Log In&lt;/button&gt;
+  &lt;/form&gt;
+
+  &lt;a href="/signup.html" class="btn btn-secondary"&gt;Don't have an account? Sign Up&lt;/a&gt;
+&lt;/div&gt;
+
+  &lt;/main&gt;
+
+  &lt;footer&gt;
+    &lt;p&gt;
+      &amp;copy; 2025 Unsecure Social PWA &amp;mdash; For Educational Purposes Only &amp;mdash;
+      &lt;a href="https://owasp.org/www-project-top-ten/" target="_blank" rel="noopener"&gt;OWASP Top 10&lt;/a&gt;
+    &lt;/p&gt;
+  &lt;/footer&gt;
+
+  &lt;!-- app.js loaded last so DOM is ready --&gt;
+  &lt;script src="/static/js/app.js"&gt;&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Parameter</th>
+		<td><pre><code>username</code></pre></td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Evidence</th>
+		<td><pre><code>password</code></pre></td>
+	</tr>
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>This is an informational alert rather than a vulnerability and so there is nothing to fix.</p>
+ </td>
+	</tr>
+</tbody></table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+								<li>
+									<h5>
+										<a href="file:///C:/Users/CatSo/2026-03-29-ZAP-Report-.html#alert-type-10">Re-examine Cache-control Directives</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">GET https://fictional-tribble-qw4r4gppx5g39rp7-5000.app.github.dev/</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tbody><tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://owasp.org/www-project-web-security-testing-guide/v42/4-Web_Application_Security_Testing/04-Authentication_Testing/06-Testing_for_Browser_Cache_Weaknesses">WSTG-v42-ATHN-06</a></span> 
+				</li>
+				<li>
+					<span><a href="https://cwe.mitre.org/data/definitions/525.html">CWE-525</a></span> 
+				</li>
+				<li>
+					 <span>POLICY_PENTEST = </span>
+				</li>
+				<li>
+					<span><a href="https://www.zaproxy.org/docs/desktop/addons/common-library/alerttags/#systemic">SYSTEMIC</a></span> 
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>The cache-control header has not been set properly or is missing, allowing the browser and proxies to cache content. For static assets like css, js, or image files this might be intended, however, the resources should be reviewed to ensure that no sensitive content will be cached.</p>
+ </td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (310 bytes)</summary>
+				
+				<pre><code>GET https://fictional-tribble-qw4r4gppx5g39rp7-5000.app.github.dev/ HTTP/1.1
+host: fictional-tribble-qw4r4gppx5g39rp7-5000.app.github.dev
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+pragma: no-cache
+cache-control: no-cache
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details>
+				<summary>Status line and header section (2454 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 200 OK
+Date: Sun, 29 Mar 2026 11:08:11 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 3119
+Connection: keep-alive
+Cache-Control: no-cache,no-store
+Expires: Thu, 01 Jan 1970 00:00:00 GMT
+Pragma: no-cache
+Set-Cookie: .Tunnels.Relay.WebForwarding.Cookies=CfDJ8NJJuTEdEi5KqensronCVW0owOthbnDBvGjcC0JJnZaitijbHTHbXWcM-ZjFCmmbcCTKcZ65PPvvei2Ikef-iiyMRkox0ldELNzopuB8eqWmxRm2xqV0Y1YXFmv2pEsURMJnVz_muH8I4XlsOcU0hp9ig0s2BMjXmQQ3b8y-aVkRjli28AHRp4ZOrW5lLUpnyIwbJth9FKtggAMXJ5xAT26VWZlBsRe_m_lP2HN_yLrlHjEezPhFJj1sg6j2U4vulxxax5PI-BpdGnIdgyvb744LM1g7NUwMAfqp5S_PkKDNRkOgUmR8dZi2Ctzvv111JJG0UKEYEy1Vgoz1HC3BZFzKO33dUjhgxoeBCU7XPTgX5W0gdwywuALw0fxLGEp0BC-FfIfNvS7HLDRo_dFbAlqZRISoFesR4z_ScyS2MHF8j-igwUqwrJLLr406XksFC0QGKQH_OcBFkPK9mY8ErDOg2m8Dsjayr2QXy-3X1qV27XBKJnkb86AMtJ8RWt1oPbgV9tQ4WLLrR-I9jyRAoxj-6nHxeSzpmQXPpHFt5XoHTxW2tO6NcqumKVyMgcyF19Xiuf61oT-b2hFQqiFzob2MHsyg1_RILqMdxSJnt0t0ynJ60qfIhokBjGLW-hILLVFTJAmrxPyd8zomCy0cn0WwBQ3f4SGmoOd1NXqW9eGEOTG_Ix8Qs-O2rq525YO31T-WyQkhljYwpc-MzqlJjAuyOAw8lFLUGRMklHcyL4fnCcUpy5ZP75VtPbhXo_Ty06nurWHZX8U-pA80wr4BIRzyeFQjA183e8ISlQ-hYv_1WkhMnD8XOy1h91sa1agGEmWsoat2I2fmkeNo1TmY0L5-lvlBe7K6Xl3N5r0E9Jm04ZcqQ72Cu8AN4GsUzHh4f_ly9baWs1OBLtBXX-qMVaIbOAmqs8rtWjPHrZDhOrryMVB0NEyFExWJ6kGXdtusnaq_d_PMOBNfFFBok0V7ojrUatMi06lnB-3oNWj9JmAr; path=/; secure; samesite=none; Partitioned
+Set-Cookie: session=eyJjc3JmX3Rva2VuIjoiZmQyMWQzM2ZiNTM4NTdlOWNjYWU4NTM5ZTdmMTJmMDdmYTcyNTUwMiJ9.ackIGw.Ze8c_xznEaYD4KzfW_UeX5OLC8M; HttpOnly; Path=/
+Vary: Cookie
+X-Content-Type-Options: nosniff
+X-Content-Type-Options: nosniff
+RateLimit-Limit: HttpRequestRatePerPort:1500/m
+RateLimit-Limit: HttpRequestRatePerPort:1500/m
+RateLimit-Remaining: HttpRequestRatePerPort:1499
+RateLimit-Remaining: HttpRequestRatePerPort:1499
+RateLimit-Reset: HttpRequestRatePerPort:53s
+RateLimit-Reset: HttpRequestRatePerPort:14s
+X-Report-Abuse: https://msrc.microsoft.com/report/abuse
+X-Report-Abuse: https://msrc.microsoft.com/report/abuse
+x-ms-ratelimit-limit: 
+x-ms-ratelimit-remaining: 
+x-ms-ratelimit-used: 1
+x-ms-ratelimit-reset: 
+Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; object-src 'none'; base-uri 'self'
+vssaas-request-id: 6d15f514-283c-4564-9cc3-bc2674448b0d
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+x-served-by: tunnels-prod-rel-aue-v3-cluster
+X-Robots-Tag: noindex, nofollow
+Referrer-Policy: same-origin
+
+</code></pre>
+				
+				
+			</details> <details class="response-body">
+				<summary>Response body (3119 bytes)</summary>
+				
+				<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8" /&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+  &lt;title&gt;Login — SocialPWA&lt;/title&gt;
+
+  &lt;!-- VULNERABILITY: No Content-Security-Policy header or meta tag.
+       Inline scripts, eval(), and external resource loading are all unrestricted.
+       A proper CSP would block XSS execution even if injection occurs. --&gt;
+
+  &lt;link rel="stylesheet" href="/static/css/style.css" /&gt;
+  &lt;link rel="manifest"   href="/static/manifest.json" /&gt;
+  &lt;meta name="theme-color" content="#e94560" /&gt;
+  &lt;meta name="csrf-token" content="ImZkMjFkMzNmYjUzODU3ZTljY2FlODUzOWU3ZjEyZjA3ZmE3MjU1MDIi.ackIGw.mm-g4T8TwwY7lIMPyqOxOY1hhTI" /&gt;
+  &lt;meta name="vapid-public-key" content="BEl62iUYgUivxIkv69yViEuiBIa-Ib9-SkvMeAtA3LFgDzkrxZJjSgSnfckjBJuBkr3qBUYIHBQFLXYp5Nksh8U" /&gt;
+  &lt;link rel="icon" href="/static/icons/icon-192.png" type="image/png" /&gt;
+
+  
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;nav class="navbar"&gt;
+    &lt;a href="/" class="brand"&gt;&amp;#9733; SocialPWA&lt;/a&gt;
+    &lt;div class="nav-links"&gt;
+      &lt;a href="/"&gt;Login&lt;/a&gt;
+      &lt;a href="/signup.html"&gt;Sign Up&lt;/a&gt;
+      &lt;a href="/feed.html"&gt;Feed&lt;/a&gt;
+      &lt;a href="/messages"&gt;Messages&lt;/a&gt;
+      &lt;button id="enable-notifications-btn" class="btn btn-sm" hidden&gt;Enable Notifications&lt;/button&gt;
+      &lt;button id="install-btn" class="btn btn-sm"&gt;&amp;#8627; Install App&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/nav&gt;
+
+  &lt;main&gt;
+    
+      
+    
+
+    
+&lt;div class="card"&gt;
+  &lt;h1&gt;Welcome back&lt;/h1&gt;
+  &lt;p class="subtitle"&gt;Log in to your SocialPWA account to see the latest posts.&lt;/p&gt;
+
+  &lt;!--
+    VULNERABILITY: No CSRF token on the login form.
+    A malicious site can submit a cross-origin form POST to this endpoint.
+  --&gt;
+  &lt;form action="/" method="POST"&gt;
+    &lt;input type="hidden" name="csrf_token" value="ImZkMjFkMzNmYjUzODU3ZTljY2FlODUzOWU3ZjEyZjA3ZmE3MjU1MDIi.ackIGw.mm-g4T8TwwY7lIMPyqOxOY1hhTI" /&gt;
+    &lt;div class="form-group"&gt;
+      &lt;label for="username"&gt;Username&lt;/label&gt;
+      &lt;input
+        type="text"
+        id="username"
+        name="username"
+        placeholder="Enter your username"
+        required
+        autocomplete="username"
+      /&gt;
+    &lt;/div&gt;
+    &lt;div class="form-group"&gt;
+      &lt;label for="password"&gt;Password&lt;/label&gt;
+      &lt;!--
+        VULNERABILITY: autocomplete="current-password" lets the browser save
+        the plaintext password locally. Combined with plaintext DB storage this
+        doubles the exposure.
+      --&gt;
+      &lt;input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="Enter your password"
+        required
+        autocomplete="current-password"
+      /&gt;
+    &lt;/div&gt;
+    &lt;button type="submit" class="btn btn-primary"&gt;Log In&lt;/button&gt;
+  &lt;/form&gt;
+
+  &lt;a href="/signup.html" class="btn btn-secondary"&gt;Don't have an account? Sign Up&lt;/a&gt;
+&lt;/div&gt;
+
+  &lt;/main&gt;
+
+  &lt;footer&gt;
+    &lt;p&gt;
+      &amp;copy; 2025 Unsecure Social PWA &amp;mdash; For Educational Purposes Only &amp;mdash;
+      &lt;a href="https://owasp.org/www-project-top-ten/" target="_blank" rel="noopener"&gt;OWASP Top 10&lt;/a&gt;
+    &lt;/p&gt;
+  &lt;/footer&gt;
+
+  &lt;!-- app.js loaded last so DOM is ready --&gt;
+  &lt;script src="/static/js/app.js"&gt;&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Parameter</th>
+		<td><pre><code>cache-control</code></pre></td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Evidence</th>
+		<td><pre><code>no-cache,no-store</code></pre></td>
+	</tr>
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>For secure content, ensure the cache-control HTTP header is set with "no-cache, no-store, must-revalidate". If an asset should be cached consider setting the directives "public, max-age, immutable".</p>
+ </td>
+	</tr>
+</tbody></table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+								<li>
+									<h5>
+										<a href="file:///C:/Users/CatSo/2026-03-29-ZAP-Report-.html#alert-type-13">User Controllable HTML Element Attribute (Potential XSS)</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">POST https://fictional-tribble-qw4r4gppx5g39rp7-5000.app.github.dev/</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tbody><tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://owasp.org/www-project-top-ten/2017/A1_2017-Injection.html">OWASP_2017_A01</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/Top10/A03_2021-Injection/">OWASP_2021_A03</a></span> 
+				</li>
+				<li>
+					<span><a href="https://cwe.mitre.org/data/definitions/20.html">CWE-20</a></span> 
+				</li>
+				<li>
+					 <span>POLICY_PENTEST = </span>
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>This check looks at user-supplied input in query string parameters and POST data to identify where certain HTML attribute values might be controlled. This provides hot-spot detection for XSS (cross-site scripting) that will require further review by a security analyst to determine exploitability.</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Other info</th>
+		<td> 
+<p>User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:</p>
+
+<p>https://fictional-tribble-qw4r4gppx5g39rp7-5000.app.github.dev/</p>
+
+<p>appears to include user input in:</p>
+
+<p>a(n) [meta] tag [content] attribute</p>
+
+<p>The user input found was:</p>
+
+<p>csrf_token=IjRlZTQzY2VmMjMxODU0MDg4ODA3YTk2M2Q3ZjJhYmMwZDk4ZjcwYTAi.ackIHQ.pZuHADdsONQlKr2O5VYl1LuoOSo</p>
+
+<p>The user-controlled value was:</p>
+
+<p>ijrlztqzy2vmmjmxodu0mdg4oda3ytk2m2q3zjjhymmwzdk4zjcwytai.ackihq.pzuhaddsonqlkr2o5vyl1luooso</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (1631 bytes)</summary>
+				
+				<pre><code>POST https://fictional-tribble-qw4r4gppx5g39rp7-5000.app.github.dev/ HTTP/1.1
+host: fictional-tribble-qw4r4gppx5g39rp7-5000.app.github.dev
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+pragma: no-cache
+cache-control: no-cache
+content-type: application/x-www-form-urlencoded
+referer: https://fictional-tribble-qw4r4gppx5g39rp7-5000.app.github.dev/
+content-length: 128
+Cookie: .Tunnels.Relay.WebForwarding.Cookies=CfDJ8NJJuTEdEi5KqensronCVW3YJf3R3fI9s-NG5KbYZJ0RRjlxSG2KurrFsdEBvujDwyRproqfvlKTGrkzLn3T288VfFNpGQmGyUHgI59AqQ7gfiyG2wETJJ-JzN51xDClZDf5WcfXE2tZ1IiHy0uFxpSDTNXU6V24W3EffA8fuM-I9Hizz4cZFMpSK_ukX7OtXWbSCkQFeNQFgOjYE25OqbHVo-2D0leymTbKo34mfZhxPqiqo7opL0rKWVlFXUXzb6ipcJP56x-RvBdlRpUcMuvzOOHvCRnqpHG9PZCNKjFzXVrwISVCWmzWqm-FFtDut0m9O2dIgWlIQex57BSkMHocTsm-GvgVVheR29_bImRbbdbgCUpsnFLLH2aP8cSp6yEbFRXsyyqzHpwjEYCmLoj6s9GIUZpZSjjBbxGGG8p2PdBS5ovrgZOSnSm0bgbj4jPYeUTX4OAd0tEsEXZ-Vc0V7iitVZVYledNY9K17Cv-NSz9GOcC9VNK7Nkqr_j16_TN4pp3NbVg6Wulw7t62VGJw2X6nCfkg7KfN0g1WyLk5bLko1OjaaUZsHzx6GAKd27MSb_eARP9R0dmBmayPElGu3-45aBWgf5IoBBegupk97QcSqphgueKaPPStAM_H6qnXS1aaSTQauSONcPLn5XeEZ8bfj20ekZitb1Cnfm7Tbbv85ZFsyzGqAgw_lna-X4izslWDYtGe5HSUFvRPnF-0x5hMWC5LqenbT2Qv6vm4h-vPuMoOesP5lULfJUIQCAW0FJdD0nEfA2FDuXpNHH6HuB4a8i4bAr6CTKUZHPtfK-HOtB_Z86JRE1D2eQx4rRw6RVwRGBaJ-SWlSAFrYWGepgrZpKDbAIzDDsKT3MqZ0Sxjbfd5zgjRzb7V64l2Aw47qO28aEsJhfyfBXTwpcGmMULbPaoeNELc8rQnIs4K54mo9xPSxE98XjOFeUcL1l_BSD-EdEiDxj_SlzQkpbr61nt69zKJPiXIZVzbiUH; session=eyJjc3JmX3Rva2VuIjoiNGVlNDNjZWYyMzE4NTQwODg4MDdhOTYzZDdmMmFiYzBkOThmNzBhMCJ9.ackIHQ.tY3KzY-Lc1yx8K1vkXQ_3H2AwnM
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (128 bytes)</summary>
+				
+				<pre><code>csrf_token=IjRlZTQzY2VmMjMxODU0MDg4ODA3YTk2M2Q3ZjJhYmMwZDk4ZjcwYTAi.ackIHQ.pZuHADdsONQlKr2O5VYl1LuoOSo&amp;username=ZAP&amp;password=ZAP</code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details open="open">
+				<summary>Status line and header section (1258 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 200 OK
+Date: Sun, 29 Mar 2026 11:08:13 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 3305
+Connection: keep-alive
+Set-Cookie: session=eyJjc3JmX3Rva2VuIjoiNGVlNDNjZWYyMzE4NTQwODg4MDdhOTYzZDdmMmFiYzBkOThmNzBhMCJ9.ackIHQ.tY3KzY-Lc1yx8K1vkXQ_3H2AwnM; HttpOnly; Path=/
+Vary: Cookie
+X-Content-Type-Options: nosniff
+X-Content-Type-Options: nosniff
+RateLimit-Limit: HttpRequestRatePerPort:1500/m
+RateLimit-Limit: HttpRequestRatePerPort:1500/m
+RateLimit-Remaining: HttpRequestRatePerPort:1497
+RateLimit-Remaining: HttpRequestRatePerPort:1499
+RateLimit-Reset: HttpRequestRatePerPort:51s
+RateLimit-Reset: HttpRequestRatePerPort:2s
+X-Report-Abuse: https://msrc.microsoft.com/report/abuse
+X-Report-Abuse: https://msrc.microsoft.com/report/abuse
+x-ms-ratelimit-limit: 
+x-ms-ratelimit-remaining: 
+x-ms-ratelimit-used: 1
+x-ms-ratelimit-reset: 
+Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; object-src 'none'; base-uri 'self'
+vssaas-request-id: 61fe48d3-748e-435b-a957-cf2a6121e94f
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+x-served-by: tunnels-prod-rel-aue-v3-cluster
+X-Robots-Tag: noindex, nofollow
+Referrer-Policy: same-origin
+
+</code></pre>
+				
+				
+			</details> <details class="response-body">
+				<summary>Response body (3305 bytes)</summary>
+				
+				<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8" /&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+  &lt;title&gt;Login — SocialPWA&lt;/title&gt;
+
+  &lt;!-- VULNERABILITY: No Content-Security-Policy header or meta tag.
+       Inline scripts, eval(), and external resource loading are all unrestricted.
+       A proper CSP would block XSS execution even if injection occurs. --&gt;
+
+  &lt;link rel="stylesheet" href="/static/css/style.css" /&gt;
+  &lt;link rel="manifest"   href="/static/manifest.json" /&gt;
+  &lt;meta name="theme-color" content="#e94560" /&gt;
+  &lt;meta name="csrf-token" content="IjRlZTQzY2VmMjMxODU0MDg4ODA3YTk2M2Q3ZjJhYmMwZDk4ZjcwYTAi.ackIHQ.pZuHADdsONQlKr2O5VYl1LuoOSo" /&gt;
+  &lt;meta name="vapid-public-key" content="BEl62iUYgUivxIkv69yViEuiBIa-Ib9-SkvMeAtA3LFgDzkrxZJjSgSnfckjBJuBkr3qBUYIHBQFLXYp5Nksh8U" /&gt;
+  &lt;link rel="icon" href="/static/icons/icon-192.png" type="image/png" /&gt;
+
+  
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;nav class="navbar"&gt;
+    &lt;a href="/" class="brand"&gt;&amp;#9733; SocialPWA&lt;/a&gt;
+    &lt;div class="nav-links"&gt;
+      &lt;a href="/"&gt;Login&lt;/a&gt;
+      &lt;a href="/signup.html"&gt;Sign Up&lt;/a&gt;
+      &lt;a href="/feed.html"&gt;Feed&lt;/a&gt;
+      &lt;a href="/messages"&gt;Messages&lt;/a&gt;
+      &lt;button id="enable-notifications-btn" class="btn btn-sm" hidden&gt;Enable Notifications&lt;/button&gt;
+      &lt;button id="install-btn" class="btn btn-sm"&gt;&amp;#8627; Install App&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/nav&gt;
+
+  &lt;main&gt;
+    
+      
+        &lt;div class="msg-box" id="js-msg-box"&gt;
+          
+            &lt;div class="flash-message flash-error"&gt;Invalid credentials. Please try again.&lt;/div&gt;
+          
+        &lt;/div&gt;
+      
+    
+
+    
+&lt;div class="card"&gt;
+  &lt;h1&gt;Welcome back&lt;/h1&gt;
+  &lt;p class="subtitle"&gt;Log in to your SocialPWA account to see the latest posts.&lt;/p&gt;
+
+  &lt;!--
+    VULNERABILITY: No CSRF token on the login form.
+    A malicious site can submit a cross-origin form POST to this endpoint.
+  --&gt;
+  &lt;form action="/" method="POST"&gt;
+    &lt;input type="hidden" name="csrf_token" value="IjRlZTQzY2VmMjMxODU0MDg4ODA3YTk2M2Q3ZjJhYmMwZDk4ZjcwYTAi.ackIHQ.pZuHADdsONQlKr2O5VYl1LuoOSo" /&gt;
+    &lt;div class="form-group"&gt;
+      &lt;label for="username"&gt;Username&lt;/label&gt;
+      &lt;input
+        type="text"
+        id="username"
+        name="username"
+        placeholder="Enter your username"
+        required
+        autocomplete="username"
+      /&gt;
+    &lt;/div&gt;
+    &lt;div class="form-group"&gt;
+      &lt;label for="password"&gt;Password&lt;/label&gt;
+      &lt;!--
+        VULNERABILITY: autocomplete="current-password" lets the browser save
+        the plaintext password locally. Combined with plaintext DB storage this
+        doubles the exposure.
+      --&gt;
+      &lt;input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="Enter your password"
+        required
+        autocomplete="current-password"
+      /&gt;
+    &lt;/div&gt;
+    &lt;button type="submit" class="btn btn-primary"&gt;Log In&lt;/button&gt;
+  &lt;/form&gt;
+
+  &lt;a href="/signup.html" class="btn btn-secondary"&gt;Don't have an account? Sign Up&lt;/a&gt;
+&lt;/div&gt;
+
+  &lt;/main&gt;
+
+  &lt;footer&gt;
+    &lt;p&gt;
+      &amp;copy; 2025 Unsecure Social PWA &amp;mdash; For Educational Purposes Only &amp;mdash;
+      &lt;a href="https://owasp.org/www-project-top-ten/" target="_blank" rel="noopener"&gt;OWASP Top 10&lt;/a&gt;
+    &lt;/p&gt;
+  &lt;/footer&gt;
+
+  &lt;!-- app.js loaded last so DOM is ready --&gt;
+  &lt;script src="/static/js/app.js"&gt;&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Parameter</th>
+		<td><pre><code>csrf_token</code></pre></td>
+	</tr>
+	
+	
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>Validate all input and sanitize output it before writing to any HTML attributes.</p>
+ </td>
+	</tr>
+</tbody></table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+							</ol>
+						</li>
+						
+					</ol>
+				</li>
+				  
+			</ol>
+		</section>
+
+		<section id="appendix" class="appendix">
+			<h2>Appendix</h2>
+
+			<section id="alert-types" class="alert-types">
+				<h3>Alert Types</h3>
+				<p class="alert-types-intro">This section contains additional information on the types of alerts in the report.</p>
+				<ol>
+					<li id="alert-type-0">
+						<h4>SQL Injection</h4>
+						<table class="alert-types-table">
+							<tbody><tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by an active scanner</span> <span>(<a href="https://www.zaproxy.org/docs/alerts/40018/">SQL Injection</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a href="https://cwe.mitre.org/data/definitions/89.html">89</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>19</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a href="https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html">https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html</a></li>
+									</ol>
+								</td>
+							</tr>
+						</tbody></table>
+					</li>
+					<li id="alert-type-1">
+						<h4>CSP: Failure to Define Directive with No Fallback</h4>
+						<table class="alert-types-table">
+							<tbody><tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a href="https://www.zaproxy.org/docs/alerts/10055/">CSP</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a href="https://cwe.mitre.org/data/definitions/693.html">693</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>15</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a href="https://www.w3.org/TR/CSP/">https://www.w3.org/TR/CSP/</a></li>
+										<li><a href="https://caniuse.com/#search=content+security+policy">https://caniuse.com/#search=content+security+policy</a></li>
+										<li><a href="https://content-security-policy.com/">https://content-security-policy.com/</a></li>
+										<li><a href="https://github.com/HtmlUnit/htmlunit-csp">https://github.com/HtmlUnit/htmlunit-csp</a></li>
+										<li><a href="https://web.dev/articles/csp#resource-options">https://web.dev/articles/csp#resource-options</a></li>
+									</ol>
+								</td>
+							</tr>
+						</tbody></table>
+					</li>
+					<li id="alert-type-2">
+						<h4>CSP: style-src unsafe-inline</h4>
+						<table class="alert-types-table">
+							<tbody><tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a href="https://www.zaproxy.org/docs/alerts/10055/">CSP</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a href="https://cwe.mitre.org/data/definitions/693.html">693</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>15</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a href="https://www.w3.org/TR/CSP/">https://www.w3.org/TR/CSP/</a></li>
+										<li><a href="https://caniuse.com/#search=content+security+policy">https://caniuse.com/#search=content+security+policy</a></li>
+										<li><a href="https://content-security-policy.com/">https://content-security-policy.com/</a></li>
+										<li><a href="https://github.com/HtmlUnit/htmlunit-csp">https://github.com/HtmlUnit/htmlunit-csp</a></li>
+										<li><a href="https://web.dev/articles/csp#resource-options">https://web.dev/articles/csp#resource-options</a></li>
+									</ol>
+								</td>
+							</tr>
+						</tbody></table>
+					</li>
+					<li id="alert-type-3">
+						<h4>Missing Anti-clickjacking Header</h4>
+						<table class="alert-types-table">
+							<tbody><tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a href="https://www.zaproxy.org/docs/alerts/10020/">Anti-clickjacking Header</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a href="https://cwe.mitre.org/data/definitions/1021.html">1021</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>15</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/X-Frame-Options">https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/X-Frame-Options</a></li>
+									</ol>
+								</td>
+							</tr>
+						</tbody></table>
+					</li>
+					<li id="alert-type-4">
+						<h4>Cookie No HttpOnly Flag</h4>
+						<table class="alert-types-table">
+							<tbody><tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a href="https://www.zaproxy.org/docs/alerts/10010/">Cookie No HttpOnly Flag</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a href="https://cwe.mitre.org/data/definitions/1004.html">1004</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>13</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a href="https://owasp.org/www-community/HttpOnly">https://owasp.org/www-community/HttpOnly</a></li>
+									</ol>
+								</td>
+							</tr>
+						</tbody></table>
+					</li>
+					<li id="alert-type-5">
+						<h4>Cookie Without Secure Flag</h4>
+						<table class="alert-types-table">
+							<tbody><tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a href="https://www.zaproxy.org/docs/alerts/10011/">Cookie Without Secure Flag</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a href="https://cwe.mitre.org/data/definitions/614.html">614</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>13</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a href="https://owasp.org/www-project-web-security-testing-guide/v41/4-Web_Application_Security_Testing/06-Session_Management_Testing/02-Testing_for_Cookies_Attributes.html">https://owasp.org/www-project-web-security-testing-guide/v41/4-Web_Application_Security_Testing/06-Session_Management_Testing/02-Testing_for_Cookies_Attributes.html</a></li>
+									</ol>
+								</td>
+							</tr>
+						</tbody></table>
+					</li>
+					<li id="alert-type-6">
+						<h4>Cookie with SameSite Attribute None</h4>
+						<table class="alert-types-table">
+							<tbody><tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a href="https://www.zaproxy.org/docs/alerts/10054/">Cookie without SameSite Attribute</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a href="https://cwe.mitre.org/data/definitions/1275.html">1275</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>13</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a href="https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-cookie-same-site">https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-cookie-same-site</a></li>
+									</ol>
+								</td>
+							</tr>
+						</tbody></table>
+					</li>
+					<li id="alert-type-7">
+						<h4>Cookie without SameSite Attribute</h4>
+						<table class="alert-types-table">
+							<tbody><tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a href="https://www.zaproxy.org/docs/alerts/10054/">Cookie without SameSite Attribute</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a href="https://cwe.mitre.org/data/definitions/1275.html">1275</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>13</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a href="https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-cookie-same-site">https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-cookie-same-site</a></li>
+									</ol>
+								</td>
+							</tr>
+						</tbody></table>
+					</li>
+					<li id="alert-type-8">
+						<h4>Authentication Request Identified</h4>
+						<table class="alert-types-table">
+							<tbody><tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a href="https://www.zaproxy.org/docs/alerts/10111/">Authentication Request Identified</a>)
+									</span>   
+								</td>
+							</tr>
+							
+							
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a href="https://www.zaproxy.org/docs/desktop/addons/authentication-helper/auth-req-id/">https://www.zaproxy.org/docs/desktop/addons/authentication-helper/auth-req-id/</a></li>
+									</ol>
+								</td>
+							</tr>
+						</tbody></table>
+					</li>
+					<li id="alert-type-9">
+						<h4>Information Disclosure - Suspicious Comments</h4>
+						<table class="alert-types-table">
+							<tbody><tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a href="https://www.zaproxy.org/docs/alerts/10027/">Information Disclosure - Suspicious Comments</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a href="https://cwe.mitre.org/data/definitions/615.html">615</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>13</td>
+							</tr>
+							
+						</tbody></table>
+					</li>
+					<li id="alert-type-10">
+						<h4>Re-examine Cache-control Directives</h4>
+						<table class="alert-types-table">
+							<tbody><tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a href="https://www.zaproxy.org/docs/alerts/10015/">Re-examine Cache-control Directives</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a href="https://cwe.mitre.org/data/definitions/525.html">525</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>13</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a href="https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching">https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching</a></li>
+										<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Cache-Control">https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Cache-Control</a></li>
+										<li><a href="https://grayduck.mn/2021/09/13/cache-control-recommendations/">https://grayduck.mn/2021/09/13/cache-control-recommendations/</a></li>
+									</ol>
+								</td>
+							</tr>
+						</tbody></table>
+					</li>
+					<li id="alert-type-11">
+						<h4>Session Management Response Identified</h4>
+						<table class="alert-types-table">
+							<tbody><tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a href="https://www.zaproxy.org/docs/alerts/10112/">Session Management Response Identified</a>)
+									</span>   
+								</td>
+							</tr>
+							
+							
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a href="https://www.zaproxy.org/docs/desktop/addons/authentication-helper/session-mgmt-id/">https://www.zaproxy.org/docs/desktop/addons/authentication-helper/session-mgmt-id/</a></li>
+									</ol>
+								</td>
+							</tr>
+						</tbody></table>
+					</li>
+					<li id="alert-type-12">
+						<h4>User Agent Fuzzer</h4>
+						<table class="alert-types-table">
+							<tbody><tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by an active scanner</span> <span>(<a href="https://www.zaproxy.org/docs/alerts/10104/">User Agent Fuzzer</a>)
+									</span>   
+								</td>
+							</tr>
+							
+							
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a href="https://owasp.org/wstg">https://owasp.org/wstg</a></li>
+									</ol>
+								</td>
+							</tr>
+						</tbody></table>
+					</li>
+					<li id="alert-type-13">
+						<h4>User Controllable HTML Element Attribute (Potential XSS)</h4>
+						<table class="alert-types-table">
+							<tbody><tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a href="https://www.zaproxy.org/docs/alerts/10031/">User Controllable HTML Element Attribute (Potential XSS)</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a href="https://cwe.mitre.org/data/definitions/20.html">20</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>20</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a href="https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html">https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html</a></li>
+									</ol>
+								</td>
+							</tr>
+						</tbody></table>
+					</li>
+				</ol>
+			</section>
+		</section>
+		 
+	</main>
+
+
+
+
+
+</body></html>

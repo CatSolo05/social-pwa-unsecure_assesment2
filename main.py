@@ -3,7 +3,6 @@ import sys
 import sqlite3
 import subprocess
 from flask import Flask, render_template, request, redirect, session
-from flask_cors import CORS
 from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
 import user_management as db
@@ -53,9 +52,6 @@ limiter = Limiter(
     app=app,
     default_limits=[],
 )
-
-# VULNERABILITY: Wildcard CORS — allows ANY origin to make credentialed requests
-CORS(app)
 
 # SECRET_KEY must be provided via environment variable.
 app.secret_key = os.environ.get("SECRET_KEY")

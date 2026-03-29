@@ -99,8 +99,26 @@ def signup():
         password = request.form["password"]
         DoB      = request.form["dob"]
         bio      = request.form.get("bio", "")
+
+        weak_passwords = {
+            "password",
+            "password123",
+            "12345678",
+            "qwerty",
+            "letmein",
+            "admin123",
+            "welcome123",
+        }
+
+        if password.lower() in weak_passwords:
+            flash("Please choose a stronger password.", "error")
+            return redirect("/signup.html")
+
+        if len(password) < 8:
+            flash("Password must be at least 8 characters long.", "error")
+            return redirect("/signup.html")
+
         # VULNERABILITY: No duplicate username check
-        # VULNERABILITY: No input validation or password strength enforcement
         db.insertUser(username, password, DoB, bio)
         flash("Account created! Please log in.", "success")
         return redirect("/")

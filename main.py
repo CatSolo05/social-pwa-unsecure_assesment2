@@ -119,8 +119,7 @@ def feed():
 
     if request.method == "POST":
         post_content = request.form["content"]
-        # VULNERABILITY: IDOR — username from hidden form field, can be tampered with
-        username = request.form.get("username", "Anonymous")
+        username = session.get("username")
         db.insertPost(username, post_content)
         posts = db.getPosts()
         return render_template("feed.html", username=username, state=True, posts=posts)
@@ -154,7 +153,7 @@ def messages():
         return guard
 
     if request.method == "POST":
-        sender    = request.form.get("sender", "Anonymous")
+        sender    = session.get("username")
         recipient = request.form.get("recipient", "")
         body      = request.form.get("body", "")
         db.sendMessage(sender, recipient, body)

@@ -22,6 +22,7 @@ import os
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DB_PATH  = os.path.join(BASE_DIR, "database_files", "database.db")
 LOG_PATH = os.path.join(BASE_DIR, "visitor_log.txt")
+DUMMY_PASSWORD_HASH = "$2b$12$QF4gq2rqfU9Y6n7M6fXV4e1bQdN9cW0x4uA8Qx5Q1hA0mAq4cF3QK"
 
 
 def insertUser(username, password, DoB, bio=""):
@@ -44,33 +45,29 @@ def insertUser(username, password, DoB, bio=""):
 def retrieveUsers(username, password):
     """
     Authenticate a user.
-        Fetch the user by username and verify the submitted password against the
-        stored bcrypt hash.
+    Fetch the user by username and verify the submitted password against the
+    stored bcrypt hash. A dummy hash is used for nonexistent users so the
+    response time does not reveal whether an account exists.
     """
     con = sql.connect(DB_PATH)
     cur = con.cursor()
 
     cur.execute("SELECT * FROM users WHERE username = ?", (username,))
     user_row = cur.fetchone()
+    con.close()
 
-    if user_row is None:
-        con.close()
-        return False  # Fast path — no sleep here (timing leak)
-    else:
-        # VULNERABILITY: Timing side-channel — delay ONLY when username found
-        time.sleep(random.randint(80, 90) / 1000)
+    stored_hash = user_row[2] if user_row is not None else DUMMY_PASSWORD_HASH
+    password_matches = bcrypt.checkpw(password.encode("utf-8"), stored_hash.encode("utf-8"))
 
-        try:
-            with open(LOG_PATH, "r") as f:
-                count = int(f.read().strip() or 0)
-            with open(LOG_PATH, "w") as f:
-                f.write(str(count + 1))
-        except Exception:
-            pass
+    try:
+        with open(LOG_PATH, "r") as f:
+            count = int(f.read().strip() or 0)
+        with open(LOG_PATH, "w") as f:
+            f.write(str(count + 1))
+    except Exception:
+        pass
 
-        stored_hash = user_row[2]
-        con.close()
-        return bcrypt.checkpw(password.encode("utf-8"), stored_hash.encode("utf-8"))
+    return user_row is not None and password_matches
 
 
 def insertPost(author, content):

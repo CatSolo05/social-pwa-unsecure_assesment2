@@ -6,11 +6,6 @@
   <h1>Join SocialPWA</h1>
   <p class="subtitle">Create your free account. Takes less than a minute.</p>
 
-  <!--
-    VULNERABILITY: No CSRF token — cross-site form submission is possible.
-    VULNERABILITY: No duplicate username check in the backend (insertUser).
-    VULNERABILITY: No password complexity requirements enforced anywhere.
-  -->
   <form action="/signup.html" method="POST">
     <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
     <div class="form-group">
@@ -28,10 +23,6 @@
     </div>
     <div class="form-group">
       <label for="password">Password</label>
-      <!--
-        VULNERABILITY: Password stored in plaintext — no hashing.
-        There are no server-side strength requirements either.
-      -->
       <input
         type="password"
         id="password"
@@ -43,10 +34,6 @@
     </div>
     <div class="form-group">
       <label for="dob">Date of Birth</label>
-      <!--
-        VULNERABILITY: Date of birth stored as plain text alongside the plaintext password.
-        PII with no encryption at rest.
-      -->
       <input
         type="text"
         id="dob"

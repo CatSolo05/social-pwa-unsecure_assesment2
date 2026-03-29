@@ -9,23 +9,31 @@
 //    5. postMessage handling — now limited to same-origin messages and internal redirects
 // ─────────────────────────────────────────────────────────────────────────────
 
-const csrfTokenMeta = document.querySelector('meta[name="csrf-token"]');
 const vapidPublicKeyMeta = document.querySelector('meta[name="vapid-public-key"]');
-const csrfToken = csrfTokenMeta ? csrfTokenMeta.content : '';
 const vapidPublicKey = vapidPublicKeyMeta ? vapidPublicKeyMeta.content : '';
+let csrfTokenPromise;
 
-function getCsrfToken() {
-  if (csrfToken) {
-    return csrfToken;
+async function getCsrfToken() {
+  if (!csrfTokenPromise) {
+    csrfTokenPromise = fetch('/csrf-token', {
+      credentials: 'same-origin'
+    })
+      .then(function (response) {
+        if (!response.ok) {
+          throw new Error('Unable to load CSRF token');
+        }
+
+        return response.json();
+      })
+      .then(function (data) {
+        return data.csrfToken || '';
+      })
+      .catch(function () {
+        return '';
+      });
   }
 
-  const csrfCookie = document.cookie
-    .split('; ')
-    .find(function (cookie) {
-      return cookie.startsWith('csrf_token=');
-    });
-
-  return csrfCookie ? decodeURIComponent(csrfCookie.split('=').slice(1).join('=')) : '';
+  return csrfTokenPromise;
 }
 
 // ── Service Worker Registration ───────────────────────────────────────────────
@@ -89,7 +97,7 @@ function setupNotificationsButton() {
 async function subscribeToPush() {
   try {
     const registration = await navigator.serviceWorker.ready;
-    const currentCsrfToken = getCsrfToken();
+    const currentCsrfToken = await getCsrfToken();
 
     const applicationServerKey = urlBase64ToUint8Array(vapidPublicKey);
 

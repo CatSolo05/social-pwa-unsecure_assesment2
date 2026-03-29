@@ -19,13 +19,8 @@
   </aside>
 
   <div class="feed-main">
-    <div class="compose-card" style="margin-bottom:1.5rem;">
-      <h2 style="margin-bottom:1rem;">&#128140; Send a Message</h2>
-      <!--
-        VULNERABILITY: No CSRF token.
-        VULNERABILITY: 'sender' is a hidden field — easily spoofed to impersonate any user.
-        VULNERABILITY: No check that 'recipient' exists in the database.
-      -->
+    <div class="compose-card">
+      <h2 class="mb-md">&#128140; Send a Message</h2>
       <form action="/messages" method="POST">
         <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
         <div class="form-group">
@@ -41,27 +36,19 @@
         </div>
         <div class="form-group">
           <label for="body">Message</label>
-          <!--
-            VULNERABILITY: Message body is rendered with |safe in the inbox view below.
-            Stored XSS via direct message — attacker can target a specific user.
-          -->
           <textarea id="body" name="body" placeholder="Write your message..." required></textarea>
         </div>
         <div class="compose-footer">
-          <button type="submit" class="btn btn-primary btn-sm" style="width:auto;">Send</button>
+          <button type="submit" class="btn btn-primary btn-sm w-auto">Send</button>
         </div>
       </form>
     </div>
 
-    <h2 style="margin-bottom:1rem;">
+    <h2 class="mb-md">
       Inbox for
-      <!--
-        VULNERABILITY: Username from URL parameter rendered with |safe — reflected XSS.
-        /messages?user=<script>alert(1)</script>
-      -->
       <span class="text-accent">{{ username }}</span>
     </h2>
-    <p class="text-muted mb-2" style="font-size:0.82rem;">
+    <p class="text-muted text-xs mb-2">
       ⚠️  No authentication required to view this inbox — change the <code>?user=</code> parameter to read anyone's messages.
     </p>
 
@@ -74,17 +61,12 @@
           &mdash; <span>{{ msg[4] }}</span>
           {% endif %}
         </div>
-        <!--
-          VULNERABILITY: Stored XSS — message body rendered with |safe.
-          An attacker can send a message containing <script>alert(document.cookie)</script>
-          and it will execute when the recipient opens their inbox.
-        -->
-        <div class="msg-body">{{ msg[3] | safe }}</div>
+        <div class="msg-body">{{ msg[3] }}</div>
       </div>
       {% endfor %}
     {% else %}
       <div class="message-card">
-        <p class="text-muted" style="text-align:center; padding:0.5rem 0;">
+        <p class="text-muted text-center py-sm">
           No messages in this inbox yet.
         </p>
       </div>

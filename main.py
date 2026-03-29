@@ -2,10 +2,10 @@ import os
 import sys
 import sqlite3
 import subprocess
-from flask import Flask, render_template, request, redirect, session, flash
+from flask import Flask, jsonify, render_template, request, redirect, session, flash
 from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
-from flask_wtf.csrf import CSRFProtect
+from flask_wtf.csrf import CSRFProtect, generate_csrf
 import user_management as db
 
 # ── Auto-bootstrap the database on every startup ──────────────────────────────
@@ -68,6 +68,11 @@ load_env_file()
 # ─────────────────────────────────────────────────────────────────────────────
 
 app = Flask(__name__)
+app.config.update(
+    SESSION_COOKIE_HTTPONLY=True,
+    SESSION_COOKIE_SECURE=True,
+    SESSION_COOKIE_SAMESITE="Lax",
+)
 
 csrf = CSRFProtect(app)
 
@@ -92,11 +97,21 @@ def add_security_headers(response):
     response.headers["Content-Security-Policy"] = (
         "default-src 'self'; "
         "script-src 'self'; "
-        "style-src 'self' 'unsafe-inline'; "
+        "style-src 'self'; "
         "img-src 'self' data:; "
+        "form-action 'self'; "
+        "frame-ancestors 'none'; "
         "object-src 'none'; "
         "base-uri 'self'"
     )
+    response.headers["X-Frame-Options"] = "DENY"
+    response.headers["X-Content-Type-Options"] = "nosniff"
+
+    if not request.path.startswith("/static/"):
+        response.headers["Cache-Control"] = "no-cache, no-store, must-revalidate"
+        response.headers["Pragma"] = "no-cache"
+        response.headers["Expires"] = "0"
+
     return response
 
 
@@ -109,6 +124,11 @@ def require_login():
 @app.context_processor
 def inject_client_config():
     return {"vapid_public_key": app.config.get("VAPID_PUBLIC_KEY", "")}
+
+
+@app.route("/csrf-token")
+def csrf_token_route():
+    return jsonify({"csrfToken": generate_csrf()})
 
 
 # ── Home / Login ──────────────────────────────────────────────────────────────
@@ -125,11 +145,10 @@ def home():
     isLoggedIn = db.retrieveUsers(username, password)
     if isLoggedIn:
         session["username"] = username
-        posts = db.getPosts()
-        return render_template("feed.html", username=username, state=isLoggedIn, posts=posts)
+        return redirect("/feed.html")
 
     flash("Invalid credentials. Please try again.", "error")
-    return render_template("index.html")
+    return redirect("/")
 
 
 # ── Sign Up ───────────────────────────────────────────────────────────────────
@@ -184,7 +203,8 @@ def feed():
         return render_template("feed.html", username=username, state=True, posts=posts)
 
     posts = db.getPosts()
-    return render_template("feed.html", username="Guest", state=True, posts=posts)
+    username = session.get("username", "Guest")
+    return render_template("feed.html", username=username, state=True, posts=posts)
 
 
 # ── User Profile ──────────────────────────────────────────────────────────────

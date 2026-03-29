@@ -488,15 +488,58 @@ footer a { color: var(--accent); }
 
 /* ── Utilities ──────────────────────────────────────────────────────────────── */
 .text-muted   { color: var(--text-muted); }
+.text-light   { color: var(--text-light); }
 .text-accent  { color: var(--accent); }
 .text-success { color: var(--success); }
 .text-danger  { color: var(--danger); }
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-sm { font-size: 0.88rem; }
+.text-xs { font-size: 0.82rem; }
+.w-auto { width: auto; }
+.d-inline-block { display: inline-block; }
+.d-flex { display: flex; }
+.gap-sm { gap: 0.75rem; }
+.mb-sm { margin-bottom: 0.2rem; }
+.mb-md { margin-bottom: 1rem; }
+.mb-lg { margin-bottom: 1.5rem; }
+.py-sm { padding: 0.5rem 0; }
+.py-md { padding: 1rem 0; }
 .mt-1 { margin-top: 0.5rem; }
 .mt-2 { margin-top: 1rem; }
 .mt-3 { margin-top: 1.5rem; }
 .mb-1 { margin-bottom: 0.5rem; }
 .mb-2 { margin-bottom: 1rem; }
 .clearfix::after { content: ''; display: table; clear: both; }
+
+.stats-card {
+  font-size: 0.82rem;
+  text-align: left;
+  color: var(--text-muted);
+}
+
+.stats-card-title {
+  color: var(--text-light);
+}
+
+.profile-bio-copy {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.status-card {
+  text-align: center;
+}
+
+.status-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.status-title {
+  color: var(--success);
+}
 
 /* ── Responsive ─────────────────────────────────────────────────────────────── */
 @media (max-width: 720px) {

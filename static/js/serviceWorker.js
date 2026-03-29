@@ -4,7 +4,7 @@
 //  INTENTIONAL VULNERABILITIES (for educational use):
 //    1. Cache Poisoning    — caches ALL GET responses including user-specific pages
 //    2. skipWaiting        — compromised SW update takes effect immediately
-//    3. clients.claim()    — instantly hijacks all open tabs on activation
+//    3. Service worker scope — newly activated workers wait for future navigations
 //    4. No SRI checks      — cached resources have no integrity verification
 //    5. Push Phishing      — notification payload URL opened with no validation
 //    6. Hardcoded VAPID    — public key visible in source; anyone can send pushes
@@ -36,10 +36,7 @@ self.addEventListener('install', function (event) {
 
 // ── ACTIVATE ─────────────────────────────────────────────────────────────────
 self.addEventListener('activate', function (event) {
-  // VULNERABILITY: clients.claim() immediately controls ALL open tabs
-  // A compromised or maliciously updated service worker now intercepts every request
-  // across every open page — including pages the user was already on
-  event.waitUntil(clients.claim());
+  event.waitUntil(Promise.resolve());
 });
 
 // ── FETCH ─────────────────────────────────────────────────────────────────────

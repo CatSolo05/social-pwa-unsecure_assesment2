@@ -30,20 +30,6 @@
     <span class="label">Username</span>
     <span class="value">{{ profile[1] }}</span>
   </div>
-  <div class="profile-stat">
-    <span class="label">Date of Birth</span>
-    <!--
-      VULNERABILITY: Date of birth is exposed on a publicly accessible profile page
-      with no authentication check required to view it.
-    -->
-    <span class="value">{{ profile[2] if profile[2] else "Not set" }}</span>
-  </div>
-  <div class="profile-stat">
-    <span class="label">Role</span>
-    <span class="value" style="color:{% if profile[4] == 'admin' %}var(--accent){% else %}var(--success){% endif %};">
-      {{ profile[4] | upper if profile[4] else "USER" }}
-    </span>
-  </div>
 
   <div class="mt-3" style="display:flex; gap:0.75rem;">
     <a href="/feed.html" class="btn btn-secondary btn-sm" style="width:auto;">&#8592; Back to Feed</a>

@@ -4,6 +4,8 @@ import sqlite3
 import subprocess
 from flask import Flask, render_template, request, redirect
 from flask_cors import CORS
+from flask_limiter import Limiter
+from flask_limiter.util import get_remote_address
 import user_management as db
 
 # ── Auto-bootstrap the database on every startup ──────────────────────────────
@@ -46,6 +48,12 @@ init_db()
 
 app = Flask(__name__)
 
+limiter = Limiter(
+    key_func=get_remote_address,
+    app=app,
+    default_limits=[],
+)
+
 # VULNERABILITY: Wildcard CORS — allows ANY origin to make credentialed requests
 CORS(app)
 
@@ -55,6 +63,7 @@ app.secret_key = "supersecretkey123"
 
 # ── Home / Login ──────────────────────────────────────────────────────────────
 
+@limiter.limit("5 per minute", methods=["POST"])
 @app.route("/", methods=["POST", "GET"])
 @app.route("/index.html", methods=["POST", "GET"])
 def home():

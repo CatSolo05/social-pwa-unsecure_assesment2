@@ -22,6 +22,50 @@ const PRECACHE_URLS = [
   '/static/icons/icon-512.png'
 ];
 const PRECACHE_PATHS = new Set(PRECACHE_URLS);
+const ALLOWED_NOTIFICATION_PATHS = new Set([
+  '/',
+  '/index.html',
+  '/signup.html',
+  '/feed.html',
+  '/profile',
+  '/messages',
+  '/success.html'
+]);
+const MAX_NOTIFICATION_TITLE_LENGTH = 80;
+const MAX_NOTIFICATION_BODY_LENGTH = 200;
+
+function sanitizeNotificationText(value, fallbackValue, maxLength) {
+  if (typeof value !== 'string') {
+    return fallbackValue;
+  }
+
+  const trimmedValue = value.trim();
+  if (!trimmedValue) {
+    return fallbackValue;
+  }
+
+  return trimmedValue.slice(0, maxLength);
+}
+
+function sanitizeNotificationUrl(value) {
+  if (typeof value !== 'string') {
+    return '/';
+  }
+
+  try {
+    const parsedUrl = new URL(value, self.location.origin);
+    if (
+      parsedUrl.origin === self.location.origin &&
+      ALLOWED_NOTIFICATION_PATHS.has(parsedUrl.pathname)
+    ) {
+      return parsedUrl.pathname + parsedUrl.search + parsedUrl.hash;
+    }
+  } catch (error) {
+    console.warn('[SW] Notification URL parse error:', error);
+  }
+
+  return '/';
+}
 
 // ── INSTALL ───────────────────────────────────────────────────────────────────
 self.addEventListener('install', function (event) {
@@ -80,34 +124,40 @@ self.addEventListener('fetch', function (event) {
 
 // ── PUSH NOTIFICATIONS ────────────────────────────────────────────────────────
 self.addEventListener('push', function (event) {
-  // VULNERABILITY: Push payload is parsed and displayed with NO origin validation
-  // Any server holding a valid push subscription can send arbitrary notification content
-  // This enables push-based phishing: fake "Your account was compromised" alerts
   let data = { title: 'SocialPWA', body: 'You have a new notification!', url: '/' };
 
   if (event.data) {
     try {
-      // VULNERABILITY: JSON parsed directly — no sanitisation of title, body, or url
       data = event.data.json();
     } catch (e) {
       console.warn('[SW] Push data parse error:', e);
     }
   }
 
+  const title = sanitizeNotificationText(
+    data.title,
+    'SocialPWA',
+    MAX_NOTIFICATION_TITLE_LENGTH
+  );
+  const body = sanitizeNotificationText(
+    data.body,
+    'You have a new notification!',
+    MAX_NOTIFICATION_BODY_LENGTH
+  );
+  const url = sanitizeNotificationUrl(data.url);
+
   const options = {
-    body: data.body,
+    body: body,
     icon: '/static/icons/icon-192.png',
     badge: '/static/icons/icon-192.png',
     tag: 'social-pwa-notification',
     data: {
-      // VULNERABILITY: URL from push payload stored as-is in notification data
-      // On click, user is navigated to attacker-controlled URL (push phishing)
-      url: data.url || '/'
+      url: url
     }
   };
 
   event.waitUntil(
-    self.registration.showNotification(data.title || 'SocialPWA', options)
+    self.registration.showNotification(title, options)
   );
 });
 
@@ -115,9 +165,7 @@ self.addEventListener('push', function (event) {
 self.addEventListener('notificationclick', function (event) {
   event.notification.close();
 
-  // VULNERABILITY: Opens attacker-supplied URL from notification payload
-  // No allowlist check — user can be sent to any external phishing site
-  const targetUrl = event.notification.data.url || '/';
+  const targetUrl = sanitizeNotificationUrl(event.notification.data.url);
   event.waitUntil(
     clients.matchAll({ type: 'window', includeUncontrolled: true }).then(function (clientList) {
       for (let client of clientList) {

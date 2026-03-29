@@ -2,7 +2,7 @@
 //  app.js  —  Unsecure Social PWA  —  Frontend JavaScript
 //
 //  INTENTIONAL VULNERABILITIES (for educational use):
-//    1. DOM-based XSS       — msg parameter injected via innerHTML (no sanitisation)
+//    1. DOM-based XSS       — historical issue; URL-driven msg injection has been removed
 //    2. Aggressive push     — requests notification permission immediately on load
 //    3. Hardcoded VAPID key — visible to any student who views page source
 //    4. No CSRF protection  — fetch() calls include no CSRF token
@@ -78,7 +78,7 @@ function urlBase64ToUint8Array(base64String) {
   return output;
 }
 
-// ── DOM-based XSS ─────────────────────────────────────────────────────────────
+// ── Navigation UI Setup ───────────────────────────────────────────────────────
 window.addEventListener('DOMContentLoaded', function () {
   // ── Highlight active nav link ──────────────────────────────────────────────
   const currentPath = window.location.pathname;
@@ -93,13 +93,32 @@ window.addEventListener('DOMContentLoaded', function () {
 // ── Insecure postMessage Listener ─────────────────────────────────────────────
 // VULNERABILITY: Listens for postMessage events from ANY origin (no origin check)
 // An iframe on a malicious page can send messages that trigger actions here
+const allowedRedirectPaths = new Set([
+  '/',
+  '/index.html',
+  '/signup.html',
+  '/feed.html',
+  '/profile',
+  '/messages',
+  '/success.html'
+]);
+
 window.addEventListener('message', function (event) {
   // VULNERABILITY: No check on event.origin — accepts messages from any domain
   console.log('[App] postMessage received from:', event.origin, 'data:', event.data);
 
   if (event.data && event.data.action === 'redirect') {
-    // VULNERABILITY: Redirects to attacker-supplied URL with no validation
-    window.location.href = event.data.url;
+    const redirectUrl = typeof event.data.url === 'string'
+      ? new URL(event.data.url, window.location.origin)
+      : null;
+
+    if (
+      redirectUrl &&
+      redirectUrl.origin === window.location.origin &&
+      allowedRedirectPaths.has(redirectUrl.pathname)
+    ) {
+      window.location.href = redirectUrl.pathname + redirectUrl.search + redirectUrl.hash;
+    }
   }
 
   if (event.data && event.data.action === 'setMsg') {

@@ -14,6 +14,9 @@ import user_management as db
 BASE_DIR     = os.path.dirname(os.path.abspath(__file__))
 DB_PATH      = os.path.join(BASE_DIR, "database_files", "database.db")
 SETUP_SCRIPT = os.path.join(BASE_DIR, "database_files", "setup_db.py")
+DEFAULT_VAPID_PUBLIC_KEY = (
+    "BEl62iUYgUivxIkv69yViEuiBIa-Ib9-SkvMeAtA3LFgDzkrxZJjSgSnfckjBJuBkr3qBUYIHBQFLXYp5Nksh8U"
+)
 
 def _tables_exist():
     """Return True if the required tables are all present."""
@@ -61,6 +64,10 @@ app.secret_key = os.environ.get("SECRET_KEY")
 if not app.secret_key:
     raise RuntimeError("SECRET_KEY environment variable is not set.")
 
+app.config["VAPID_PUBLIC_KEY"] = os.environ.get(
+    "VAPID_PUBLIC_KEY", DEFAULT_VAPID_PUBLIC_KEY
+)
+
 
 @app.after_request
 def add_security_headers(response):
@@ -79,6 +86,11 @@ def require_login():
     if not session.get("username"):
         return redirect("/")
     return None
+
+
+@app.context_processor
+def inject_client_config():
+    return {"vapid_public_key": app.config.get("VAPID_PUBLIC_KEY", "")}
 
 
 # ── Home / Login ──────────────────────────────────────────────────────────────

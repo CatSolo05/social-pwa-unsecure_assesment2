@@ -121,6 +121,10 @@ def require_login():
     return None
 
 
+def current_username():
+    return session.get("username", "")
+
+
 @app.context_processor
 def inject_client_config():
     return {"vapid_public_key": app.config.get("VAPID_PUBLIC_KEY", "")}
@@ -181,7 +185,10 @@ def signup():
         flash("Password must be at least 8 characters long.", "error")
         return redirect("/signup.html")
 
-    # VULNERABILITY: No duplicate username check
+    if db.userExists(username):
+        flash("That username is already taken.", "error")
+        return redirect("/signup.html")
+
     db.insertUser(username, password, DoB, bio)
     flash("Account created! Please log in.", "success")
     return redirect("/")
@@ -211,13 +218,11 @@ def feed():
 
 @app.route("/profile")
 def profile():
-    # VULNERABILITY: No authentication check — any visitor can read any profile
-    # VULNERABILITY: SQL Injection via 'user' parameter in getUserProfile()
     guard = require_login()
     if guard:
         return guard
 
-    username = request.args.get("user", "")
+    username = current_username()
     profile_data = db.getUserProfile(username)
     return render_template("profile.html", profile=profile_data, username=username)
 
@@ -226,13 +231,14 @@ def profile():
 
 @app.route("/messages", methods=["POST", "GET"])
 def messages():
-    # VULNERABILITY: No authentication — change ?user= to read anyone's inbox
     guard = require_login()
     if guard:
         return guard
 
+    username = current_username()
+
     if request.method == "POST":
-        sender    = session.get("username")
+        sender    = username
         recipient = request.form.get("recipient", "")
         body      = request.form.get("body", "")
 
@@ -242,12 +248,20 @@ def messages():
             return render_template("messages.html", messages=msgs, username=sender, recipient=sender)
 
         db.sendMessage(sender, recipient, body)
-        msgs = db.getMessages(recipient)
+        msgs = db.getMessages(sender)
+        flash("Message sent.", "success")
         return render_template("messages.html", messages=msgs, username=sender, recipient=recipient)
 
-    username = request.args.get("user", "Guest")
     msgs = db.getMessages(username)
-    return render_template("messages.html", messages=msgs, username=username, recipient=username)
+    recipient = request.args.get("recipient", "")
+    return render_template("messages.html", messages=msgs, username=username, recipient=recipient)
+
+
+@app.route("/logout", methods=["POST"])
+def logout():
+    session.clear()
+    flash("You have been logged out.", "success")
+    return redirect("/")
 
 
 # ── Success Page ──────────────────────────────────────────────────────────────

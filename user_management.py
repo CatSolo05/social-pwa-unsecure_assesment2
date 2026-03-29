@@ -10,12 +10,7 @@ import os
 #  user_management.py
 #  Handles all direct database operations for the Unsecure Social PWA.
 #
-#  INTENTIONAL VULNERABILITIES (for educational use):
-#    1. SQL Injection      — f-string queries throughout
-#    2. Plaintext passwords — no hashing applied at any point
-#    3. Timing side-channel — sleep only fires when username EXISTS
-#    4. No input validation — any string accepted as username/password
-#    5. IDOR-equivalent    — username passed from client-side hidden field
+#  Database access helpers for the Social PWA.
 # ─────────────────────────────────────────────────────────────────────────────
 
 # Absolute paths — works regardless of where `python main.py` is called from
@@ -40,6 +35,16 @@ def insertUser(username, password, DoB, bio=""):
     )
     con.commit()
     con.close()
+
+
+def userExists(username):
+    """Return True when a username is already present."""
+    con = sql.connect(DB_PATH)
+    cur = con.cursor()
+    cur.execute("SELECT 1 FROM users WHERE username = ?", (username,))
+    row = cur.fetchone()
+    con.close()
+    return row is not None
 
 
 def retrieveUsers(username, password):
@@ -98,8 +103,6 @@ def getPosts():
 def getUserProfile(username):
     """
     Get a user profile row.
-    VULNERABILITY: SQL Injection via f-string — try /profile?user=admin'--
-    VULNERABILITY: No authentication check — any visitor can view any profile.
     """
     con = sql.connect(DB_PATH)
     cur = con.cursor()
@@ -112,8 +115,6 @@ def getUserProfile(username):
 def getMessages(username):
     """
     Get inbox for a user.
-    VULNERABILITY: SQL Injection via f-string.
-    VULNERABILITY: No auth check — change ?user= to read anyone's inbox.
     """
     con = sql.connect(DB_PATH)
     cur = con.cursor()

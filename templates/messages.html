@@ -12,8 +12,11 @@
       <br/>
       <div class="sidebar-links">
         <a href="/feed.html">&#128247; Feed</a>
-        <a href="/profile?user={{ username }}">&#128100; Profile</a>
-        <a href="/">&#128682; Log Out</a>
+        <a href="/profile">&#128100; Profile</a>
+        <form action="/logout" method="POST">
+          <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
+          <button type="submit" class="link-button">&#128682; Log Out</button>
+        </form>
       </div>
     </div>
   </aside>
@@ -48,9 +51,6 @@
       Inbox for
       <span class="text-accent">{{ username }}</span>
     </h2>
-    <p class="text-muted text-xs mb-2">
-      ⚠️  No authentication required to view this inbox — change the <code>?user=</code> parameter to read anyone's messages.
-    </p>
 
     {% if messages %}
       {% for msg in messages %}

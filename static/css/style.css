@@ -305,6 +305,8 @@ main {
 
 .sidebar-links { display: flex; flex-direction: column; gap: 0.4rem; }
 
+.sidebar-links form { margin: 0; }
+
 .sidebar-links a {
   display: block;
   padding: 0.5rem 0.9rem;
@@ -315,7 +317,28 @@ main {
   transition: background-color var(--transition), color var(--transition);
 }
 
+.link-button {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 0.9rem;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  font-weight: 500;
+  font-family: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color var(--transition), color var(--transition);
+}
+
 .sidebar-links a:hover {
+  background-color: var(--bg-card);
+  color: var(--text-light);
+}
+
+.link-button:hover {
   background-color: var(--bg-card);
   color: var(--text-light);
 }

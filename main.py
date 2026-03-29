@@ -2,7 +2,7 @@ import os
 import sys
 import sqlite3
 import subprocess
-from flask import Flask, render_template, request, redirect
+from flask import Flask, render_template, request, redirect, session
 from flask_cors import CORS
 from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
@@ -63,6 +63,12 @@ if not app.secret_key:
     raise RuntimeError("SECRET_KEY environment variable is not set.")
 
 
+def require_login():
+    if not session.get("username"):
+        return redirect("/")
+    return None
+
+
 # ── Home / Login ──────────────────────────────────────────────────────────────
 
 @limiter.limit("5 per minute", methods=["POST"])
@@ -79,6 +85,7 @@ def home():
         password = request.form["password"]
         isLoggedIn = db.retrieveUsers(username, password)
         if isLoggedIn:
+            session["username"] = username
             posts = db.getPosts()
             return render_template("feed.html", username=username, state=isLoggedIn, posts=posts)
         else:
@@ -106,6 +113,10 @@ def signup():
 
 @app.route("/feed.html", methods=["POST", "GET"])
 def feed():
+    guard = require_login()
+    if guard:
+        return guard
+
     if request.method == "POST":
         post_content = request.form["content"]
         # VULNERABILITY: IDOR — username from hidden form field, can be tampered with
@@ -124,6 +135,10 @@ def feed():
 def profile():
     # VULNERABILITY: No authentication check — any visitor can read any profile
     # VULNERABILITY: SQL Injection via 'user' parameter in getUserProfile()
+    guard = require_login()
+    if guard:
+        return guard
+
     username = request.args.get("user", "")
     profile_data = db.getUserProfile(username)
     return render_template("profile.html", profile=profile_data, username=username)
@@ -134,6 +149,10 @@ def profile():
 @app.route("/messages", methods=["POST", "GET"])
 def messages():
     # VULNERABILITY: No authentication — change ?user= to read anyone's inbox
+    guard = require_login()
+    if guard:
+        return guard
+
     if request.method == "POST":
         sender    = request.form.get("sender", "Anonymous")
         recipient = request.form.get("recipient", "")

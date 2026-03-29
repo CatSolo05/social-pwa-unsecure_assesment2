@@ -105,8 +105,8 @@ window.addEventListener('message', function (event) {
   if (event.data && event.data.action === 'setMsg') {
     const msgBox = document.getElementById('js-msg-box');
     if (msgBox) {
-      // VULNERABILITY: innerHTML again — cross-origin XSS via postMessage
-      msgBox.innerHTML = event.data.content;
+      // Render message content as plain text so HTML is not interpreted.
+      msgBox.textContent = event.data.content;
     }
   }
 });

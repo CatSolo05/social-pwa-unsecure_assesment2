@@ -117,56 +117,55 @@ def inject_client_config():
 @app.route("/", methods=["POST", "GET"])
 @app.route("/index.html", methods=["POST", "GET"])
 def home():
-    if request.method == "GET":
+    if request.method != "POST":
         return render_template("index.html")
 
-    elif request.method == "POST":
-        username = request.form["username"]
-        password = request.form["password"]
-        isLoggedIn = db.retrieveUsers(username, password)
-        if isLoggedIn:
-            session["username"] = username
-            posts = db.getPosts()
-            return render_template("feed.html", username=username, state=isLoggedIn, posts=posts)
-        else:
-            flash("Invalid credentials. Please try again.", "error")
-            return render_template("index.html")
+    username = request.form["username"]
+    password = request.form["password"]
+    isLoggedIn = db.retrieveUsers(username, password)
+    if isLoggedIn:
+        session["username"] = username
+        posts = db.getPosts()
+        return render_template("feed.html", username=username, state=isLoggedIn, posts=posts)
+
+    flash("Invalid credentials. Please try again.", "error")
+    return render_template("index.html")
 
 
 # ── Sign Up ───────────────────────────────────────────────────────────────────
 
 @app.route("/signup.html", methods=["POST", "GET"])
 def signup():
-    if request.method == "POST":
-        username = request.form["username"]
-        password = request.form["password"]
-        DoB      = request.form["dob"]
-        bio      = request.form.get("bio", "")
-
-        weak_passwords = {
-            "password",
-            "password123",
-            "12345678",
-            "qwerty",
-            "letmein",
-            "admin123",
-            "welcome123",
-        }
-
-        if password.lower() in weak_passwords:
-            flash("Please choose a stronger password.", "error")
-            return redirect("/signup.html")
-
-        if len(password) < 8:
-            flash("Password must be at least 8 characters long.", "error")
-            return redirect("/signup.html")
-
-        # VULNERABILITY: No duplicate username check
-        db.insertUser(username, password, DoB, bio)
-        flash("Account created! Please log in.", "success")
-        return redirect("/")
-    else:
+    if request.method != "POST":
         return render_template("signup.html")
+
+    username = request.form["username"]
+    password = request.form["password"]
+    DoB      = request.form["dob"]
+    bio      = request.form.get("bio", "")
+
+    weak_passwords = {
+        "password",
+        "password123",
+        "12345678",
+        "qwerty",
+        "letmein",
+        "admin123",
+        "welcome123",
+    }
+
+    if password.lower() in weak_passwords:
+        flash("Please choose a stronger password.", "error")
+        return redirect("/signup.html")
+
+    if len(password) < 8:
+        flash("Password must be at least 8 characters long.", "error")
+        return redirect("/signup.html")
+
+    # VULNERABILITY: No duplicate username check
+    db.insertUser(username, password, DoB, bio)
+    flash("Account created! Please log in.", "success")
+    return redirect("/")
 
 
 # ── Social Feed ───────────────────────────────────────────────────────────────
@@ -183,9 +182,9 @@ def feed():
         db.insertPost(username, post_content)
         posts = db.getPosts()
         return render_template("feed.html", username=username, state=True, posts=posts)
-    else:
-        posts = db.getPosts()
-        return render_template("feed.html", username="Guest", state=True, posts=posts)
+
+    posts = db.getPosts()
+    return render_template("feed.html", username="Guest", state=True, posts=posts)
 
 
 # ── User Profile ──────────────────────────────────────────────────────────────
@@ -225,10 +224,10 @@ def messages():
         db.sendMessage(sender, recipient, body)
         msgs = db.getMessages(recipient)
         return render_template("messages.html", messages=msgs, username=sender, recipient=recipient)
-    else:
-        username = request.args.get("user", "Guest")
-        msgs = db.getMessages(username)
-        return render_template("messages.html", messages=msgs, username=username, recipient=username)
+
+    username = request.args.get("user", "Guest")
+    msgs = db.getMessages(username)
+    return render_template("messages.html", messages=msgs, username=username, recipient=username)
 
 
 # ── Success Page ──────────────────────────────────────────────────────────────

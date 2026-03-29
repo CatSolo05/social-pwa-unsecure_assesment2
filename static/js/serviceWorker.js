@@ -13,16 +13,8 @@
 // VULNERABILITY: Predictable, hardcoded cache name makes targeted cache poisoning easier
 const CACHE_NAME = 'social-pwa-cache-v1';
 
-// VULNERABILITY: Caches authenticated pages (feed, messages, profile)
-// A different user on the same device could be served another user's cached data
+// Pre-cache only static application assets.
 const PRECACHE_URLS = [
-  '/',
-  '/index.html',
-  '/signup.html',
-  '/feed.html',
-  '/profile',
-  '/messages',
-  '/success.html',
   '/static/css/style.css',
   '/static/js/app.js',
   '/static/manifest.json',

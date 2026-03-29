@@ -21,6 +21,7 @@ const PRECACHE_URLS = [
   '/static/icons/icon-192.png',
   '/static/icons/icon-512.png'
 ];
+const PRECACHE_PATHS = new Set(PRECACHE_URLS);
 
 // ── INSTALL ───────────────────────────────────────────────────────────────────
 self.addEventListener('install', function (event) {
@@ -41,32 +42,26 @@ self.addEventListener('activate', function (event) {
 
 // ── FETCH ─────────────────────────────────────────────────────────────────────
 self.addEventListener('fetch', function (event) {
-  // VULNERABILITY: Cache-First strategy applied to ALL requests, including:
-  //   - Authenticated pages (feed, messages) — shared cache leaks between users
-  //   - POST responses are NOT cached, but GET feed page IS (after first load)
-  //   - Reflected XSS in a cached response URL is permanently stored in cache
+  if (event.request.method !== 'GET') {
+    return;
+  }
+
+  const requestUrl = new URL(event.request.url);
+  const isStaticAsset = requestUrl.origin === self.location.origin &&
+    PRECACHE_PATHS.has(requestUrl.pathname);
+
+  if (!isStaticAsset) {
+    event.respondWith(fetch(event.request));
+    return;
+  }
+
   event.respondWith(
     caches.match(event.request).then(function (cachedResponse) {
       if (cachedResponse) {
-        // Serve cached version with no freshness or integrity check
         return cachedResponse;
       }
 
-      return fetch(event.request).then(function (networkResponse) {
-        // VULNERABILITY: All GET responses are cloned and cached without inspection
-        // An attacker who causes a reflected XSS response to be cached makes it persistent
-        if (event.request.method === 'GET') {
-          let responseClone = networkResponse.clone();
-          caches.open(CACHE_NAME).then(function (cache) {
-            cache.put(event.request, responseClone);
-          });
-        }
-        return networkResponse;
-      }).catch(function () {
-        // VULNERABILITY: Falls back to caching root for ALL offline errors
-        // This can mask failures and serve stale/attacker-modified content
-        return caches.match('/');
-      });
+      return fetch(event.request);
     })
   );
 });

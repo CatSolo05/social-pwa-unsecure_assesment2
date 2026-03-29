@@ -57,8 +57,10 @@ limiter = Limiter(
 # VULNERABILITY: Wildcard CORS — allows ANY origin to make credentialed requests
 CORS(app)
 
-# VULNERABILITY: Hardcoded secret key — session cookies can be forged
-app.secret_key = "supersecretkey123"
+# SECRET_KEY must be provided via environment variable.
+app.secret_key = os.environ.get("SECRET_KEY")
+if not app.secret_key:
+    raise RuntimeError("SECRET_KEY environment variable is not set.")
 
 
 # ── Home / Login ──────────────────────────────────────────────────────────────
@@ -67,10 +69,6 @@ app.secret_key = "supersecretkey123"
 @app.route("/", methods=["POST", "GET"])
 @app.route("/index.html", methods=["POST", "GET"])
 def home():
-    # VULNERABILITY: Open Redirect — blindly follows 'url' query parameter
-    if request.method == "GET" and request.args.get("url"):
-        return redirect(request.args.get("url"), code=302)
-
     # VULNERABILITY: Reflected XSS — 'msg' rendered with |safe in template
     if request.method == "GET":
         msg = request.args.get("msg", "")
@@ -91,9 +89,6 @@ def home():
 
 @app.route("/signup.html", methods=["POST", "GET"])
 def signup():
-    if request.method == "GET" and request.args.get("url"):
-        return redirect(request.args.get("url"), code=302)
-
     if request.method == "POST":
         username = request.form["username"]
         password = request.form["password"]
@@ -111,9 +106,6 @@ def signup():
 
 @app.route("/feed.html", methods=["POST", "GET"])
 def feed():
-    if request.method == "GET" and request.args.get("url"):
-        return redirect(request.args.get("url"), code=302)
-
     if request.method == "POST":
         post_content = request.form["content"]
         # VULNERABILITY: IDOR — username from hidden form field, can be tampered with
@@ -132,8 +124,6 @@ def feed():
 def profile():
     # VULNERABILITY: No authentication check — any visitor can read any profile
     # VULNERABILITY: SQL Injection via 'user' parameter in getUserProfile()
-    if request.args.get("url"):
-        return redirect(request.args.get("url"), code=302)
     username = request.args.get("user", "")
     profile_data = db.getUserProfile(username)
     return render_template("profile.html", profile=profile_data, username=username)

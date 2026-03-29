@@ -3,10 +3,10 @@
 //
 //  INTENTIONAL VULNERABILITIES (for educational use):
 //    1. DOM-based XSS       — historical issue; URL-driven msg injection has been removed
-//    2. Aggressive push     — requests notification permission immediately on load
+//    2. Aggressive push     — historical issue; permission prompt now requires a user click
 //    3. Hardcoded VAPID key — visible to any student who views page source
 //    4. No CSRF protection  — fetch() calls include no CSRF token
-//    5. Insecure postMessage — message origin is never validated
+//    5. postMessage handling — now limited to same-origin messages and internal redirects
 // ─────────────────────────────────────────────────────────────────────────────
 
 // ── Service Worker Registration ───────────────────────────────────────────────
@@ -25,18 +25,42 @@ if ('serviceWorker' in navigator) {
 }
 
 // ── Push Notification Subscription ───────────────────────────────────────────
-// VULNERABILITY: Notification permission is requested immediately on page load
-// without any user-initiated action — bad practice and against browser guidelines
-window.addEventListener('load', function () {
-  if ('Notification' in window && 'serviceWorker' in navigator) {
+// Permission requests must be triggered by a user gesture to avoid browser
+// warnings or blocked prompts.
+function setupNotificationsButton() {
+  const notificationsBtn = document.getElementById('enable-notifications-btn');
+
+  if (!notificationsBtn) {
+    return;
+  }
+
+  if (!('Notification' in window) || !('serviceWorker' in navigator)) {
+    notificationsBtn.hidden = true;
+    return;
+  }
+
+  if (Notification.permission === 'granted') {
+    notificationsBtn.hidden = true;
+    return;
+  }
+
+  notificationsBtn.hidden = false;
+  notificationsBtn.addEventListener('click', function () {
     Notification.requestPermission().then(function (permission) {
       console.log('[App] Notification permission:', permission);
+
       if (permission === 'granted') {
+        notificationsBtn.hidden = true;
         subscribeToPush();
+        return;
+      }
+
+      if (permission === 'denied') {
+        notificationsBtn.disabled = true;
       }
     });
-  }
-});
+  });
+}
 
 async function subscribeToPush() {
   try {
@@ -88,6 +112,8 @@ window.addEventListener('DOMContentLoaded', function () {
       link.style.fontWeight = '700';
     }
   });
+
+  setupNotificationsButton();
 });
 
 // ── Insecure postMessage Listener ─────────────────────────────────────────────

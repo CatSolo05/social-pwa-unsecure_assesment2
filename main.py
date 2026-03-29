@@ -173,6 +173,12 @@ def messages():
         sender    = session.get("username")
         recipient = request.form.get("recipient", "")
         body      = request.form.get("body", "")
+
+        if not db.getUserProfile(recipient):
+            flash("Recipient not found.", "error")
+            msgs = db.getMessages(sender)
+            return render_template("messages.html", messages=msgs, username=sender, recipient=sender)
+
         db.sendMessage(sender, recipient, body)
         msgs = db.getMessages(recipient)
         return render_template("messages.html", messages=msgs, username=sender, recipient=recipient)

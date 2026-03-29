@@ -104,7 +104,10 @@ const allowedRedirectPaths = new Set([
 ]);
 
 window.addEventListener('message', function (event) {
-  // VULNERABILITY: No check on event.origin — accepts messages from any domain
+  if (event.origin !== window.location.origin) {
+    return;
+  }
+
   console.log('[App] postMessage received from:', event.origin, 'data:', event.data);
 
   if (event.data && event.data.action === 'redirect') {
